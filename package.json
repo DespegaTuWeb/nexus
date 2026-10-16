@@ -1,9 +1,9 @@
 {
-  "name": "digital-debris",
+  "name": "nexus-motos-peru",
   "type": "module",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "engines": {
-    "node": ">=22.22.0"
+    "node": ">=20.0.0"
   },
   "scripts": {
     "dev": "astro dev",
