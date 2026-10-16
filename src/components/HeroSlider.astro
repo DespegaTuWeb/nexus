@@ -10,42 +10,16 @@ const slides = [
     price: "S/ 8,738*",
     installments: "Cuotas desde S/ 292/mes*",
     image: "/images/banners/banner-nexus-250-rs-sport.png",
-    mobileImage: "/images/banners/banner-movil-nexus-250.webp",
+    mobileImage: "/images/banners/banner-nexus-250-rs-sport-mobile.webp",
     link: "/modelos/nexus-250-rsport",
     primaryCta: "Ver Ficha Técnica",
     accentColor: "from-red-600/40",
     isGraphicBanner: true
-  },
-  {
-    tag: "LÍDER EN MOVILIDAD URBANA",
-    title: "NEXUS SCOOTER 150 TAX",
-    headline: "MÁXIMA COMODIDAD, TRANSMISIÓN AUTOMÁTICA CVT",
-    description: "La reina de la ciudad: transmisión continua CVT libre de cambios de marcha, amplia maletera, puerto de carga USB y rendimiento superior.",
-    price: "S/ 4,869*",
-    installments: "Desde S/ 163/mes*",
-    image: "/images/banners/banner-carrusel-3.png",
-    link: "/modelos/nexus-scooter-150-tax",
-    primaryCta: "Conocer Scooter",
-    accentColor: "from-blue-600/40",
-    isGraphicBanner: false
-  },
-  {
-    tag: "BENEFICIOS POR TU COMPRA",
-    title: "BENEFICIOS INCLUIDOS NEXUS",
-    headline: "TRÁMITE DE PLACA + CASCO + HERRAMIENTAS + ACEITE",
-    description: "Por la compra de tu unidad se incluye trámite de tarjeta y placa (15-20 días), casco, kit de herramientas, aceite de activación y los 03 primeros mantenimientos gratis (mano de obra).",
-    price: "Pack Incluido",
-    installments: "Garantía 1 año o 12,000KM (Sólo Motor)",
-    image: "/images/banners/banner-carrusel-2.png",
-    link: "/combos-promociones",
-    primaryCta: "Ver Beneficios",
-    accentColor: "from-amber-600/40",
-    isGraphicBanner: false
   }
 ];
 ---
 
-<div class="relative w-full overflow-hidden bg-[#0a0b0e] select-none group" id="hero-slider">
+<div class="relative w-full overflow-hidden bg-[#0a0b0e] select-none" id="hero-slider">
   <div class="relative w-full h-full">
     {slides.map((slide, index) => (
       <div
@@ -63,6 +37,8 @@ const slides = [
                   src={slide.image}
                   alt={slide.title}
                   class="w-full h-full object-cover object-center block"
+                  loading="eager"
+                  fetchpriority="high"
                 />
               </picture>
             </a>
@@ -142,35 +118,39 @@ const slides = [
     ))}
   </div>
 
-  <button
-    id="slider-prev"
-    class="absolute left-3 sm:left-4 top-1/2 -translate-y-1/2 z-30 w-10 h-10 md:w-12 md:h-12 rounded-full bg-black/50 hover:bg-black/80 border border-white/25 text-white flex items-center justify-center transition-all opacity-80 hover:opacity-100 hover:scale-110 focus:outline-none cursor-pointer"
-    aria-label="Anterior slide"
-  >
-    <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M15 19l-7-7 7-7" />
-    </svg>
-  </button>
-
-  <button
-    id="slider-next"
-    class="absolute right-3 sm:right-4 top-1/2 -translate-y-1/2 z-30 w-10 h-10 md:w-12 md:h-12 rounded-full bg-black/50 hover:bg-black/80 border border-white/25 text-white flex items-center justify-center transition-all opacity-80 hover:opacity-100 hover:scale-110 focus:outline-none cursor-pointer"
-    aria-label="Siguiente slide"
-  >
-    <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7" />
-    </svg>
-  </button>
-
-  <div class="absolute bottom-4 sm:bottom-5 left-1/2 -translate-x-1/2 z-30 flex items-center gap-3">
-    {slides.map((_, i) => (
+  {slides.length > 1 && (
+    <>
       <button
-        class={`slider-dot w-3 h-3 rounded-full transition-all duration-300 cursor-pointer ${i === 0 ? 'bg-[#FF0000] w-8' : 'bg-white/40 hover:bg-white'}`}
-        data-target-slide={i}
-        aria-label={`Ir al slide ${i + 1}`}
-      ></button>
-    ))}
-  </div>
+        id="slider-prev"
+        class="absolute left-3 sm:left-4 top-1/2 -translate-y-1/2 z-30 w-10 h-10 md:w-12 md:h-12 rounded-full bg-black/50 hover:bg-black/80 border border-white/25 text-white flex items-center justify-center transition-all opacity-80 hover:opacity-100 hover:scale-110 focus:outline-none cursor-pointer"
+        aria-label="Anterior slide"
+      >
+        <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M15 19l-7-7 7-7" />
+        </svg>
+      </button>
+
+      <button
+        id="slider-next"
+        class="absolute right-3 sm:right-4 top-1/2 -translate-y-1/2 z-30 w-10 h-10 md:w-12 md:h-12 rounded-full bg-black/50 hover:bg-black/80 border border-white/25 text-white flex items-center justify-center transition-all opacity-80 hover:opacity-100 hover:scale-110 focus:outline-none cursor-pointer"
+        aria-label="Siguiente slide"
+      >
+        <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7" />
+        </svg>
+      </button>
+
+      <div class="absolute bottom-4 sm:bottom-5 left-1/2 -translate-x-1/2 z-30 flex items-center gap-3">
+        {slides.map((_, i) => (
+          <button
+            class={`slider-dot w-3 h-3 rounded-full transition-all duration-300 cursor-pointer ${i === 0 ? 'bg-[#FF0000] w-8' : 'bg-white/40 hover:bg-white'}`}
+            data-target-slide={i}
+            aria-label={`Ir al slide ${i + 1}`}
+          ></button>
+        ))}
+      </div>
+    </>
+  )}
 </div>
 
 <script>
@@ -180,72 +160,74 @@ const slides = [
   const totalSlides = slides.length;
   let autoplayTimer: any = null;
 
-  function showSlide(index: number) {
-    slides.forEach((slide, i) => {
-      if (i === index) {
-        slide.classList.remove('opacity-0', 'pointer-events-none', 'z-0');
-        slide.classList.add('opacity-100', 'z-10');
-      } else {
-        slide.classList.remove('opacity-100', 'z-10');
-        slide.classList.add('opacity-0', 'pointer-events-none', 'z-0');
-      }
-    });
+  if (totalSlides > 1) {
+    function showSlide(index: number) {
+      slides.forEach((slide, i) => {
+        if (i === index) {
+          slide.classList.remove('opacity-0', 'pointer-events-none', 'z-0');
+          slide.classList.add('opacity-100', 'z-10');
+        } else {
+          slide.classList.remove('opacity-100', 'z-10');
+          slide.classList.add('opacity-0', 'pointer-events-none', 'z-0');
+        }
+      });
 
-    dots.forEach((dot, i) => {
-      if (i === index) {
-        dot.classList.add('bg-[#FF0000]', 'w-8');
-        dot.classList.remove('bg-white/40');
-      } else {
-        dot.classList.remove('bg-[#FF0000]', 'w-8');
-        dot.classList.add('bg-white/40');
-      }
-    });
+      dots.forEach((dot, i) => {
+        if (i === index) {
+          dot.classList.add('bg-[#FF0000]', 'w-8');
+          dot.classList.remove('bg-white/40');
+        } else {
+          dot.classList.remove('bg-[#FF0000]', 'w-8');
+          dot.classList.add('bg-white/40');
+        }
+      });
 
-    currentSlide = index;
-  }
+      currentSlide = index;
+    }
 
-  function nextSlide() {
-    const next = (currentSlide + 1) % totalSlides;
-    showSlide(next);
-  }
+    function nextSlide() {
+      const next = (currentSlide + 1) % totalSlides;
+      showSlide(next);
+    }
 
-  function prevSlide() {
-    const prev = (currentSlide - 1 + totalSlides) % totalSlides;
-    showSlide(prev);
-  }
+    function prevSlide() {
+      const prev = (currentSlide - 1 + totalSlides) % totalSlides;
+      showSlide(prev);
+    }
 
-  function startAutoplay() {
-    stopAutoplay();
-    autoplayTimer = setInterval(nextSlide, 6000);
-  }
+    function startAutoplay() {
+      stopAutoplay();
+      autoplayTimer = setInterval(nextSlide, 6000);
+    }
 
-  function stopAutoplay() {
-    if (autoplayTimer) clearInterval(autoplayTimer);
-  }
+    function stopAutoplay() {
+      if (autoplayTimer) clearInterval(autoplayTimer);
+    }
 
-  document.getElementById('slider-next')?.addEventListener('click', () => {
-    nextSlide();
-    startAutoplay();
-  });
-
-  document.getElementById('slider-prev')?.addEventListener('click', () => {
-    prevSlide();
-    startAutoplay();
-  });
-
-  dots.forEach((dot) => {
-    dot.addEventListener('click', () => {
-      const target = Number(dot.getAttribute('data-target-slide'));
-      showSlide(target);
+    document.getElementById('slider-next')?.addEventListener('click', () => {
+      nextSlide();
       startAutoplay();
     });
-  });
 
-  const slider = document.getElementById('hero-slider');
-  slider?.addEventListener('mouseenter', stopAutoplay);
-  slider?.addEventListener('mouseleave', startAutoplay);
+    document.getElementById('slider-prev')?.addEventListener('click', () => {
+      prevSlide();
+      startAutoplay();
+    });
 
-  startAutoplay();
+    dots.forEach((dot) => {
+      dot.addEventListener('click', () => {
+        const target = Number(dot.getAttribute('data-target-slide'));
+        showSlide(target);
+        startAutoplay();
+      });
+    });
+
+    const slider = document.getElementById('hero-slider');
+    slider?.addEventListener('mouseenter', stopAutoplay);
+    slider?.addEventListener('mouseleave', startAutoplay);
+
+    startAutoplay();
+  }
 </script>
 
 <style>

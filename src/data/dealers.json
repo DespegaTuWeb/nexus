@@ -20,24 +20,6 @@
     ]
   },
   {
-    "id": "lima-kwk-motors",
-    "name": "KWK Motors (Taller Autorizado Lima)",
-    "department": "Lima",
-    "city": "Lima",
-    "district": "San Luis",
-    "address": "Av. El Aire 1397 C, San Luis",
-    "phone": "941 294 197",
-    "mobile": "941 294 197",
-    "whatsapp": "51941294197",
-    "hours": "Lunes a Sábado: 8:30 AM - 6:30 PM",
-    "isMain": false,
-    "services": [
-      "Taller de Mantenimiento",
-      "Garantía Nexus",
-      "Venta de Repuestos"
-    ]
-  },
-  {
     "id": "arequipa-motocentro",
     "name": "Motocentro Arequipa (Taller Autorizado)",
     "department": "Arequipa",

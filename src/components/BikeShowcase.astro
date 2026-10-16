@@ -32,146 +32,158 @@ const showcaseBikes = showcaseSlugs
   }));
 ---
 
-<section class="py-20 bg-[#fafafa] text-gray-900 overflow-hidden relative border-t border-gray-200" id="showcase-section">
+<section class="py-10 md:py-20 bg-[#fafafa] text-gray-900 overflow-hidden relative border-t border-gray-200" id="showcase-section">
   <div class="absolute inset-0 bg-[radial-gradient(#e5e7eb_1px,transparent_1px)] [background-size:24px_24px] opacity-70"></div>
 
   <div class="max-w-7xl mx-auto px-6 relative z-10">
-    <div class="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-8">
-      <div>
-        <span class="text-xs font-bold text-gray-500 uppercase tracking-widest font-['Teko',sans-serif] text-base">
-          VITRINA PRINCIPAL
-        </span>
-        <h2 class="text-5xl md:text-7xl font-black uppercase text-gray-900 leading-[0.9] tracking-tight font-['Teko',sans-serif]">
-          SIENTE EL LLAMADO DE TU NUEVA <span class="text-[#FF0000]">NEXUS</span>
-        </h2>
-      </div>
-      <p class="text-gray-500 text-sm max-w-md font-medium">
-        Explora las especificaciones clave de los modelos insignia con respaldo oficial de Grupo Lauzher.
-      </p>
+    <div class="mb-4 md:mb-6">
+      <h2 class="text-4xl sm:text-5xl md:text-7xl font-black uppercase text-gray-900 leading-[0.9] tracking-tight font-['Teko',sans-serif]">
+        LAS 4 MÁS <span class="text-[#FF0000]">VENDIDAS</span>
+      </h2>
     </div>
 
-    <!-- Bike Stage with Navigation Arrows -->
-    <div class="relative min-h-[380px] md:min-h-[460px] flex items-center justify-center">
-      <!-- Floating Navigation Arrow Prev -->
-      <button
-        id="stage-prev"
-        class="absolute left-1 md:left-4 z-30 w-10 h-10 md:w-14 md:h-14 rounded-full bg-white/90 backdrop-blur-sm border border-gray-200 shadow-md hover:shadow-lg hover:border-black flex items-center justify-center text-gray-800 hover:text-black hover:scale-105 transition-all cursor-pointer"
-        aria-label="Modelo anterior"
+    <!-- Bike Showcase Swipe / Drag Zone -->
+    <div id="showcase-swipe-area" class="relative touch-pan-y select-none">
+      <!-- Bike Stage with Navigation Arrows -->
+      <div
+        id="showcase-stage"
+        class="relative min-h-[260px] sm:min-h-[340px] md:min-h-[460px] flex items-center justify-center cursor-grab active:cursor-grabbing select-none"
       >
-        <svg class="w-5 h-5 md:w-6 md:h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
-        </svg>
-      </button>
+        <!-- Floating Navigation Arrow Prev -->
+        <button
+          id="stage-prev"
+          class="absolute left-1 md:left-4 z-30 w-9 h-9 md:w-14 md:h-14 rounded-full bg-white/90 backdrop-blur-sm border border-gray-200 shadow-md hover:shadow-lg hover:border-black flex items-center justify-center text-gray-800 hover:text-black hover:scale-105 transition-all cursor-pointer"
+          aria-label="Modelo anterior"
+        >
+          <svg class="w-4 h-4 md:w-6 md:h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+          </svg>
+        </button>
 
-      <!-- Center Bike Display -->
-      <div class="relative w-full max-w-3xl flex items-center justify-center py-4">
-        <img
-          id="showcase-bike-img"
-          src={showcaseBikes[0].transparentImage}
-          alt={showcaseBikes[0].name}
-          class="w-full max-w-[580px] md:max-w-[640px] h-auto object-contain drop-shadow-[0_25px_30px_rgba(0,0,0,0.25)] transition-all duration-500 transform hover:scale-105"
-        />
-        <div class="absolute -bottom-2 w-3/4 h-8 bg-black/15 rounded-[100%] blur-md -z-10"></div>
+        <!-- Center Bike Display (Draggable with finger / mouse) -->
+        <div id="showcase-bike-wrapper" class="relative w-full max-w-3xl flex items-center justify-center py-2 sm:py-4 transition-transform duration-300 will-change-transform pointer-events-none">
+          <img
+            id="showcase-bike-img"
+            src={showcaseBikes[0].transparentImage}
+            alt={showcaseBikes[0].name}
+            draggable="false"
+            class="w-full max-w-[340px] sm:max-w-[480px] md:max-w-[640px] h-auto object-contain drop-shadow-[0_20px_25px_rgba(0,0,0,0.22)] transition-opacity duration-300 pointer-events-none select-none"
+          />
+          <div class="absolute -bottom-1 w-3/4 h-6 sm:h-8 bg-black/15 rounded-[100%] blur-md -z-10"></div>
+        </div>
+
+        <!-- Floating Navigation Arrow Next -->
+        <button
+          id="stage-next"
+          class="absolute right-1 md:right-4 z-30 w-9 h-9 md:w-14 md:h-14 rounded-full bg-white/90 backdrop-blur-sm border border-gray-200 shadow-md hover:shadow-lg hover:border-black flex items-center justify-center text-gray-800 hover:text-black hover:scale-105 transition-all cursor-pointer"
+          aria-label="Siguiente modelo"
+        >
+          <svg class="w-4 h-4 md:w-6 md:h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+          </svg>
+        </button>
       </div>
 
-      <!-- Floating Navigation Arrow Next -->
-      <button
-        id="stage-next"
-        class="absolute right-1 md:right-4 z-30 w-10 h-10 md:w-14 md:h-14 rounded-full bg-white/90 backdrop-blur-sm border border-gray-200 shadow-md hover:shadow-lg hover:border-black flex items-center justify-center text-gray-800 hover:text-black hover:scale-105 transition-all cursor-pointer"
-        aria-label="Siguiente modelo"
+      <!-- Spacious Specs & Model Info Card (Draggable swipe zone on mobile) -->
+      <div
+        id="showcase-card"
+        class="mt-2 sm:mt-4 max-w-4xl mx-auto bg-white border border-gray-200 rounded-2xl md:rounded-3xl p-4 sm:p-6 md:p-8 shadow-lg md:shadow-xl cursor-grab active:cursor-grabbing select-none"
       >
-        <svg class="w-5 h-5 md:w-6 md:h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
-        </svg>
-      </button>
-    </div>
+        <!-- Header Row: Model Name & Price -->
+        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-6 border-b border-gray-100">
+          <div>
+            <div class="flex items-center gap-2 mb-1">
+              <span id="badge-cat" class="text-xs uppercase font-bold text-gray-500 tracking-wider">
+                {showcaseBikes[0].categoryLabel}
+              </span>
+            </div>
+            <h3 id="spec-name" class="text-4xl md:text-6xl font-black uppercase text-gray-900 font-['Teko',sans-serif] tracking-tight leading-none">
+              {showcaseBikes[0].name}
+            </h3>
+          </div>
 
-    <!-- Spacious Specs & Model Info Card -->
-    <div class="mt-4 max-w-4xl mx-auto bg-white border border-gray-200 rounded-3xl p-6 md:p-8 shadow-xl">
-      <!-- Header Row: Model Name & Price -->
-      <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-6 border-b border-gray-100">
-        <div>
-          <div class="flex items-center gap-2 mb-1">
-            <span id="badge-cat" class="text-xs uppercase font-bold text-gray-500 tracking-wider">
-              {showcaseBikes[0].categoryLabel}
+          <div class="text-left sm:text-right flex-shrink-0">
+            <span class="text-[10px] uppercase font-bold text-gray-400 block tracking-wider">Precio Sugerido</span>
+            <span id="spec-price" class="text-3xl md:text-5xl font-black text-gray-900 font-['Teko',sans-serif] tracking-tight block leading-none">
+              {showcaseBikes[0].priceFromPen}
+            </span>
+            <span id="spec-installments" class="text-xs font-bold text-emerald-600 block mt-0.5">
+              Cuotas desde {showcaseBikes[0].installmentsFrom}
             </span>
           </div>
-          <h3 id="spec-name" class="text-4xl md:text-6xl font-black uppercase text-gray-900 font-['Teko',sans-serif] tracking-tight leading-none">
-            {showcaseBikes[0].name}
-          </h3>
         </div>
 
-        <div class="text-left sm:text-right flex-shrink-0">
-          <span class="text-[10px] uppercase font-bold text-gray-400 block tracking-wider">Precio Sugerido</span>
-          <span id="spec-price" class="text-3xl md:text-5xl font-black text-gray-900 font-['Teko',sans-serif] tracking-tight block leading-none">
-            {showcaseBikes[0].priceFromPen}
-          </span>
-          <span id="spec-installments" class="text-xs font-bold text-emerald-600 block mt-0.5">
-            Cuotas desde {showcaseBikes[0].installmentsFrom}
-          </span>
-        </div>
-      </div>
+        <!-- 3 Key Specs Cards: Cilindrada, Potencia, Transmision -->
+        <div class="grid grid-cols-3 gap-2 sm:gap-3 md:gap-5 py-4 sm:py-6">
+          <!-- Cilindrada -->
+          <div class="bg-gray-50 border border-gray-200/90 rounded-2xl p-2.5 sm:p-4 text-center hover:bg-gray-100/70 transition-colors">
+            <span class="text-[9px] sm:text-[10px] uppercase font-bold text-gray-500 block tracking-wider mb-1">
+              Cilindrada
+            </span>
+            <span id="spec-cc" class="text-xl sm:text-2xl md:text-4xl font-black text-gray-900 font-['Teko',sans-serif] tracking-tight block">
+              {showcaseBikes[0].cc}
+            </span>
+          </div>
 
-      <!-- 3 Key Specs Cards: Cilindrada, Potencia, Transmision -->
-      <div class="grid grid-cols-3 gap-2 sm:gap-3 md:gap-5 py-4 sm:py-6">
-        <!-- Cilindrada -->
-        <div class="bg-gray-50 border border-gray-200/90 rounded-2xl p-2.5 sm:p-4 text-center hover:bg-gray-100/70 transition-colors">
-          <span class="text-[9px] sm:text-[10px] uppercase font-bold text-gray-500 block tracking-wider mb-1">
-            Cilindrada
-          </span>
-          <span id="spec-cc" class="text-xl sm:text-2xl md:text-4xl font-black text-gray-900 font-['Teko',sans-serif] tracking-tight block">
-            {showcaseBikes[0].cc}
-          </span>
-        </div>
+          <!-- Potencia -->
+          <div class="bg-gray-50 border border-gray-200/90 rounded-2xl p-2.5 sm:p-4 text-center hover:bg-gray-100/70 transition-colors">
+            <span class="text-[9px] sm:text-[10px] uppercase font-bold text-gray-500 block tracking-wider mb-1">
+              Potencia
+            </span>
+            <span id="spec-power" class="text-xl sm:text-2xl md:text-4xl font-black text-gray-900 font-['Teko',sans-serif] tracking-tight block">
+              {showcaseBikes[0].displayPower}
+            </span>
+          </div>
 
-        <!-- Potencia (solo número y HP) -->
-        <div class="bg-gray-50 border border-gray-200/90 rounded-2xl p-2.5 sm:p-4 text-center hover:bg-gray-100/70 transition-colors">
-          <span class="text-[9px] sm:text-[10px] uppercase font-bold text-gray-500 block tracking-wider mb-1">
-            Potencia
-          </span>
-          <span id="spec-power" class="text-xl sm:text-2xl md:text-4xl font-black text-gray-900 font-['Teko',sans-serif] tracking-tight block">
-            {showcaseBikes[0].displayPower}
-          </span>
-        </div>
-
-        <!-- Transmisión (Manual / Automática / Semiautomática) -->
-        <div class="bg-gray-50 border border-gray-200/90 rounded-2xl p-2.5 sm:p-4 text-center hover:bg-gray-100/70 transition-colors">
-          <span class="text-[9px] sm:text-[10px] uppercase font-bold text-gray-500 block tracking-wider mb-1">
-            Transmisión
-          </span>
-          <span id="spec-trans" class="text-lg sm:text-2xl md:text-4xl font-black text-gray-900 font-['Teko',sans-serif] tracking-tight block truncate">
-            {showcaseBikes[0].displayTrans}
-          </span>
-        </div>
-      </div>
-
-      <!-- Footer Row: Counter & Action CTAs -->
-      <div class="flex flex-col sm:flex-row items-center justify-between gap-4 pt-4 border-t border-gray-100">
-        <!-- Counter and selector dots -->
-        <div class="flex items-center gap-2">
-          <span class="text-xs font-bold text-gray-500 uppercase tracking-wider" id="showcase-counter">
-            1 de {showcaseBikes.length} modelos destacados
-          </span>
+          <!-- Transmisión -->
+          <div class="bg-gray-50 border border-gray-200/90 rounded-2xl p-2.5 sm:p-4 text-center hover:bg-gray-100/70 transition-colors">
+            <span class="text-[9px] sm:text-[10px] uppercase font-bold text-gray-500 block tracking-wider mb-1">
+              Transmisión
+            </span>
+            <span id="spec-trans" class="text-lg sm:text-2xl md:text-4xl font-black text-gray-900 font-['Teko',sans-serif] tracking-tight block truncate">
+              {showcaseBikes[0].displayTrans}
+            </span>
+          </div>
         </div>
 
-        <!-- CTA Buttons -->
-        <div class="flex items-center gap-3 w-full sm:w-auto">
-          <a
-            id="showcase-detail-btn"
-            href={`/modelos/${showcaseBikes[0].slug}`}
-            class="flex-1 sm:flex-initial text-center px-6 py-3 text-xs font-bold uppercase tracking-wider text-gray-800 bg-white border border-gray-300 hover:border-black hover:text-black rounded-full transition-all"
-          >
-            Ficha Técnica
-          </a>
-          <a
-            id="showcase-quote-btn"
-            href={`https://wa.me/${site.whatsappNumber}?text=Hola%20Grupo%20Lauzher,%20deseo%20cotizar%20la%20moto%20${encodeURIComponent(showcaseBikes[0].name)}`}
-            target="_blank"
-            rel="noopener noreferrer"
-            class="flex-1 sm:flex-initial text-center px-6 py-3 text-xs font-black uppercase tracking-wider text-white bg-emerald-600 hover:bg-emerald-700 rounded-full shadow-md shadow-emerald-600/20 transition-all flex items-center justify-center gap-1.5"
-          >
-            Cotizar por WhatsApp
-          </a>
+        <!-- Footer Row: Counter, Indicator Dots & CTAs -->
+        <div class="flex flex-col sm:flex-row items-center justify-between gap-4 pt-4 border-t border-gray-100">
+          <!-- Counter and interactive dots -->
+          <div class="flex items-center gap-3">
+            <span class="text-xs font-bold text-gray-500 uppercase tracking-wider" id="showcase-counter">
+              1 de {showcaseBikes.length} más vendidas
+            </span>
+            <div class="flex items-center gap-1.5" id="showcase-dots">
+              {showcaseBikes.map((_, idx) => (
+                <button
+                  type="button"
+                  class={`showcase-dot h-2 rounded-full transition-all cursor-pointer ${idx === 0 ? 'w-6 bg-gray-900' : 'w-2 bg-gray-300 hover:bg-gray-400'}`}
+                  data-dot-index={idx}
+                  aria-label={`Ir al modelo ${idx + 1}`}
+                ></button>
+              ))}
+            </div>
+          </div>
+
+          <!-- CTA Buttons -->
+          <div class="flex items-center gap-3 w-full sm:w-auto">
+            <a
+              id="showcase-detail-btn"
+              href={`/modelos/${showcaseBikes[0].slug}`}
+              class="flex-1 sm:flex-initial text-center px-6 py-3 text-xs font-bold uppercase tracking-wider text-gray-800 bg-white border border-gray-300 hover:border-black hover:text-black rounded-full transition-all"
+            >
+              Ficha Técnica
+            </a>
+            <a
+              id="showcase-quote-btn"
+              href={`https://wa.me/${site.whatsappNumber}?text=Hola%20Grupo%20Lauzher,%20deseo%20cotizar%20la%20moto%20${encodeURIComponent(showcaseBikes[0].name)}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              class="flex-1 sm:flex-initial text-center px-6 py-3 text-xs font-black uppercase tracking-wider text-white bg-emerald-600 hover:bg-emerald-700 rounded-full shadow-md shadow-emerald-600/20 transition-all flex items-center justify-center gap-1.5"
+            >
+              Cotizar por WhatsApp
+            </a>
+          </div>
         </div>
       </div>
     </div>
@@ -183,6 +195,7 @@ const showcaseBikes = showcaseSlugs
   const total = showcaseBikes.length;
 
   const imgEl = document.getElementById('showcase-bike-img');
+  const bikeWrapper = document.getElementById('showcase-bike-wrapper');
   const badgeTag = document.getElementById('badge-tag');
   const badgeCat = document.getElementById('badge-cat');
   const specName = document.getElementById('spec-name');
@@ -194,20 +207,25 @@ const showcaseBikes = showcaseSlugs
   const counter = document.getElementById('showcase-counter');
   const detailBtn = document.getElementById('showcase-detail-btn');
   const quoteBtn = document.getElementById('showcase-quote-btn');
+  const dots = document.querySelectorAll('.showcase-dot');
+  const swipeArea = document.getElementById('showcase-swipe-area');
 
-  function updateShowcase(index) {
+  function updateDots(index) {
+    dots.forEach((dot, idx) => {
+      if (idx === index) {
+        dot.className = 'showcase-dot h-2 rounded-full transition-all cursor-pointer w-6 bg-gray-900';
+      } else {
+        dot.className = 'showcase-dot h-2 rounded-full transition-all cursor-pointer w-2 bg-gray-300 hover:bg-gray-400';
+      }
+    });
+  }
+
+  function updateShowcaseData(index) {
     const bike = showcaseBikes[index];
 
     if (imgEl) {
-      imgEl.style.opacity = '0';
-      imgEl.style.transform = 'scale(0.95)';
-
-      setTimeout(() => {
-        imgEl.src = bike.transparentImage;
-        imgEl.alt = bike.name;
-        imgEl.style.opacity = '1';
-        imgEl.style.transform = 'scale(1)';
-      }, 180);
+      imgEl.src = bike.transparentImage;
+      imgEl.alt = bike.name;
     }
 
     if (badgeTag) badgeTag.textContent = bike.tag || 'DESTACADO';
@@ -218,7 +236,7 @@ const showcaseBikes = showcaseSlugs
     if (specCc) specCc.textContent = bike.cc;
     if (specPower) specPower.textContent = bike.displayPower;
     if (specTrans) specTrans.textContent = bike.displayTrans;
-    if (counter) counter.textContent = `${index + 1} de ${total} modelos destacados`;
+    if (counter) counter.textContent = `${index + 1} de ${total} más vendidas`;
     if (detailBtn) detailBtn.href = `/modelos/${bike.slug}`;
     if (quoteBtn) {
       const modelUrl = `${window.location.origin}/modelos/${bike.slug}`;
@@ -226,26 +244,200 @@ const showcaseBikes = showcaseSlugs
       quoteBtn.href = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(msg)}`;
     }
 
+    updateDots(index);
     currentIndex = index;
   }
 
-  // Initialize first quote button with full model URL
+  // Smooth slide transition
+  let isAnimating = false;
+  function slideTo(direction, targetIdx) {
+    if (isAnimating) return;
+    isAnimating = true;
+
+    const nextIndex = targetIdx !== undefined ? targetIdx : (currentIndex + direction + total) % total;
+    const exitX = direction > 0 ? -140 : 140;
+    const enterX = direction > 0 ? 140 : -140;
+
+    if (bikeWrapper) {
+      bikeWrapper.style.transition = 'transform 0.2s ease-out, opacity 0.2s ease-out';
+      bikeWrapper.style.transform = `translateX(${exitX}px) scale(0.92)`;
+      bikeWrapper.style.opacity = '0';
+    }
+
+    setTimeout(() => {
+      updateShowcaseData(nextIndex);
+
+      if (bikeWrapper) {
+        bikeWrapper.style.transition = 'none';
+        bikeWrapper.style.transform = `translateX(${enterX}px) scale(0.92)`;
+        bikeWrapper.style.opacity = '0';
+
+        requestAnimationFrame(() => {
+          requestAnimationFrame(() => {
+            bikeWrapper.style.transition = 'transform 0.32s cubic-bezier(0.2, 0.9, 0.3, 1), opacity 0.32s ease-out';
+            bikeWrapper.style.transform = 'translateX(0) scale(1)';
+            bikeWrapper.style.opacity = '1';
+            setTimeout(() => {
+              isAnimating = false;
+            }, 320);
+          });
+        });
+      } else {
+        isAnimating = false;
+      }
+    }, 190);
+  }
+
+  // Dot button clicks
+  dots.forEach((dot) => {
+    dot.addEventListener('click', (e) => {
+      e.stopPropagation();
+      const idx = parseInt(dot.getAttribute('data-dot-index') || '0', 10);
+      if (idx !== currentIndex) {
+        slideTo(idx > currentIndex ? 1 : -1, idx);
+      }
+    });
+  });
+
+  // Navigation Arrow clicks
+  const prevBtn = document.getElementById('stage-prev');
+  const nextBtn = document.getElementById('stage-next');
+
+  nextBtn?.addEventListener('click', (e) => {
+    e.stopPropagation();
+    slideTo(1);
+  });
+
+  prevBtn?.addEventListener('click', (e) => {
+    e.stopPropagation();
+    slideTo(-1);
+  });
+
+  // Touch and Mouse Drag / Swipe Handlers
+  if (swipeArea) {
+    let startX = 0;
+    let startY = 0;
+    let diffX = 0;
+    let isDragging = false;
+    let isHorizontalSwipe = false;
+
+    // Touch events (mobile finger drag)
+    swipeArea.addEventListener(
+      'touchstart',
+      (e) => {
+        const target = e.target;
+        if (target && (target.closest('a') || target.closest('button'))) return;
+
+        isDragging = true;
+        isHorizontalSwipe = false;
+        diffX = 0;
+        startX = e.touches[0].clientX;
+        startY = e.touches[0].clientY;
+      },
+      { passive: true }
+    );
+
+    swipeArea.addEventListener(
+      'touchmove',
+      (e) => {
+        if (!isDragging) return;
+        const currentX = e.touches[0].clientX;
+        const currentY = e.touches[0].clientY;
+        const deltaX = currentX - startX;
+        const deltaY = currentY - startY;
+
+        if (!isHorizontalSwipe) {
+          if (Math.abs(deltaX) > Math.abs(deltaY) && Math.abs(deltaX) > 8) {
+            isHorizontalSwipe = true;
+          } else if (Math.abs(deltaY) > 8) {
+            // User is scrolling the page vertically, cancel horizontal drag
+            isDragging = false;
+            return;
+          }
+        }
+
+        if (isHorizontalSwipe && bikeWrapper) {
+          if (e.cancelable) e.preventDefault();
+          diffX = deltaX;
+          bikeWrapper.style.transition = 'none';
+          bikeWrapper.style.transform = `translateX(${diffX * 0.75}px) scale(${1 - Math.min(Math.abs(diffX) / 800, 0.08)})`;
+          bikeWrapper.style.opacity = `${1 - Math.min(Math.abs(diffX) / 600, 0.4)}`;
+        }
+      },
+      { passive: false }
+    );
+
+    const onTouchEnd = () => {
+      if (!isDragging || !isHorizontalSwipe) {
+        isDragging = false;
+        isHorizontalSwipe = false;
+        return;
+      }
+
+      isDragging = false;
+      isHorizontalSwipe = false;
+
+      if (diffX < -40) {
+        slideTo(1);
+      } else if (diffX > 40) {
+        slideTo(-1);
+      } else if (bikeWrapper) {
+        bikeWrapper.style.transition = 'transform 0.25s cubic-bezier(0.2, 0.9, 0.3, 1), opacity 0.25s ease-out';
+        bikeWrapper.style.transform = 'translateX(0) scale(1)';
+        bikeWrapper.style.opacity = '1';
+      }
+      diffX = 0;
+    };
+
+    swipeArea.addEventListener('touchend', onTouchEnd);
+    swipeArea.addEventListener('touchcancel', onTouchEnd);
+
+    // Mouse drag events (for desktop mouse drag)
+    swipeArea.addEventListener('mousedown', (e) => {
+      const target = e.target;
+      if (target && (target.closest('a') || target.closest('button'))) return;
+
+      isDragging = true;
+      isHorizontalSwipe = true;
+      diffX = 0;
+      startX = e.clientX;
+      startY = e.clientY;
+      swipeArea.style.cursor = 'grabbing';
+    });
+
+    window.addEventListener('mousemove', (e) => {
+      if (!isDragging || !isHorizontalSwipe) return;
+      diffX = e.clientX - startX;
+      if (bikeWrapper) {
+        bikeWrapper.style.transition = 'none';
+        bikeWrapper.style.transform = `translateX(${diffX * 0.75}px) scale(${1 - Math.min(Math.abs(diffX) / 800, 0.08)})`;
+        bikeWrapper.style.opacity = `${1 - Math.min(Math.abs(diffX) / 600, 0.4)}`;
+      }
+    });
+
+    window.addEventListener('mouseup', () => {
+      if (!isDragging) return;
+      isDragging = false;
+      isHorizontalSwipe = false;
+      swipeArea.style.cursor = '';
+
+      if (diffX < -40) {
+        slideTo(1);
+      } else if (diffX > 40) {
+        slideTo(-1);
+      } else if (bikeWrapper) {
+        bikeWrapper.style.transition = 'transform 0.25s cubic-bezier(0.2, 0.9, 0.3, 1), opacity 0.25s ease-out';
+        bikeWrapper.style.transform = 'translateX(0) scale(1)';
+        bikeWrapper.style.opacity = '1';
+      }
+      diffX = 0;
+    });
+  }
+
+  // Initialize first quote button with full live URL
   if (quoteBtn && showcaseBikes[0]) {
     const modelUrl = `${window.location.origin}/modelos/${showcaseBikes[0].slug}`;
     const msg = `Hola Grupo Lauzher, deseo cotizar la moto ${showcaseBikes[0].name} (${showcaseBikes[0].priceFromPen}).\n\nModelo: ${modelUrl}`;
     quoteBtn.href = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(msg)}`;
   }
-
-  const prevBtn = document.getElementById('stage-prev');
-  const nextBtn = document.getElementById('stage-next');
-
-  nextBtn?.addEventListener('click', () => {
-    const next = (currentIndex + 1) % total;
-    updateShowcase(next);
-  });
-
-  prevBtn?.addEventListener('click', () => {
-    const prev = (currentIndex - 1 + total) % total;
-    updateShowcase(prev);
-  });
 </script>
