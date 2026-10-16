@@ -13,12 +13,15 @@ export async function getStaticPaths() {
 const { bike } = Astro.props;
 
 const relatedBikes = bikes.filter((b) => b.category === bike.category && b.id !== bike.id).slice(0, 3);
+const ogImage = (bike.transparentImage || bike.image)
+  .replace('/images/bikes/', '/images/og/')
+  .replace(/\.(png|webp)$/i, '.jpg');
 ---
 
 <Layout
   title={`${bike.name} (${bike.priceFromPen}) | Ficha Técnica y Crédito - Nexus Motos Grupo Lauzher`}
   description={`Conoce la ${bike.name} con motor ${bike.cc}, ${bike.power}. Precio desde ${bike.priceFromPen} (Cuotas desde ${bike.installmentsFrom}). Garantía oficial de Grupo Lauzher.`}
-  image={bike.transparentImage || bike.image}
+  image={ogImage}
 >
   <!-- Breadcrumb -->
   <div class="bg-gray-50 border-b border-gray-200 py-3 px-6 text-xs text-gray-600">

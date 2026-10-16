@@ -12,14 +12,15 @@ interface Props {
   canonicalUrl?: string;
 }
 
+const siteOrigin = Astro.site ? Astro.site.origin : Astro.url.origin;
 const {
   title = "Nexus Motos Perú | Grupo Lauzher - Catálogo Oficial y Financiamiento",
   description = "Nexus Motos en Perú. Principal importador: Grupo Lauzher. Conoce nuestras motos deportivas, pisteras, scooters, todoterreno y cafe racer. Crédito directo con DNI y Combo Motero con Casco y Placa.",
-  image = "/images/logo-nexus.png",
-  canonicalUrl = Astro.url.href,
+  image = "/images/og/deportiva-250-rsport.jpg",
+  canonicalUrl = new URL(Astro.url.pathname, siteOrigin).href,
 } = Astro.props;
 
-const absoluteImageUrl = image.startsWith('http') ? image : new URL(image, Astro.url.origin).href;
+const absoluteImageUrl = image.startsWith('http') ? image : new URL(image, siteOrigin).href;
 ---
 
 <!doctype html>
@@ -42,6 +43,8 @@ const absoluteImageUrl = image.startsWith('http') ? image : new URL(image, Astro
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
     <meta property="og:image" content={absoluteImageUrl} />
+    <meta property="og:image:secure_url" content={absoluteImageUrl} />
+    <meta property="og:image:type" content="image/jpeg" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
     <meta property="og:site_name" content="Nexus Motos Perú - Grupo Lauzher" />

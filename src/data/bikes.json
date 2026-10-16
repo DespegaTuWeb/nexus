@@ -37,8 +37,8 @@
         "hex": "#94a3b8"
       }
     ],
-    "image": "/images/bikes/scooter-125-tx.png",
-    "transparentImage": "/images/bikes/scooter-125-tx.png",
+    "image": "/images/bikes/scooter-125-tx.webp",
+    "transparentImage": "/images/bikes/scooter-125-tx.webp",
     "description": "La puerta de entrada al mundo de los scooters. Súper liviana, fácil de parquear y con un consumo récord de hasta 175 km por galón.",
     "highlights": [
       "Peso ultra ligero de solo 102 kg",
@@ -84,8 +84,8 @@
         "hex": "#111827"
       }
     ],
-    "image": "/images/bikes/scooter-150-t.png",
-    "transparentImage": "/images/bikes/scooter-150-t.png",
+    "image": "/images/bikes/scooter-150-t.webp",
+    "transparentImage": "/images/bikes/scooter-150-t.webp",
     "description": "Diseño clásico y funcional con posición de manejo sumamente relajada para trayectos universitarios y laborales.",
     "highlights": [
       "Manejo sumamente suave",
@@ -130,8 +130,8 @@
         "hex": "#111827"
       }
     ],
-    "image": "/images/bikes/multiproposito-150-ch1.png",
-    "transparentImage": "/images/bikes/multiproposito-150-ch1.png",
+    "image": "/images/bikes/multiproposito-150-ch1.webp",
+    "transparentImage": "/images/bikes/multiproposito-150-ch1.webp",
     "description": "Motocicleta lineal urbana de máxima resistencia y bajo consumo. Diseñada con amplia parrilla trasera de fábrica, chasis tubular reforzado y doble amortiguador posterior para trabajo continuo y transporte diario.",
     "highlights": [
       "Amplia parrilla posterior reforzada de fábrica para carga",
@@ -178,8 +178,8 @@
         "hex": "#1e3a8a"
       }
     ],
-    "image": "/images/bikes/150-gl.png",
-    "transparentImage": "/images/bikes/150-gl.png",
+    "image": "/images/bikes/150-gl.webp",
+    "transparentImage": "/images/bikes/150-gl.webp",
     "description": "La moto de calle por excelencia. Ágil en curvas cerradas, fácil de estacionar en cualquier lugar y con un motor indestructible.",
     "highlights": [
       "Arranque eléctrico y pedal",
@@ -225,8 +225,8 @@
         "hex": "#f3f4f6"
       }
     ],
-    "image": "/images/bikes/multiproposito-150-delivery.png",
-    "transparentImage": "/images/bikes/multiproposito-150-delivery.png",
+    "image": "/images/bikes/multiproposito-150-delivery.webp",
+    "transparentImage": "/images/bikes/multiproposito-150-delivery.webp",
     "description": "Configurada especialmente para trabajo de mensajería, delivery y carga pesada. Parrilla extra grande soldada de fábrica que soporta cajas de gran volumen sin balanceo.",
     "highlights": [
       "Parrilla trasera reforzada de máxima extensión",
@@ -272,8 +272,8 @@
         "hex": "#2563eb"
       }
     ],
-    "image": "/images/bikes/multiproposito-150-dk.png",
-    "transparentImage": "/images/bikes/multiproposito-150-dk.png",
+    "image": "/images/bikes/multiproposito-150-dk.webp",
+    "transparentImage": "/images/bikes/multiproposito-150-dk.webp",
     "description": "Formato todoterreno en motor de 150cc. Mayor altura al piso que una pistera para atravesar baches, rompemuelles y trochas sin tocar el chasis.",
     "highlights": [
       "Suspensión delantera con mayor recorrido",
@@ -318,8 +318,8 @@
         "hex": "#1f2937"
       }
     ],
-    "image": "/images/bikes/multiproposito-150-plusor.png",
-    "transparentImage": "/images/bikes/multiproposito-150-plusor.png",
+    "image": "/images/bikes/multiproposito-150-plusor.webp",
+    "transparentImage": "/images/bikes/multiproposito-150-plusor.webp",
     "description": "Estilo moderno con chasis ligero. Perfecta para quienes buscan una moto atractiva para movilizarse a diario sin gastar de más.",
     "highlights": [
       "Tanque con alerones laterales aerodinámicos",
@@ -365,8 +365,8 @@
         "hex": "#1f2937"
       }
     ],
-    "image": "/images/bikes/multiproposito-200-cb3.png",
-    "transparentImage": "/images/bikes/multiproposito-200-cb3.png",
+    "image": "/images/bikes/multiproposito-200-cb3.webp",
+    "transparentImage": "/images/bikes/multiproposito-200-cb3.webp",
     "description": "Un clásico probado por miles de mototaxistas y repartidores peruanos. Motor duradero de bajo mantenimiento y excelente consumo.",
     "highlights": [
       "Motor varillero de gran fuerza en bajas revoluciones",
@@ -416,8 +416,8 @@
         "hex": "#111827"
       }
     ],
-    "image": "/images/bikes/scooter-150-tax.png",
-    "transparentImage": "/images/bikes/scooter-150-tax.png",
+    "image": "/images/bikes/scooter-150-tax.webp",
+    "transparentImage": "/images/bikes/scooter-150-tax.webp",
     "description": "Olvídate de hacer cambios de marcha. El scooter 150 TAX es la solución más práctica y económica para el tráfico de la ciudad, con cajuela bajo el asiento y piso plano para paquetes.",
     "highlights": [
       "Transmisión automática CVT sin embrague",
@@ -464,8 +464,8 @@
         "hex": "#d97706"
       }
     ],
-    "image": "/images/bikes/caferacer-britania-69.png",
-    "transparentImage": "/images/bikes/caferacer-britania-69.png",
+    "image": "/images/bikes/caferacer-britania-69.webp",
+    "transparentImage": "/images/bikes/caferacer-britania-69.webp",
     "description": "El homenaje definitivo a la época dorada del motociclismo. Tanque esculpido en gota, asiento café racer en cuero sintético acanalado y faro circular vintage con aro cromado.",
     "highlights": [
       "Asiento café racer biplaza con costuras estilo diamante",
@@ -512,8 +512,8 @@
         "hex": "#ef4444"
       }
     ],
-    "image": "/images/bikes/scooter-150-t3.png",
-    "transparentImage": "/images/bikes/scooter-150-t3.png",
+    "image": "/images/bikes/scooter-150-t3.webp",
+    "transparentImage": "/images/bikes/scooter-150-t3.webp",
     "description": "Líneas redondeadas y aerodinámicas diseñadas para abrirse paso con total libertad en horas punta sin esfuerzo alguno.",
     "highlights": [
       "Chasis ligero de bajo centro de gravedad",
@@ -559,8 +559,8 @@
         "hex": "#111827"
       }
     ],
-    "image": "/images/bikes/scooter-150-tx.png",
-    "transparentImage": "/images/bikes/scooter-150-tx.png",
+    "image": "/images/bikes/scooter-150-tx.webp",
+    "transparentImage": "/images/bikes/scooter-150-tx.webp",
     "description": "Doble disco de freno y llantas anchas para mayor agarre en curvas y frenado de emergencia sobre piso húmedo.",
     "highlights": [
       "Frenos de disco en ambas ruedas",
@@ -606,8 +606,8 @@
         "hex": "#2563eb"
       }
     ],
-    "image": "/images/bikes/multiproposito-150-puma.png",
-    "transparentImage": "/images/bikes/multiproposito-150-puma.png",
+    "image": "/images/bikes/multiproposito-150-puma.webp",
+    "transparentImage": "/images/bikes/multiproposito-150-puma.webp",
     "description": "La moto de 150cc más rentable para empezar a generar ingresos inmediatos en delivery o mensajería corporativa.",
     "highlights": [
       "Consumo récord de hasta 160 km por galón",
@@ -653,8 +653,8 @@
         "hex": "#1f2937"
       }
     ],
-    "image": "/images/bikes/todoterreno-200-zz.png",
-    "transparentImage": "/images/bikes/todoterreno-200-zz.png",
+    "image": "/images/bikes/todoterreno-200-zz.webp",
+    "transparentImage": "/images/bikes/todoterreno-200-zz.webp",
     "description": "Una de las favoritas del Perú. La 200 ZZ combina la agilidad de una moto de ciudad con la resistencia y altura de una todoterreno pura.",
     "highlights": [
       "Excelente relación peso-potencia",
@@ -705,8 +705,8 @@
         "hex": "#f3f4f6"
       }
     ],
-    "image": "/images/bikes/scooter-150-t4.png",
-    "transparentImage": "/images/bikes/scooter-150-t4.png",
+    "image": "/images/bikes/scooter-150-t4.webp",
+    "transparentImage": "/images/bikes/scooter-150-t4.webp",
     "description": "Estilo deportivo agresivo con faro frontal afilado y detalles en fibra. Máxima comodidad para viajes diarios entre distritos con frenos de respuesta inmediata.",
     "highlights": [
       "Faro frontal de doble óptica LED de gran cobertura",
@@ -753,8 +753,8 @@
         "hex": "#1f2937"
       }
     ],
-    "image": "/images/bikes/caferacer-200-vx.png",
-    "transparentImage": "/images/bikes/caferacer-200-vx.png",
+    "image": "/images/bikes/caferacer-200-vx.webp",
+    "transparentImage": "/images/bikes/caferacer-200-vx.webp",
     "description": "Una auténtica scrambler con alma clásica. Llantas de dibujo mixto, manillar elevado y posición relajada para pasear por la ciudad con la máxima personalidad.",
     "highlights": [
       "Llantas mixtas aptas para asfalto y caminos secundarios",
@@ -800,8 +800,8 @@
         "hex": "#ef4444"
       }
     ],
-    "image": "/images/bikes/todoterreno-200-dm.png",
-    "transparentImage": "/images/bikes/todoterreno-200-dm.png",
+    "image": "/images/bikes/todoterreno-200-dm.webp",
+    "transparentImage": "/images/bikes/todoterreno-200-dm.webp",
     "description": "Chasis ágil y respuesta inmediata de acelerador. Perfecta para quienes quieren sortear el tráfico de Lima de lunes a viernes y escapar a la trocha los fines de semana.",
     "highlights": [
       "Frenos de disco en ambas ruedas",
@@ -852,8 +852,8 @@
         "hex": "#2563eb"
       }
     ],
-    "image": "/images/bikes/multiproposito-200-puma.png",
-    "transparentImage": "/images/bikes/multiproposito-200-puma.png",
+    "image": "/images/bikes/multiproposito-200-puma.webp",
+    "transparentImage": "/images/bikes/multiproposito-200-puma.webp",
     "description": "La fiera de la carga y el transporte diario. Diseñada para soportar jornadas de más de 12 horas continuas con mínimo costo de combustible.",
     "highlights": [
       "Parrilla trasera reforzada con soporte lateral para carga",
@@ -899,8 +899,8 @@
         "hex": "#4b5563"
       }
     ],
-    "image": "/images/bikes/deportiva-200-ss.png",
-    "transparentImage": "/images/bikes/deportiva-200-ss.png",
+    "image": "/images/bikes/deportiva-200-ss.webp",
+    "transparentImage": "/images/bikes/deportiva-200-ss.webp",
     "description": "Líneas afiladas y actitud rebelde. La 200 SS ofrece una postura de conducción erguida pero agresiva, haciéndola muy cómoda y divertida.",
     "highlights": [
       "Aros de aleación de 17 pulgadas con filos de color",
@@ -946,8 +946,8 @@
         "hex": "#ef4444"
       }
     ],
-    "image": "/images/bikes/deportiva-200-rr.png",
-    "transparentImage": "/images/bikes/deportiva-200-rr.png",
+    "image": "/images/bikes/deportiva-200-rr.webp",
+    "transparentImage": "/images/bikes/deportiva-200-rr.webp",
     "description": "La dosis ideal de velocidad y practicidad. Perfecta para quienes buscan una moto deportiva de bajo consumo para rodar a diario y salir de ruta.",
     "highlights": [
       "Frenos de disco en ambas ruedas",
@@ -994,8 +994,8 @@
         "hex": "#dc2626"
       }
     ],
-    "image": "/images/bikes/todoterreno-250-xl.png",
-    "transparentImage": "/images/bikes/todoterreno-250-xl.png",
+    "image": "/images/bikes/todoterreno-250-xl.webp",
+    "transparentImage": "/images/bikes/todoterreno-250-xl.webp",
     "description": "La compañera incansable para trabajo rural, supervisión de campo y rutas no pavimentadas con bajo costo de mantenimiento y repuestos económicos.",
     "highlights": [
       "Motor balanceado para reducir vibraciones",
@@ -1042,8 +1042,8 @@
         "hex": "#1f2937"
       }
     ],
-    "image": "/images/bikes/todoterreno-250-xr.png",
-    "transparentImage": "/images/bikes/todoterreno-250-xr.png",
+    "image": "/images/bikes/todoterreno-250-xr.webp",
+    "transparentImage": "/images/bikes/todoterreno-250-xr.webp",
     "description": "Diseñada para las geografías más exigentes de la costa, sierra y selva. Excelente despegue del suelo y torque lineal que responde en pendientes pronunciadas.",
     "highlights": [
       "Gran despeje al suelo para obstáculos pesados",
@@ -1094,8 +1094,8 @@
         "hex": "#f3f4f6"
       }
     ],
-    "image": "/images/bikes/todoterreno-250-adv.png",
-    "transparentImage": "/images/bikes/todoterreno-250-adv.png",
+    "image": "/images/bikes/todoterreno-250-adv.webp",
+    "transparentImage": "/images/bikes/todoterreno-250-adv.webp",
     "description": "No te limites a bordo de tu TODOTERRENO. Diseñada para quienes buscan llevar todo a toda potencia sin límites. Sube a la 250 ADV y haz que cada kilómetro cuente con su chasis de alta rigidez y suspensión de largo recorrido.",
     "highlights": [
       "Parabrisas aerodinámico alto para viajes largos",
@@ -1142,8 +1142,8 @@
         "hex": "#111827"
       }
     ],
-    "image": "/images/bikes/todoterreno-250-tk.png",
-    "transparentImage": "/images/bikes/todoterreno-250-tk.png",
+    "image": "/images/bikes/todoterreno-250-tk.webp",
+    "transparentImage": "/images/bikes/todoterreno-250-tk.webp",
     "description": "Potencia todoterreno sin concesiones. La 250 TK está equipada con aros de radios resistentes a impactos, suspensión delantera telescópica y monoshock reforzado para cualquier ruta del Perú.",
     "highlights": [
       "Aros de radios especiales para caminos de trocha",
@@ -1190,8 +1190,8 @@
         "hex": "#2563eb"
       }
     ],
-    "image": "/images/bikes/deportiva-250-rr.png",
-    "transparentImage": "/images/bikes/deportiva-250-rr.png",
+    "image": "/images/bikes/deportiva-250-rr.webp",
+    "transparentImage": "/images/bikes/deportiva-250-rr.webp",
     "description": "ADN de competición en tus manos. La 250 RR ofrece frenado de respuesta milimétrica, chasis de doble viga perimetral y escape con resonancia grave de circuito.",
     "highlights": [
       "Chasis perimetral de máxima rigidez torsional",
@@ -1242,8 +1242,8 @@
         "hex": "#ef4444"
       }
     ],
-    "image": "/images/bikes/deportiva-250-rsport.png",
-    "transparentImage": "/images/bikes/deportiva-250-rsport.png",
+    "image": "/images/bikes/deportiva-250-rsport.webp",
+    "transparentImage": "/images/bikes/deportiva-250-rsport.webp",
     "description": "Nacida para emocionar. Su diseño aerodinámico con carenado integral corta el viento para máxima estabilidad en autopista, entregando una postura deportiva inigualable.",
     "highlights": [
       "Carenado aerodinámico completo de estilo Superbike",
