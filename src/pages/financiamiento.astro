@@ -1,0 +1,105 @@
+---
+import Layout from '../layouts/Layout.astro';
+import FinanceSimulator from '../components/FinanceSimulator.astro';
+import site from '../data/site.json';
+---
+
+<Layout
+  title="Financiamiento de Motos con DNI en Perú | Nexus Motos - Grupo Lauzher"
+  description="Calcula tu cuota mensual en Soles para tu moto Nexus 0 km. Crédito directo y financiero aprobado en 15 minutos solo con DNI."
+>
+  <section class="bg-gray-50 py-16 px-6 border-b border-gray-200 text-center">
+    <div class="max-w-4xl mx-auto space-y-3">
+      <span class="text-xs font-bold text-emerald-700 uppercase tracking-widest font-['Teko',sans-serif] text-base">
+        CRÉDITO FÁCIL Y SEGURO
+      </span>
+      <h1 class="text-5xl md:text-7xl font-black uppercase text-gray-900 font-['Teko',sans-serif] tracking-tight leading-none">
+        FINANCIA TU MOTO <span class="text-[#FF0000]">NEXUS</span>
+      </h1>
+      <p class="text-gray-600 text-base md:text-lg max-w-2xl mx-auto font-medium">
+        Obtén tu moto 0 km hoy mismo sin complicaciones. Evaluamos tu crédito en menos de 15 minutos solo con tu documento de identidad.
+      </p>
+    </div>
+  </section>
+
+  <!-- Interactive Simulator Component -->
+  <FinanceSimulator />
+
+  <!-- Requirements in Pure White -->
+  <section class="py-20 px-6 bg-white border-t border-gray-200 text-gray-900">
+    <div class="max-w-7xl mx-auto">
+      <div class="text-center mb-14">
+        <h2 class="text-4xl md:text-5xl font-black uppercase text-gray-900 font-['Teko',sans-serif] tracking-tight">
+          REQUISITOS SIMPLES PARA CALIFICAR
+        </h2>
+        <p class="text-gray-600 text-sm">
+          Planes flexibles pensados para la realidad laboral de los peruanos.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="bg-gray-50 border border-gray-200 rounded-2xl p-6 space-y-3 shadow-sm">
+          <div class="w-10 h-10 rounded-xl bg-blue-100 text-blue-700 flex items-center justify-center font-bold">
+            01
+          </div>
+          <h3 class="text-2xl font-bold uppercase text-gray-900 font-['Teko',sans-serif]">Trabajadores en Planilla</h3>
+          <ul class="space-y-2 text-xs text-gray-600 font-medium">
+            <li>✔ Copia de DNI vigente</li>
+            <li>✔ Últimas 3 boletas de pago</li>
+            <li>✔ Recibo de agua o luz de domicilio</li>
+            <li>✔ Buen historial en Infocorp / Sentinel</li>
+          </ul>
+        </div>
+
+        <div class="bg-gray-50 border border-gray-200 rounded-2xl p-6 space-y-3 shadow-sm">
+          <div class="w-10 h-10 rounded-xl bg-emerald-100 text-emerald-700 flex items-center justify-center font-bold">
+            02
+          </div>
+          <h3 class="text-2xl font-bold uppercase text-gray-900 font-['Teko',sans-serif]">Independientes y RUS</h3>
+          <ul class="space-y-2 text-xs text-gray-600 font-medium">
+            <li>✔ DNI vigente</li>
+            <li>✔ Ficha RUC (RUS, RUC 10 o RUC 20)</li>
+            <li>✔ Últimos 3 pagos a la SUNAT o recibos por honorarios</li>
+            <li>✔ Movimientos de cuenta o fotos del negocio</li>
+          </ul>
+        </div>
+
+        <div class="bg-gray-50 border border-gray-200 rounded-2xl p-6 space-y-3 shadow-sm">
+          <div class="w-10 h-10 rounded-xl bg-amber-100 text-amber-800 flex items-center justify-center font-bold">
+            03
+          </div>
+          <h3 class="text-2xl font-bold uppercase text-gray-900 font-['Teko',sans-serif]">Delivery y Emprendedores</h3>
+          <ul class="space-y-2 text-xs text-gray-600 font-medium">
+            <li>✔ DNI vigente</li>
+            <li>✔ Capturas de ingresos de apps (PedidosYa, Rappi, Uber)</li>
+            <li>✔ Recibo de servicio de vivienda</li>
+            <li>✔ Evaluación ágil con entidades aliadas</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="mt-16 bg-gray-50 border border-gray-200 rounded-2xl p-8 text-center space-y-4">
+        <h3 class="text-xl font-bold uppercase text-gray-900 font-['Teko',sans-serif] tracking-wider">
+          ENTIDADES FINANCIERAS ALIADAS
+        </h3>
+        <p class="text-xs text-gray-600 max-w-xl mx-auto">
+          Grupo Lauzher trabaja en alianza con las principales entidades de crédito vehicular y microfinanzas del país:
+        </p>
+        <div class="flex flex-wrap items-center justify-center gap-6 pt-2">
+          <span class="px-5 py-2.5 rounded-xl bg-white border border-gray-300 text-xs font-bold text-gray-800 shadow-sm">
+            Santander Consumer
+          </span>
+          <span class="px-5 py-2.5 rounded-xl bg-white border border-gray-300 text-xs font-bold text-gray-800 shadow-sm">
+            Caja Huancayo
+          </span>
+          <span class="px-5 py-2.5 rounded-xl bg-white border border-gray-300 text-xs font-bold text-gray-800 shadow-sm">
+            Financiera Efectiva
+          </span>
+          <span class="px-5 py-2.5 rounded-xl bg-emerald-50 border border-emerald-200 text-xs font-bold text-emerald-800 shadow-sm">
+            Crédito Directo Grupo Lauzher
+          </span>
+        </div>
+      </div>
+    </div>
+  </section>
+</Layout>

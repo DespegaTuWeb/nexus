@@ -1,0 +1,325 @@
+---
+import dealers from '../data/dealers.json';
+
+// Extract unique provincial departments sorted alphabetically
+const provinceDepartments = Array.from(
+  new Set(dealers.filter((d) => d.department !== 'Lima').map((d) => d.department))
+).sort();
+---
+
+<section class="py-20 bg-white text-gray-900 border-t border-gray-200" id="red-concesionarios">
+  <div class="max-w-7xl mx-auto px-6">
+    <!-- Header & Compact Selector (Lima Default + Province Dropdown) -->
+    <div class="flex flex-col lg:flex-row lg:items-end justify-between gap-6 mb-10">
+      <div>
+        <span class="text-xs font-bold text-gray-500 uppercase tracking-widest font-['Teko',sans-serif] text-base">
+          COBERTURA NACIONAL
+        </span>
+        <h2 class="text-4xl md:text-6xl font-black uppercase tracking-tight font-['Teko',sans-serif] leading-none mt-1">
+          SEDE CENTRAL Y RED DE TALLERES
+        </h2>
+        <p class="text-gray-600 text-sm md:text-base mt-2">
+          Atención principal en Lima y red de soporte técnico autorizado en provincias.
+        </p>
+      </div>
+
+      <!-- Clean Filter Controls: Lima Button + Provinces Dropdown -->
+      <div class="flex flex-wrap items-center gap-3">
+        <button
+          id="btn-lima-default"
+          type="button"
+          class="px-5 py-2.5 rounded-xl text-xs font-bold uppercase tracking-wider transition-all cursor-pointer bg-gray-900 text-white shadow-sm flex items-center gap-2"
+        >
+          <span class="w-2 h-2 rounded-full bg-emerald-400"></span>
+          Lima (Sede Principal)
+        </button>
+
+        <div class="relative">
+          <select
+            id="province-select"
+            aria-label="Seleccionar departamento en provincia"
+            class="appearance-none bg-gray-100 hover:bg-gray-200/80 text-gray-800 border border-gray-300 rounded-xl pl-4 pr-10 py-2.5 text-xs font-bold uppercase tracking-wider cursor-pointer focus:outline-none focus:border-gray-900 transition-all"
+          >
+            <option value="">📍 ¿Estás en provincia? Elige tu región...</option>
+            {provinceDepartments.map((dept) => (
+              <option value={dept}>{dept}</option>
+            ))}
+            <option value="ALL_PROVINCES">Ver todas las provincias ({provinceDepartments.length})</option>
+          </select>
+          <svg
+            class="w-4 h-4 text-gray-600 pointer-events-none absolute right-3.5 top-1/2 -translate-y-1/2"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+          </svg>
+        </div>
+      </div>
+    </div>
+
+    <!-- Featured Main Showroom Banner with Real Storefront Photo (Always visible in Lima view) -->
+    <div id="main-lima-banner" class="mb-8 bg-gray-50 border border-gray-200 rounded-3xl overflow-hidden shadow-md grid grid-cols-1 lg:grid-cols-12">
+      <div class="lg:col-span-6 relative min-h-[260px] md:min-h-[320px] overflow-hidden group">
+        <img
+          src="/images/arriola-san-luis-ubicacion.webp"
+          alt="Fachada Showroom Central Grupo Lauzher - Av. Nicolás Arriola 2278, San Luis"
+          class="w-full h-full object-cover object-center transition-transform duration-700 group-hover:scale-105"
+          loading="lazy"
+        />
+        <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/15 to-transparent"></div>
+        <div class="absolute top-4 left-4">
+          <span class="px-3 py-1 rounded-full text-[11px] font-black uppercase tracking-wider bg-emerald-600 text-white shadow-md flex items-center gap-1.5">
+            <span class="w-2 h-2 rounded-full bg-white"></span>
+            Sede Central & Showroom Principal
+          </span>
+        </div>
+        <div class="absolute bottom-4 left-4 right-4 text-white">
+          <span class="text-[11px] uppercase tracking-widest text-gray-200 font-bold block">Fachada Oficial en Lima</span>
+          <p class="text-xl md:text-2xl font-black uppercase font-['Teko',sans-serif] tracking-wide leading-tight">
+            Av. Nicolás Arriola 2278, San Luis — Lima
+          </p>
+        </div>
+      </div>
+
+      <div class="lg:col-span-6 p-6 md:p-8 flex flex-col justify-between space-y-5">
+        <div class="space-y-3">
+          <div class="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-gray-500">
+            <span>GRUPO LAUZHER — CASA MATRIZ</span>
+          </div>
+          <h3 class="text-3xl md:text-4xl font-black uppercase text-gray-900 font-['Teko',sans-serif] tracking-tight leading-none">
+            VISITA NUESTRA TIENDA CENTRAL EN SAN LUIS
+          </h3>
+          <p class="text-xs md:text-sm text-gray-600 leading-relaxed">
+            Conoce toda la gama de motocicletas Nexus en exhibición, solicita tu evaluación de crédito directo con DNI en minutos y accede a nuestro almacén central de repuestos originales y taller autorizado.
+          </p>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-2 text-xs text-gray-700">
+            <a
+              href="https://www.google.com/maps/search/?api=1&query=Av.+Nicol%C3%A1s+Arriola+2278,+San+Luis,+Lima+-+Per%C3%BA"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="flex items-start gap-2 bg-white p-3 rounded-xl border border-gray-200 hover:border-gray-900 transition-colors"
+            >
+              <svg class="w-4 h-4 text-gray-800 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+              </svg>
+              <div>
+                <strong class="block text-gray-900">Dirección Exacta</strong>
+                <span class="underline">Av. Nicolás Arriola 2278, San Luis</span>
+              </div>
+            </a>
+
+            <div class="flex items-start gap-2 bg-white p-3 rounded-xl border border-gray-200">
+              <svg class="w-4 h-4 text-gray-800 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+              <div>
+                <strong class="block text-gray-900">Horario de Atención</strong>
+                <span>Lun - Sáb: 8:30 AM - 7:00 PM<br/>Dom: 9:00 AM - 2:00 PM</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="pt-3 border-t border-gray-200 flex flex-col sm:flex-row items-center gap-3">
+          <a
+            href="https://www.google.com/maps/search/?api=1&query=Av.+Nicol%C3%A1s+Arriola+2278,+San+Luis,+Lima+-+Per%C3%BA"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="w-full sm:w-auto flex-1 text-center py-3 px-5 rounded-full text-xs font-black uppercase tracking-wider text-white bg-gray-900 hover:bg-black transition-all flex items-center justify-center gap-2"
+          >
+            <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+            </svg>
+            Cómo Llegar (Google Maps)
+          </a>
+          <a
+            href="https://wa.me/51981234567?text=Hola%20Grupo%20Lauzher,%20deseo%20visitar%20la%20tienda%20central%20de%20Av.%20Nicol%C3%A1s%20Arriola%202278"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="w-full sm:w-auto flex-1 text-center py-3 px-5 rounded-full text-xs font-black uppercase tracking-wider text-white bg-emerald-600 hover:bg-emerald-700 shadow-md shadow-emerald-600/20 transition-all flex items-center justify-center gap-2"
+          >
+            Agendar Visita por WhatsApp
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Selected Region Header (shown when a province is selected) -->
+    <div id="selected-region-bar" class="hidden mb-6 flex items-center justify-between bg-gray-100 border border-gray-200 rounded-2xl px-5 py-3.5">
+      <div class="flex items-center gap-2.5">
+        <span class="w-2.5 h-2.5 rounded-full bg-emerald-500"></span>
+        <span class="text-sm font-bold text-gray-900 uppercase tracking-wider" id="selected-region-title">
+          Talleres Autorizados
+        </span>
+      </div>
+      <button
+        id="back-to-lima-btn"
+        type="button"
+        class="text-xs font-bold text-gray-700 hover:text-black underline cursor-pointer"
+      >
+        ← Volver a Sede Principal Lima
+      </button>
+    </div>
+
+    <!-- Dealers Cards Grid (Filtered to Lima by default so it stays compact) -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" id="dealers-grid">
+      {dealers
+        .filter((d) => !d.isMain)
+        .map((dealer) => (
+          <div
+            class={`dealer-card bg-gray-50 border border-gray-200/90 rounded-2xl p-6 hover:shadow-lg transition-all duration-300 flex-col justify-between ${
+              dealer.department === 'Lima' ? 'flex' : 'hidden'
+            }`}
+            data-department={dealer.department}
+          >
+            <div>
+              <div class="flex items-center justify-between mb-3">
+                <span class="px-2.5 py-0.5 text-[10px] font-black uppercase tracking-wider rounded bg-gray-200 text-gray-800">
+                  {dealer.department} — {dealer.district}
+                </span>
+                <span class="px-2 py-0.5 text-[10px] font-bold uppercase rounded bg-gray-900 text-white">
+                  TALLER AUTORIZADO
+                </span>
+              </div>
+
+              <h3 class="text-xl font-bold uppercase text-gray-900 font-['Teko',sans-serif] tracking-wide mb-2">
+                {dealer.name}
+              </h3>
+
+              <div class="space-y-2 text-xs text-gray-600 mb-4">
+                <a
+                  href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(dealer.address)}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="flex items-start gap-2 hover:text-gray-900 hover:underline transition-colors"
+                  title="Ver en Google Maps"
+                >
+                  <svg class="w-4 h-4 text-gray-600 flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                  </svg>
+                  <span>{dealer.address}</span>
+                </a>
+                <p class="flex items-center gap-2">
+                  <svg class="w-4 h-4 text-gray-500 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                  </svg>
+                  <span>{dealer.phone}</span>
+                </p>
+                <p class="flex items-center gap-2">
+                  <svg class="w-4 h-4 text-gray-500 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
+                  <span>{dealer.hours}</span>
+                </p>
+              </div>
+
+              <div class="flex flex-wrap gap-1 mb-5">
+                {dealer.services.map((svc) => (
+                  <span class="text-[10px] font-semibold bg-gray-200/80 text-gray-700 px-2 py-0.5 rounded">
+                    {svc}
+                  </span>
+                ))}
+              </div>
+            </div>
+
+            <div class="pt-4 border-t border-gray-200 flex items-center gap-3">
+              <a
+                href={`https://wa.me/${dealer.whatsapp}?text=Hola%20${encodeURIComponent(dealer.name)},%20deseo%20consultar%20sobre%20motos%20Nexus`}
+                target="_blank"
+                rel="noopener noreferrer"
+                class="flex-1 text-center py-2 px-3 text-xs font-bold uppercase rounded-lg text-emerald-700 bg-emerald-100 hover:bg-emerald-200 transition-colors flex items-center justify-center gap-1.5"
+              >
+                Contactar Sede
+              </a>
+              <a
+                href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(dealer.address)}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                class="p-2 rounded-lg text-gray-600 hover:text-black hover:bg-gray-200 transition-colors"
+                title="Ver en Google Maps"
+              >
+                <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                </svg>
+              </a>
+            </div>
+          </div>
+        ))}
+    </div>
+  </div>
+</section>
+
+<script>
+  const btnLima = document.getElementById('btn-lima-default');
+  const provinceSelect = document.getElementById('province-select') as HTMLSelectElement | null;
+  const mainLimaBanner = document.getElementById('main-lima-banner');
+  const regionBar = document.getElementById('selected-region-bar');
+  const regionTitle = document.getElementById('selected-region-title');
+  const backToLimaBtn = document.getElementById('back-to-lima-btn');
+  const dealerCards = document.querySelectorAll('.dealer-card');
+
+  function showLima() {
+    if (provinceSelect) provinceSelect.value = '';
+    btnLima?.classList.add('bg-gray-900', 'text-white', 'shadow-sm');
+    btnLima?.classList.remove('bg-gray-100', 'text-gray-700');
+    mainLimaBanner?.classList.remove('hidden');
+    regionBar?.classList.add('hidden');
+
+    dealerCards.forEach((card) => {
+      const el = card as HTMLElement;
+      if (el.getAttribute('data-department') === 'Lima') {
+        el.classList.remove('hidden');
+        el.classList.add('flex');
+      } else {
+        el.classList.add('hidden');
+        el.classList.remove('flex');
+      }
+    });
+  }
+
+  function showProvince(dept: string) {
+    if (!dept) {
+      showLima();
+      return;
+    }
+
+    btnLima?.classList.remove('bg-gray-900', 'text-white', 'shadow-sm');
+    btnLima?.classList.add('bg-gray-100', 'text-gray-700');
+    mainLimaBanner?.classList.add('hidden');
+    regionBar?.classList.remove('hidden');
+
+    if (regionTitle) {
+      regionTitle.textContent =
+        dept === 'ALL_PROVINCES'
+          ? 'Mostrando todos los talleres autorizados en Provincias'
+          : `Concesionarios y Talleres Autorizados en: ${dept}`;
+    }
+
+    dealerCards.forEach((card) => {
+      const el = card as HTMLElement;
+      const cardDept = el.getAttribute('data-department');
+      const match =
+        dept === 'ALL_PROVINCES' ? cardDept !== 'Lima' : cardDept === dept;
+
+      if (match) {
+        el.classList.remove('hidden');
+        el.classList.add('flex');
+      } else {
+        el.classList.add('hidden');
+        el.classList.remove('flex');
+      }
+    });
+  }
+
+  btnLima?.addEventListener('click', showLima);
+  backToLimaBtn?.addEventListener('click', showLima);
+  provinceSelect?.addEventListener('change', (e) => {
+    const val = (e.target as HTMLSelectElement).value;
+    showProvince(val);
+  });
+</script>

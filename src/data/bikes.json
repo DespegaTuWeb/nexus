@@ -1,0 +1,1259 @@
+[
+  {
+    "id": "nexus-scooter-125-tx",
+    "name": "NEXUS SCOOTER 125 TX",
+    "slug": "nexus-scooter-125-tx",
+    "category": "scooter",
+    "categoryLabel": "Scooters",
+    "tag": "ECONÓMICA",
+    "badge": "BAJO CONSUMO",
+    "year": 2026,
+    "priceFromPen": "S/ 3,814*",
+    "priceFromUsd": "$ 1,070*",
+    "rawPricePen": 3814,
+    "installmentsFrom": "S/ 128/mes*",
+    "cc": "125 cc",
+    "power": "8.8 HP / 7500 rpm",
+    "torque": "9.0 Nm / 5500 rpm",
+    "transmission": "Automática CVT",
+    "fuelSystem": "Carburador de alta eficiencia",
+    "cooling": "Aire",
+    "brakes": "Disco Delantero / Tambor",
+    "tankCapacity": "5.5 L",
+    "consumption": "175 km/gal",
+    "weight": "102 kg",
+    "maxSpeed": "90 km/h",
+    "colors": [
+      {
+        "name": "Rojo Fuego",
+        "hex": "#ef4444"
+      },
+      {
+        "name": "Azul Eléctrico",
+        "hex": "#2563eb"
+      },
+      {
+        "name": "Plata Metálico",
+        "hex": "#94a3b8"
+      }
+    ],
+    "image": "/images/bikes/scooter-125-tx.png",
+    "transparentImage": "/images/bikes/scooter-125-tx.png",
+    "description": "La puerta de entrada al mundo de los scooters. Súper liviana, fácil de parquear y con un consumo récord de hasta 175 km por galón.",
+    "highlights": [
+      "Peso ultra ligero de solo 102 kg",
+      "Rendimiento líder de 175 km por galón",
+      "Freno delantero de disco",
+      "Garantía 12 meses o 12,000 km"
+    ],
+    "featured": false,
+    "showcase": false,
+    "comboEligible": true
+  },
+  {
+    "id": "nexus-scooter-150-t",
+    "name": "NEXUS SCOOTER 150 T CLASSIC",
+    "slug": "nexus-scooter-150-t",
+    "category": "scooter",
+    "categoryLabel": "Scooters",
+    "tag": "CLÁSICA URBANA",
+    "badge": "CONFORT TOTAL",
+    "year": 2026,
+    "priceFromPen": "S/ 3,948*",
+    "priceFromUsd": "$ 1,141*",
+    "rawPricePen": 3948,
+    "installmentsFrom": "S/ 132/mes*",
+    "cc": "150 cc",
+    "power": "9.5 HP / 7500 rpm",
+    "torque": "9.8 Nm / 5500 rpm",
+    "transmission": "Automática CVT",
+    "fuelSystem": "Carburador",
+    "cooling": "Aire",
+    "brakes": "Disco Delantero / Tambor",
+    "tankCapacity": "5.8 L",
+    "consumption": "165 km/gal",
+    "weight": "106 kg",
+    "maxSpeed": "94 km/h",
+    "colors": [
+      {
+        "name": "Rojo Brillante",
+        "hex": "#dc2626"
+      },
+      {
+        "name": "Negro Clásico",
+        "hex": "#111827"
+      }
+    ],
+    "image": "/images/bikes/scooter-150-t.png",
+    "transparentImage": "/images/bikes/scooter-150-t.png",
+    "description": "Diseño clásico y funcional con posición de manejo sumamente relajada para trayectos universitarios y laborales.",
+    "highlights": [
+      "Manejo sumamente suave",
+      "Piso amplio y ergonómico",
+      "Garantía 12 meses o 12,000 km"
+    ],
+    "featured": false,
+    "showcase": false,
+    "comboEligible": true
+  },
+  {
+    "id": "nexus-150-ch1",
+    "name": "NEXUS 150 CH1",
+    "slug": "nexus-150-ch1",
+    "category": "pisteras",
+    "categoryLabel": "Pisteras",
+    "tag": "CALLE & CARGA",
+    "badge": "PARRILLA REFORZADA",
+    "year": 2026,
+    "priceFromPen": "S/ 3,950*",
+    "priceFromUsd": "$ 1,120*",
+    "rawPricePen": 3950,
+    "installmentsFrom": "S/ 132/mes*",
+    "cc": "150 cc",
+    "power": "12.0 HP / 8000 rpm",
+    "torque": "11.5 Nm / 6500 rpm",
+    "transmission": "Mecánica 5 velocidades",
+    "fuelSystem": "Carburador de alta eficiencia",
+    "cooling": "Aire natural por aletas",
+    "brakes": "Freno de Disco Delantero / Tambor Posterior",
+    "tankCapacity": "13.0 L",
+    "consumption": "145 km/gal",
+    "weight": "118 kg",
+    "maxSpeed": "105 km/h",
+    "colors": [
+      {
+        "name": "Rojo Furia",
+        "hex": "#ef4444"
+      },
+      {
+        "name": "Negro Clásico",
+        "hex": "#111827"
+      }
+    ],
+    "image": "/images/bikes/multiproposito-150-ch1.png",
+    "transparentImage": "/images/bikes/multiproposito-150-ch1.png",
+    "description": "Motocicleta lineal urbana de máxima resistencia y bajo consumo. Diseñada con amplia parrilla trasera de fábrica, chasis tubular reforzado y doble amortiguador posterior para trabajo continuo y transporte diario.",
+    "highlights": [
+      "Amplia parrilla posterior reforzada de fábrica para carga",
+      "Motor varillero 150cc de alto torque y repuestos sumamente económicos",
+      "Doble amortiguador posterior con resortes de alta resistencia",
+      "Faro frontal aerodinámico con protector de viento",
+      "Garantía oficial Grupo Lauzher por 1 año o 12,000 KM (Sólo Motor)"
+    ],
+    "featured": false,
+    "showcase": false,
+    "comboEligible": true
+  },
+  {
+    "id": "nexus-150-gl",
+    "name": "NEXUS 150 GL",
+    "slug": "nexus-150-gl",
+    "category": "pisteras",
+    "categoryLabel": "Pisteras",
+    "tag": "CALLE",
+    "badge": "EFICIENCIA PURA",
+    "year": 2026,
+    "priceFromPen": "S/ 4,320*",
+    "priceFromUsd": "$ 1,234*",
+    "rawPricePen": 4320,
+    "installmentsFrom": "S/ 145/mes*",
+    "cc": "150 cc",
+    "power": "11.5 HP / 7500 rpm",
+    "torque": "11.0 Nm / 5500 rpm",
+    "transmission": "Mecánica 5 velocidades",
+    "fuelSystem": "Carburador",
+    "cooling": "Aire",
+    "brakes": "Disco Delantero / Tambor Trasero",
+    "tankCapacity": "11.0 L",
+    "consumption": "165 km/gal",
+    "weight": "110 kg",
+    "maxSpeed": "98 km/h",
+    "colors": [
+      {
+        "name": "Rojo Rubí",
+        "hex": "#b91c1c"
+      },
+      {
+        "name": "Azul Noche",
+        "hex": "#1e3a8a"
+      }
+    ],
+    "image": "/images/bikes/150-gl.png",
+    "transparentImage": "/images/bikes/150-gl.png",
+    "description": "La moto de calle por excelencia. Ágil en curvas cerradas, fácil de estacionar en cualquier lugar y con un motor indestructible.",
+    "highlights": [
+      "Arranque eléctrico y pedal",
+      "Asiento biplaza antideslizante",
+      "Bajo costo de mantenimiento",
+      "Garantía 12 meses o 12,000 km"
+    ],
+    "featured": false,
+    "showcase": false,
+    "comboEligible": true
+  },
+  {
+    "id": "nexus-150-delivery",
+    "name": "NEXUS 150 DELIVERY CARGO",
+    "slug": "nexus-150-delivery",
+    "category": "pisteras",
+    "categoryLabel": "Pisteras",
+    "tag": "DELIVERY PRO",
+    "badge": "EQUIPADA PARA CARGA",
+    "year": 2026,
+    "priceFromPen": "S/ 4,375*",
+    "priceFromUsd": "$ 1,250*",
+    "rawPricePen": 4375,
+    "installmentsFrom": "S/ 147/mes*",
+    "cc": "150 cc",
+    "power": "11.8 HP / 8000 rpm",
+    "torque": "11.2 Nm / 5500 rpm",
+    "transmission": "Mecánica 5 velocidades",
+    "fuelSystem": "Carburador",
+    "cooling": "Aire",
+    "brakes": "Disco Delantero / Tambor Posterior",
+    "tankCapacity": "13.0 L",
+    "consumption": "160 km/gal",
+    "weight": "115 kg",
+    "maxSpeed": "98 km/h",
+    "colors": [
+      {
+        "name": "Rojo Delivery",
+        "hex": "#ef4444"
+      },
+      {
+        "name": "Blanco Puro",
+        "hex": "#f3f4f6"
+      }
+    ],
+    "image": "/images/bikes/multiproposito-150-delivery.png",
+    "transparentImage": "/images/bikes/multiproposito-150-delivery.png",
+    "description": "Configurada especialmente para trabajo de mensajería, delivery y carga pesada. Parrilla extra grande soldada de fábrica que soporta cajas de gran volumen sin balanceo.",
+    "highlights": [
+      "Parrilla trasera reforzada de máxima extensión",
+      "Tanque de 13 litros para jornadas completas sin repostar",
+      "Asiento monoplaza cómodo con espacio trasero liberado para carga",
+      "Garantía 12 meses o 12,000 km"
+    ],
+    "featured": false,
+    "showcase": false,
+    "comboEligible": true
+  },
+  {
+    "id": "nexus-150-dk",
+    "name": "NEXUS 150 DK",
+    "slug": "nexus-150-dk",
+    "category": "pisteras",
+    "categoryLabel": "Pisteras",
+    "tag": "TODO TERRENO 150",
+    "badge": "LIGERA Y FUERTE",
+    "year": 2026,
+    "priceFromPen": "S/ 4,480*",
+    "priceFromUsd": "$ 1,280*",
+    "rawPricePen": 4480,
+    "installmentsFrom": "S/ 150/mes*",
+    "cc": "150 cc",
+    "power": "12.0 HP / 8000 rpm",
+    "torque": "11.4 Nm / 6000 rpm",
+    "transmission": "Mecánica 5 velocidades",
+    "fuelSystem": "Carburador",
+    "cooling": "Aire",
+    "brakes": "Disco Delantero / Tambor Trasero",
+    "tankCapacity": "10.5 L",
+    "consumption": "150 km/gal",
+    "weight": "116 kg",
+    "maxSpeed": "102 km/h",
+    "colors": [
+      {
+        "name": "Rojo & Negro",
+        "hex": "#ef4444"
+      },
+      {
+        "name": "Azul Eléctrico",
+        "hex": "#2563eb"
+      }
+    ],
+    "image": "/images/bikes/multiproposito-150-dk.png",
+    "transparentImage": "/images/bikes/multiproposito-150-dk.png",
+    "description": "Formato todoterreno en motor de 150cc. Mayor altura al piso que una pistera para atravesar baches, rompemuelles y trochas sin tocar el chasis.",
+    "highlights": [
+      "Suspensión delantera con mayor recorrido",
+      "Aros de radios para absorber imperfecciones",
+      "Garantía 12 meses o 12,000 km"
+    ],
+    "featured": false,
+    "showcase": false,
+    "comboEligible": true
+  },
+  {
+    "id": "nexus-150-plusor",
+    "name": "NEXUS 150 PULSOR",
+    "slug": "nexus-150-plusor",
+    "category": "pisteras",
+    "categoryLabel": "Pisteras",
+    "tag": "MODERNA",
+    "badge": "DISEÑO URBANO",
+    "year": 2026,
+    "priceFromPen": "S/ 4,515*",
+    "priceFromUsd": "$ 1,290*",
+    "rawPricePen": 4515,
+    "installmentsFrom": "S/ 151/mes*",
+    "cc": "150 cc",
+    "power": "12.2 HP / 8000 rpm",
+    "torque": "11.5 Nm / 6000 rpm",
+    "transmission": "Mecánica 5 velocidades",
+    "fuelSystem": "Carburador",
+    "cooling": "Aire",
+    "brakes": "Disco Delantero / Tambor Trasero",
+    "tankCapacity": "13.0 L",
+    "consumption": "155 km/gal",
+    "weight": "115 kg",
+    "maxSpeed": "100 km/h",
+    "colors": [
+      {
+        "name": "Rojo Fuego",
+        "hex": "#ef4444"
+      },
+      {
+        "name": "Negro Grafito",
+        "hex": "#1f2937"
+      }
+    ],
+    "image": "/images/bikes/multiproposito-150-plusor.png",
+    "transparentImage": "/images/bikes/multiproposito-150-plusor.png",
+    "description": "Estilo moderno con chasis ligero. Perfecta para quienes buscan una moto atractiva para movilizarse a diario sin gastar de más.",
+    "highlights": [
+      "Tanque con alerones laterales aerodinámicos",
+      "Faro frontal de gran potencia luminosa",
+      "Frenos de disco ventilado",
+      "Garantía 12 meses o 12,000 km"
+    ],
+    "featured": false,
+    "showcase": false,
+    "comboEligible": true
+  },
+  {
+    "id": "nexus-200-cb3",
+    "name": "NEXUS 200 CB3",
+    "slug": "nexus-200-cb3",
+    "category": "pisteras",
+    "categoryLabel": "Pisteras",
+    "tag": "UTILITARIA",
+    "badge": "IMBATIBLE",
+    "year": 2026,
+    "priceFromPen": "S/ 4,855*",
+    "priceFromUsd": "$ 1,399*",
+    "rawPricePen": 4855,
+    "installmentsFrom": "S/ 163/mes*",
+    "cc": "200 cc",
+    "power": "15.5 HP / 7500 rpm",
+    "torque": "14.8 Nm / 5500 rpm",
+    "transmission": "Mecánica 5 velocidades",
+    "fuelSystem": "Carburador",
+    "cooling": "Aire",
+    "brakes": "Disco Delantero / Tambor Trasero",
+    "tankCapacity": "12.0 L",
+    "consumption": "148 km/gal",
+    "weight": "118 kg",
+    "maxSpeed": "105 km/h",
+    "colors": [
+      {
+        "name": "Rojo Deportivo",
+        "hex": "#ef4444"
+      },
+      {
+        "name": "Negro Mate",
+        "hex": "#1f2937"
+      }
+    ],
+    "image": "/images/bikes/multiproposito-200-cb3.png",
+    "transparentImage": "/images/bikes/multiproposito-200-cb3.png",
+    "description": "Un clásico probado por miles de mototaxistas y repartidores peruanos. Motor duradero de bajo mantenimiento y excelente consumo.",
+    "highlights": [
+      "Motor varillero de gran fuerza en bajas revoluciones",
+      "Asiento extra acolchado para largas jornadas",
+      "Parrilla posterior reforzada",
+      "Garantía 12 meses o 12,000 km"
+    ],
+    "featured": false,
+    "showcase": false,
+    "comboEligible": true
+  },
+  {
+    "id": "nexus-scooter-150-tax",
+    "name": "NEXUS SCOOTER 150 TAX",
+    "slug": "nexus-scooter-150-tax",
+    "category": "scooter",
+    "categoryLabel": "Scooters",
+    "tag": "AUTOMÁTICA CVT",
+    "badge": "TOP EN CIUDAD",
+    "year": 2026,
+    "priceFromPen": "S/ 4,869*",
+    "priceFromUsd": "$ 1,399*",
+    "rawPricePen": 4869,
+    "installmentsFrom": "S/ 163/mes*",
+    "cc": "150 cc",
+    "power": "9.5 HP / 7500 rpm",
+    "torque": "9.8 Nm / 6000 rpm",
+    "transmission": "Automática CVT (Acelera y frena)",
+    "fuelSystem": "Carburador electrónico eficiente",
+    "cooling": "Aire forzado por turbina",
+    "brakes": "Disco Delantero / Tambor Trasero",
+    "tankCapacity": "6.0 L",
+    "consumption": "165 km/gal",
+    "weight": "108 kg",
+    "maxSpeed": "95 km/h",
+    "colors": [
+      {
+        "name": "Amarillo Taxi Urbano",
+        "hex": "#facc15"
+      },
+      {
+        "name": "Blanco Puro",
+        "hex": "#f3f4f6"
+      },
+      {
+        "name": "Negro Piano",
+        "hex": "#111827"
+      }
+    ],
+    "image": "/images/bikes/scooter-150-tax.png",
+    "transparentImage": "/images/bikes/scooter-150-tax.png",
+    "description": "Olvídate de hacer cambios de marcha. El scooter 150 TAX es la solución más práctica y económica para el tráfico de la ciudad, con cajuela bajo el asiento y piso plano para paquetes.",
+    "highlights": [
+      "Transmisión automática CVT sin embrague",
+      "Piso plano ideal para transportar bolsas o cajas",
+      "Cajuela espaciosa bajo el asiento para casco",
+      "Arranque eléctrico con botón y pedal de emergencia",
+      "Garantía oficial 12 meses o 12,000 km"
+    ],
+    "featured": true,
+    "showcase": true,
+    "comboEligible": true
+  },
+  {
+    "id": "nexus-britania-69",
+    "name": "NEXUS BRITANIA 69",
+    "slug": "nexus-britania-69",
+    "category": "caferacer",
+    "categoryLabel": "Cafe Racer",
+    "tag": "VINTAGE RETRO",
+    "badge": "DISEÑO DE AUTOR",
+    "year": 2026,
+    "priceFromPen": "S/ 4,880*",
+    "priceFromUsd": "$ 1,395*",
+    "rawPricePen": 4880,
+    "installmentsFrom": "S/ 164/mes*",
+    "cc": "150 cc",
+    "power": "16.5 HP / 7500 rpm",
+    "torque": "15.8 Nm / 6000 rpm",
+    "transmission": "Mecánica 5 velocidades",
+    "fuelSystem": "Carburador",
+    "cooling": "Aire con aletas cromadas",
+    "brakes": "Disco Delantero / Tambor Trasero",
+    "tankCapacity": "14.0 L tipo gota",
+    "consumption": "145 km/gal",
+    "weight": "128 kg",
+    "maxSpeed": "115 km/h",
+    "colors": [
+      {
+        "name": "Rojo Británico Clásico",
+        "hex": "#b91c1c"
+      },
+      {
+        "name": "Negro Satinado Oro",
+        "hex": "#d97706"
+      }
+    ],
+    "image": "/images/bikes/caferacer-britania-69.png",
+    "transparentImage": "/images/bikes/caferacer-britania-69.png",
+    "description": "El homenaje definitivo a la época dorada del motociclismo. Tanque esculpido en gota, asiento café racer en cuero sintético acanalado y faro circular vintage con aro cromado.",
+    "highlights": [
+      "Asiento café racer biplaza con costuras estilo diamante",
+      "Faro circular retro clásico con protector de rejilla",
+      "Espejos retrovisores de extremo de manillar (bar-end mirrors)",
+      "Escape vintage tipo trompeta con acabado satinado",
+      "Garantía oficial Grupo Lauzher 12 meses o 12,000 km"
+    ],
+    "featured": false,
+    "showcase": false,
+    "comboEligible": true
+  },
+  {
+    "id": "nexus-scooter-150-t3",
+    "name": "NEXUS SCOOTER 150 T3",
+    "slug": "nexus-scooter-150-t3",
+    "category": "scooter",
+    "categoryLabel": "Scooters",
+    "tag": "URBAN GLIDE",
+    "badge": "ÁGIL Y CÓMODA",
+    "year": 2026,
+    "priceFromPen": "S/ 4,890*",
+    "priceFromUsd": "$ 1,380*",
+    "rawPricePen": 4890,
+    "installmentsFrom": "S/ 164/mes*",
+    "cc": "150 cc",
+    "power": "9.8 HP / 7500 rpm",
+    "torque": "10.0 Nm / 5500 rpm",
+    "transmission": "Automática CVT",
+    "fuelSystem": "Carburador",
+    "cooling": "Aire Forzado",
+    "brakes": "Disco Delantero / Tambor",
+    "tankCapacity": "6.0 L",
+    "consumption": "162 km/gal",
+    "weight": "110 kg",
+    "maxSpeed": "98 km/h",
+    "colors": [
+      {
+        "name": "Verde Lima",
+        "hex": "#84cc16"
+      },
+      {
+        "name": "Rojo Pasión",
+        "hex": "#ef4444"
+      }
+    ],
+    "image": "/images/bikes/scooter-150-t3.png",
+    "transparentImage": "/images/bikes/scooter-150-t3.png",
+    "description": "Líneas redondeadas y aerodinámicas diseñadas para abrirse paso con total libertad en horas punta sin esfuerzo alguno.",
+    "highlights": [
+      "Chasis ligero de bajo centro de gravedad",
+      "Guantera delantera con cerradura",
+      "Excelente rendimiento de combustible",
+      "Garantía 12 meses o 12,000 km"
+    ],
+    "featured": false,
+    "showcase": false,
+    "comboEligible": true
+  },
+  {
+    "id": "nexus-scooter-150-tx",
+    "name": "NEXUS SCOOTER 150 TX",
+    "slug": "nexus-scooter-150-tx",
+    "category": "scooter",
+    "categoryLabel": "Scooters",
+    "tag": "SPORT SCOOTER",
+    "badge": "MÁXIMA POTENCIA",
+    "year": 2026,
+    "priceFromPen": "S/ 4,990*",
+    "priceFromUsd": "$ 1,420*",
+    "rawPricePen": 4990,
+    "installmentsFrom": "S/ 167/mes*",
+    "cc": "150 cc",
+    "power": "10.0 HP / 7500 rpm",
+    "torque": "10.2 Nm / 6000 rpm",
+    "transmission": "Automática CVT",
+    "fuelSystem": "Carburador",
+    "cooling": "Aire Forzado",
+    "brakes": "Disco Delantero / Disco Trasero",
+    "tankCapacity": "6.5 L",
+    "consumption": "158 km/gal",
+    "weight": "114 kg",
+    "maxSpeed": "102 km/h",
+    "colors": [
+      {
+        "name": "Verde Flúor",
+        "hex": "#22c55e"
+      },
+      {
+        "name": "Negro Carbón",
+        "hex": "#111827"
+      }
+    ],
+    "image": "/images/bikes/scooter-150-tx.png",
+    "transparentImage": "/images/bikes/scooter-150-tx.png",
+    "description": "Doble disco de freno y llantas anchas para mayor agarre en curvas y frenado de emergencia sobre piso húmedo.",
+    "highlights": [
+      "Frenos de disco en ambas ruedas",
+      "Aros de aleación deportiva",
+      "Suspensión trasera regulable",
+      "Garantía 12 meses o 12,000 km"
+    ],
+    "featured": false,
+    "showcase": false,
+    "comboEligible": true
+  },
+  {
+    "id": "nexus-150-puma",
+    "name": "NEXUS 150 PUMA",
+    "slug": "nexus-150-puma",
+    "category": "pisteras",
+    "categoryLabel": "Pisteras",
+    "tag": "AHORRO TOTAL",
+    "badge": "MÁS ECONÓMICA",
+    "year": 2026,
+    "priceFromPen": "S/ 5,050*",
+    "priceFromUsd": "$ 1,442*",
+    "rawPricePen": 5050,
+    "installmentsFrom": "S/ 169/mes*",
+    "cc": "150 cc",
+    "power": "11.8 HP / 8000 rpm",
+    "torque": "11.2 Nm / 6000 rpm",
+    "transmission": "Mecánica 5 velocidades",
+    "fuelSystem": "Carburador",
+    "cooling": "Aire",
+    "brakes": "Disco Delantero / Tambor Trasero",
+    "tankCapacity": "12.0 L",
+    "consumption": "160 km/gal",
+    "weight": "112 kg",
+    "maxSpeed": "98 km/h",
+    "colors": [
+      {
+        "name": "Negro con Rojo",
+        "hex": "#ef4444"
+      },
+      {
+        "name": "Azul Metálico",
+        "hex": "#2563eb"
+      }
+    ],
+    "image": "/images/bikes/multiproposito-150-puma.png",
+    "transparentImage": "/images/bikes/multiproposito-150-puma.png",
+    "description": "La moto de 150cc más rentable para empezar a generar ingresos inmediatos en delivery o mensajería corporativa.",
+    "highlights": [
+      "Consumo récord de hasta 160 km por galón",
+      "Repuestos disponibles en cualquier ferretería o tienda de motos",
+      "Excelente maniobrabilidad",
+      "Garantía 12 meses o 12,000 km"
+    ],
+    "featured": false,
+    "showcase": false,
+    "comboEligible": true
+  },
+  {
+    "id": "nexus-200-zz",
+    "name": "NEXUS 200 ZZ",
+    "slug": "nexus-200-zz",
+    "category": "todoterreno",
+    "categoryLabel": "Todoterreno",
+    "tag": "POPULAR",
+    "badge": "TOP VENTAS",
+    "year": 2026,
+    "priceFromPen": "S/ 5,076*",
+    "priceFromUsd": "$ 1,467*",
+    "rawPricePen": 5076,
+    "installmentsFrom": "S/ 170/mes*",
+    "cc": "200 cc",
+    "power": "16.8 HP / 8000 rpm",
+    "torque": "15.5 Nm / 6500 rpm",
+    "transmission": "Mecánica 5 velocidades",
+    "fuelSystem": "Carburador optimizado",
+    "cooling": "Aire",
+    "brakes": "Disco Delantero / Tambor Trasero",
+    "tankCapacity": "12.0 L",
+    "consumption": "140 km/gal",
+    "weight": "128 kg",
+    "maxSpeed": "115 km/h",
+    "colors": [
+      {
+        "name": "Rojo Deportivo",
+        "hex": "#ef4444"
+      },
+      {
+        "name": "Negro Mate",
+        "hex": "#1f2937"
+      }
+    ],
+    "image": "/images/bikes/todoterreno-200-zz.png",
+    "transparentImage": "/images/bikes/todoterreno-200-zz.png",
+    "description": "Una de las favoritas del Perú. La 200 ZZ combina la agilidad de una moto de ciudad con la resistencia y altura de una todoterreno pura.",
+    "highlights": [
+      "Excelente relación peso-potencia",
+      "Arranque eléctrico y a pedal",
+      "Luces direccionales LED flexibles",
+      "Mantenimiento rápido y sencillo con repuestos en todo el país",
+      "Garantía 12 meses o 12,000 km"
+    ],
+    "featured": true,
+    "showcase": false,
+    "comboEligible": true
+  },
+  {
+    "id": "nexus-scooter-150-t4",
+    "name": "NEXUS SCOOTER 150 T4",
+    "slug": "nexus-scooter-150-t4",
+    "category": "scooter",
+    "categoryLabel": "Scooters",
+    "tag": "MAXI SCOOTER",
+    "badge": "DISEÑO PREMIUM",
+    "year": 2026,
+    "priceFromPen": "S/ 5,190*",
+    "priceFromUsd": "$ 1,450*",
+    "rawPricePen": 5190,
+    "installmentsFrom": "S/ 174/mes*",
+    "cc": "150 cc",
+    "power": "10.2 HP / 7500 rpm",
+    "torque": "10.5 Nm / 6000 rpm",
+    "transmission": "Automática CVT Continua",
+    "fuelSystem": "Carburador de flujo constante",
+    "cooling": "Aire Forzado",
+    "brakes": "Freno de Disco Delantero Lobulado / Tambor",
+    "tankCapacity": "6.5 L",
+    "consumption": "160 km/gal",
+    "weight": "112 kg",
+    "maxSpeed": "100 km/h",
+    "colors": [
+      {
+        "name": "Anaranjado Neón",
+        "hex": "#f97316"
+      },
+      {
+        "name": "Negro Mate",
+        "hex": "#1f2937"
+      },
+      {
+        "name": "Blanco Glaciar",
+        "hex": "#f3f4f6"
+      }
+    ],
+    "image": "/images/bikes/scooter-150-t4.png",
+    "transparentImage": "/images/bikes/scooter-150-t4.png",
+    "description": "Estilo deportivo agresivo con faro frontal afilado y detalles en fibra. Máxima comodidad para viajes diarios entre distritos con frenos de respuesta inmediata.",
+    "highlights": [
+      "Faro frontal de doble óptica LED de gran cobertura",
+      "Tablero digital de pantalla ancha con reloj",
+      "Puerto de carga USB integrado en guantera",
+      "Asiento de dos niveles con costuras reforzadas",
+      "Garantía 12 meses o 12,000 km"
+    ],
+    "featured": true,
+    "showcase": true,
+    "comboEligible": true
+  },
+  {
+    "id": "nexus-200-vx",
+    "name": "NEXUS 200 VX",
+    "slug": "nexus-200-vx",
+    "category": "caferacer",
+    "categoryLabel": "Cafe Racer",
+    "tag": "SCRAMBLER RETRO",
+    "badge": "ESTILO PURO",
+    "year": 2026,
+    "priceFromPen": "S/ 5,215*",
+    "priceFromUsd": "$ 1,490*",
+    "rawPricePen": 5215,
+    "installmentsFrom": "S/ 175/mes*",
+    "cc": "200 cc",
+    "power": "16.0 HP / 7500 rpm",
+    "torque": "15.2 Nm / 6000 rpm",
+    "transmission": "Mecánica 5 velocidades",
+    "fuelSystem": "Carburador",
+    "cooling": "Aire",
+    "brakes": "Disco Delantero / Tambor Trasero",
+    "tankCapacity": "12.5 L",
+    "consumption": "142 km/gal",
+    "weight": "125 kg",
+    "maxSpeed": "112 km/h",
+    "colors": [
+      {
+        "name": "Plata Titanio & Café",
+        "hex": "#64748b"
+      },
+      {
+        "name": "Negro Mate",
+        "hex": "#1f2937"
+      }
+    ],
+    "image": "/images/bikes/caferacer-200-vx.png",
+    "transparentImage": "/images/bikes/caferacer-200-vx.png",
+    "description": "Una auténtica scrambler con alma clásica. Llantas de dibujo mixto, manillar elevado y posición relajada para pasear por la ciudad con la máxima personalidad.",
+    "highlights": [
+      "Llantas mixtas aptas para asfalto y caminos secundarios",
+      "Manillar scrambler ancho con barra transversal",
+      "Tablero monorojal con odómetro analógico",
+      "Garantía oficial 12 meses o 12,000 km"
+    ],
+    "featured": false,
+    "showcase": false,
+    "comboEligible": true
+  },
+  {
+    "id": "nexus-200-dm",
+    "name": "NEXUS 200 DM",
+    "slug": "nexus-200-dm",
+    "category": "todoterreno",
+    "categoryLabel": "Todoterreno",
+    "tag": "ENDURO URBANO",
+    "badge": "RENDIMIENTO",
+    "year": 2026,
+    "priceFromPen": "S/ 5,290*",
+    "priceFromUsd": "$ 1,520*",
+    "rawPricePen": 5290,
+    "installmentsFrom": "S/ 177/mes*",
+    "cc": "200 cc",
+    "power": "16.2 HP / 7500 rpm",
+    "torque": "15.0 Nm / 6000 rpm",
+    "transmission": "Mecánica 5 velocidades",
+    "fuelSystem": "Carburador",
+    "cooling": "Aire",
+    "brakes": "Disco Delantero / Disco Trasero",
+    "tankCapacity": "11.5 L",
+    "consumption": "142 km/gal",
+    "weight": "126 kg",
+    "maxSpeed": "112 km/h",
+    "colors": [
+      {
+        "name": "Amarillo Aventura",
+        "hex": "#eab308"
+      },
+      {
+        "name": "Rojo Pasión",
+        "hex": "#ef4444"
+      }
+    ],
+    "image": "/images/bikes/todoterreno-200-dm.png",
+    "transparentImage": "/images/bikes/todoterreno-200-dm.png",
+    "description": "Chasis ágil y respuesta inmediata de acelerador. Perfecta para quienes quieren sortear el tráfico de Lima de lunes a viernes y escapar a la trocha los fines de semana.",
+    "highlights": [
+      "Frenos de disco en ambas ruedas",
+      "Suspensión delantera con guardapolvos de goma",
+      "Tablero de fácil lectura",
+      "Asiento largo de doble nivel",
+      "Garantía 12 meses o 12,000 km"
+    ],
+    "featured": false,
+    "showcase": false,
+    "comboEligible": true
+  },
+  {
+    "id": "nexus-200-puma",
+    "name": "NEXUS 200 PUMA",
+    "slug": "nexus-200-puma",
+    "category": "pisteras",
+    "categoryLabel": "Pisteras",
+    "tag": "TRABAJO PESADO",
+    "badge": "RENDIMIENTO MÁXIMO",
+    "year": 2026,
+    "priceFromPen": "S/ 5,379*",
+    "priceFromUsd": "$ 1,550*",
+    "rawPricePen": 5379,
+    "installmentsFrom": "S/ 180/mes*",
+    "cc": "200 cc",
+    "power": "15.8 HP / 7500 rpm",
+    "torque": "15.0 Nm / 5500 rpm",
+    "transmission": "Mecánica 5 velocidades",
+    "fuelSystem": "Carburador de fácil calibración",
+    "cooling": "Aire",
+    "brakes": "Disco Delantero / Tambor Trasero",
+    "tankCapacity": "13.0 L",
+    "consumption": "145 km/gal",
+    "weight": "120 kg",
+    "maxSpeed": "105 km/h",
+    "colors": [
+      {
+        "name": "Rojo Trabajo",
+        "hex": "#dc2626"
+      },
+      {
+        "name": "Negro Profundo",
+        "hex": "#111827"
+      },
+      {
+        "name": "Azul Real",
+        "hex": "#2563eb"
+      }
+    ],
+    "image": "/images/bikes/multiproposito-200-puma.png",
+    "transparentImage": "/images/bikes/multiproposito-200-puma.png",
+    "description": "La fiera de la carga y el transporte diario. Diseñada para soportar jornadas de más de 12 horas continuas con mínimo costo de combustible.",
+    "highlights": [
+      "Parrilla trasera reforzada con soporte lateral para carga",
+      "Doble amortiguador trasero de espirales dobles",
+      "Chasis tubular en acero al carbono reforzado",
+      "Garantía oficial 12 meses o 12,000 km"
+    ],
+    "featured": true,
+    "showcase": false,
+    "comboEligible": true
+  },
+  {
+    "id": "nexus-200-ss",
+    "name": "NEXUS 200 SS",
+    "slug": "nexus-200-ss",
+    "category": "deportivas",
+    "categoryLabel": "Deportivas",
+    "tag": "URBAN SPORT",
+    "badge": "ESTILO URBANO",
+    "year": 2026,
+    "priceFromPen": "S/ 5,715*",
+    "priceFromUsd": "$ 1,676*",
+    "rawPricePen": 5715,
+    "installmentsFrom": "S/ 191/mes*",
+    "cc": "200 cc",
+    "power": "16.8 HP / 8000 rpm",
+    "torque": "15.2 Nm / 6000 rpm",
+    "transmission": "Mecánica 5 velocidades",
+    "fuelSystem": "Carburador",
+    "cooling": "Aire",
+    "brakes": "Disco Delantero / Tambor Trasero",
+    "tankCapacity": "13.5 L",
+    "consumption": "140 km/gal",
+    "weight": "132 kg",
+    "maxSpeed": "118 km/h",
+    "colors": [
+      {
+        "name": "Negro con Amarillo Flúor",
+        "hex": "#eab308"
+      },
+      {
+        "name": "Gris Grafito",
+        "hex": "#4b5563"
+      }
+    ],
+    "image": "/images/bikes/deportiva-200-ss.png",
+    "transparentImage": "/images/bikes/deportiva-200-ss.png",
+    "description": "Líneas afiladas y actitud rebelde. La 200 SS ofrece una postura de conducción erguida pero agresiva, haciéndola muy cómoda y divertida.",
+    "highlights": [
+      "Aros de aleación de 17 pulgadas con filos de color",
+      "Luz frontal de doble proyector",
+      "Consumo de combustible sumamente económico",
+      "Garantía 12 meses o 12,000 km"
+    ],
+    "featured": false,
+    "showcase": false,
+    "comboEligible": true
+  },
+  {
+    "id": "nexus-200-rr",
+    "name": "NEXUS 200 RR",
+    "slug": "nexus-200-rr",
+    "category": "deportivas",
+    "categoryLabel": "Deportivas",
+    "tag": "SPORT NAKED",
+    "badge": "ÁGIL Y VELOZ",
+    "year": 2026,
+    "priceFromPen": "S/ 6,764*",
+    "priceFromUsd": "$ 1,949*",
+    "rawPricePen": 6764,
+    "installmentsFrom": "S/ 226/mes*",
+    "cc": "200 cc",
+    "power": "17.5 HP / 8000 rpm",
+    "torque": "16.0 Nm / 6500 rpm",
+    "transmission": "Mecánica 5 velocidades",
+    "fuelSystem": "Carburador de alta eficiencia",
+    "cooling": "Aire con radiador de aceite auxiliar",
+    "brakes": "Disco Delantero / Disco Trasero",
+    "tankCapacity": "13.0 L",
+    "consumption": "138 km/gal",
+    "weight": "135 kg",
+    "maxSpeed": "122 km/h",
+    "colors": [
+      {
+        "name": "Verde Racing & Negro",
+        "hex": "#16a34a"
+      },
+      {
+        "name": "Negro y Rojo",
+        "hex": "#ef4444"
+      }
+    ],
+    "image": "/images/bikes/deportiva-200-rr.png",
+    "transparentImage": "/images/bikes/deportiva-200-rr.png",
+    "description": "La dosis ideal de velocidad y practicidad. Perfecta para quienes buscan una moto deportiva de bajo consumo para rodar a diario y salir de ruta.",
+    "highlights": [
+      "Frenos de disco en ambas ruedas",
+      "Monoshock posterior regulable",
+      "Escape aerodinámico inferior",
+      "Tablero digital retroiluminado",
+      "Garantía 12 meses o 12,000 km"
+    ],
+    "featured": false,
+    "showcase": false,
+    "comboEligible": true
+  },
+  {
+    "id": "nexus-250-xl",
+    "name": "NEXUS 250 XL",
+    "slug": "nexus-250-xl",
+    "category": "todoterreno",
+    "categoryLabel": "Todoterreno",
+    "tag": "TODO TERRENO",
+    "badge": "CLÁSICA Y FUERTE",
+    "year": 2026,
+    "priceFromPen": "S/ 6,790*",
+    "priceFromUsd": "$ 1,950*",
+    "rawPricePen": 6790,
+    "installmentsFrom": "S/ 228/mes*",
+    "cc": "250 cc",
+    "power": "19.2 HP / 7500 rpm",
+    "torque": "18.5 Nm / 5500 rpm",
+    "transmission": "Mecánica 5 velocidades",
+    "fuelSystem": "Carburador japonés de precisión",
+    "cooling": "Aire",
+    "brakes": "Disco Delantero / Tambor Posterior",
+    "tankCapacity": "13.0 L",
+    "consumption": "130 km/gal",
+    "weight": "134 kg",
+    "maxSpeed": "115 km/h",
+    "colors": [
+      {
+        "name": "Verde Militar & Negro",
+        "hex": "#16a34a"
+      },
+      {
+        "name": "Rojo Fuego & Negro",
+        "hex": "#dc2626"
+      }
+    ],
+    "image": "/images/bikes/todoterreno-250-xl.png",
+    "transparentImage": "/images/bikes/todoterreno-250-xl.png",
+    "description": "La compañera incansable para trabajo rural, supervisión de campo y rutas no pavimentadas con bajo costo de mantenimiento y repuestos económicos.",
+    "highlights": [
+      "Motor balanceado para reducir vibraciones",
+      "Doble amortiguador posterior reforzado",
+      "Protector de cadena completo",
+      "Parrilla trasera de alta capacidad de carga",
+      "Garantía 12 meses o 12,000 km"
+    ],
+    "featured": false,
+    "showcase": false,
+    "comboEligible": true
+  },
+  {
+    "id": "nexus-250-xr",
+    "name": "NEXUS 250 XR",
+    "slug": "nexus-250-xr",
+    "category": "todoterreno",
+    "categoryLabel": "Todoterreno",
+    "tag": "TRAIL",
+    "badge": "MÁXIMA RESISTENCIA",
+    "year": 2026,
+    "priceFromPen": "S/ 6,890*",
+    "priceFromUsd": "$ 1,980*",
+    "rawPricePen": 6890,
+    "installmentsFrom": "S/ 231/mes*",
+    "cc": "250 cc",
+    "power": "19.5 HP / 7500 rpm",
+    "torque": "18.8 Nm / 6000 rpm",
+    "transmission": "Mecánica 5 velocidades",
+    "fuelSystem": "Carburador de alto rendimiento",
+    "cooling": "Aire forzado",
+    "brakes": "Disco Delantero y Trasero",
+    "tankCapacity": "12.0 L",
+    "consumption": "128 km/gal",
+    "weight": "136 kg",
+    "maxSpeed": "118 km/h",
+    "colors": [
+      {
+        "name": "Rojo Nexus",
+        "hex": "#ef4444"
+      },
+      {
+        "name": "Negro Brillante",
+        "hex": "#1f2937"
+      }
+    ],
+    "image": "/images/bikes/todoterreno-250-xr.png",
+    "transparentImage": "/images/bikes/todoterreno-250-xr.png",
+    "description": "Diseñada para las geografías más exigentes de la costa, sierra y selva. Excelente despegue del suelo y torque lineal que responde en pendientes pronunciadas.",
+    "highlights": [
+      "Gran despeje al suelo para obstáculos pesados",
+      "Cubiertas laterales flexibles resistentes a caídas",
+      "Faro frontal de alta penetración nocturna",
+      "Tablero con tacómetro y nivel de combustible",
+      "Garantía Lauzher de 12 meses o 12,000 km"
+    ],
+    "featured": false,
+    "showcase": false,
+    "comboEligible": true
+  },
+  {
+    "id": "nexus-250-adv",
+    "name": "NEXUS 250 ADV",
+    "slug": "nexus-250-adv",
+    "category": "todoterreno",
+    "categoryLabel": "Todoterreno",
+    "tag": "AVENTURA",
+    "badge": "LÍDER EN RUTA",
+    "year": 2026,
+    "priceFromPen": "S/ 7,990*",
+    "priceFromUsd": "$ 2,150*",
+    "rawPricePen": 7990,
+    "installmentsFrom": "S/ 268/mes*",
+    "cc": "250 cc",
+    "power": "20.5 HP / 8000 rpm",
+    "torque": "19.5 Nm / 6500 rpm",
+    "transmission": "Mecánica 6 velocidades",
+    "fuelSystem": "Inyección Electrónica EFI",
+    "cooling": "Refrigeración por Aire con Radiador de Aceite",
+    "brakes": "Disco Delantero y Trasero Ventilado",
+    "tankCapacity": "14.0 L (3.7 Gal)",
+    "consumption": "130 km/gal",
+    "weight": "146 kg",
+    "maxSpeed": "125 km/h",
+    "colors": [
+      {
+        "name": "Rojo Racing & Negro",
+        "hex": "#ef4444"
+      },
+      {
+        "name": "Negro Mate Asfalto",
+        "hex": "#1f2937"
+      },
+      {
+        "name": "Blanco Aventura",
+        "hex": "#f3f4f6"
+      }
+    ],
+    "image": "/images/bikes/todoterreno-250-adv.png",
+    "transparentImage": "/images/bikes/todoterreno-250-adv.png",
+    "description": "No te limites a bordo de tu TODOTERRENO. Diseñada para quienes buscan llevar todo a toda potencia sin límites. Sube a la 250 ADV y haz que cada kilómetro cuente con su chasis de alta rigidez y suspensión de largo recorrido.",
+    "highlights": [
+      "Parabrisas aerodinámico alto para viajes largos",
+      "Defensas laterales integradas para protección en trocha",
+      "Parrilla trasera reforzada apta para top case y alforjas",
+      "Frenos de disco lobulados con excelente disipación térmica",
+      "Garantía oficial de 12 meses o 12,000 km respaldada por Grupo Lauzher"
+    ],
+    "featured": true,
+    "showcase": true,
+    "comboEligible": true
+  },
+  {
+    "id": "nexus-250-tk",
+    "name": "NEXUS 250 TK",
+    "slug": "nexus-250-tk",
+    "category": "todoterreno",
+    "categoryLabel": "Todoterreno",
+    "tag": "CROSS ENDURO",
+    "badge": "ALTA DEMANDA",
+    "year": 2026,
+    "priceFromPen": "S/ 8,471*",
+    "priceFromUsd": "$ 2,441*",
+    "rawPricePen": 8471,
+    "installmentsFrom": "S/ 284/mes*",
+    "cc": "250 cc",
+    "power": "19.8 HP / 8000 rpm",
+    "torque": "19.0 Nm / 6000 rpm",
+    "transmission": "Mecánica 5 velocidades",
+    "fuelSystem": "Carburador con bomba de pique optimizado",
+    "cooling": "Refrigeración por Aire",
+    "brakes": "Disco Delantero / Disco Trasero",
+    "tankCapacity": "12.5 L",
+    "consumption": "125 km/gal",
+    "weight": "138 kg",
+    "maxSpeed": "120 km/h",
+    "colors": [
+      {
+        "name": "Rojo Fuego",
+        "hex": "#dc2626"
+      },
+      {
+        "name": "Negro Carbón",
+        "hex": "#111827"
+      }
+    ],
+    "image": "/images/bikes/todoterreno-250-tk.png",
+    "transparentImage": "/images/bikes/todoterreno-250-tk.png",
+    "description": "Potencia todoterreno sin concesiones. La 250 TK está equipada con aros de radios resistentes a impactos, suspensión delantera telescópica y monoshock reforzado para cualquier ruta del Perú.",
+    "highlights": [
+      "Aros de radios especiales para caminos de trocha",
+      "Monoshock posterior de largo recorrido con bieletas",
+      "Escape alto protegido contra el agua y piedras",
+      "Asiento ergonómico antideslizante para todo clima",
+      "Garantía oficial 12 meses o 12,000 km"
+    ],
+    "featured": false,
+    "showcase": false,
+    "comboEligible": true
+  },
+  {
+    "id": "nexus-250-rr",
+    "name": "NEXUS 250 RR RACING",
+    "slug": "nexus-250-rr",
+    "category": "deportivas",
+    "categoryLabel": "Deportivas",
+    "tag": "SUPER SPORT",
+    "badge": "EDICIÓN ESPECIAL",
+    "year": 2026,
+    "priceFromPen": "S/ 8,499*",
+    "priceFromUsd": "$ 2,299*",
+    "rawPricePen": 8499,
+    "installmentsFrom": "S/ 285/mes*",
+    "cc": "250 cc",
+    "power": "23.5 HP / 8500 rpm",
+    "torque": "21.5 Nm / 7000 rpm",
+    "transmission": "Mecánica 6 velocidades",
+    "fuelSystem": "Inyección Electrónica EFI",
+    "cooling": "Radiador de Líquido",
+    "brakes": "Disco Delantero y Trasero con Cáliper de Doble Pistón",
+    "tankCapacity": "14.5 L",
+    "consumption": "128 km/gal",
+    "weight": "150 kg",
+    "maxSpeed": "140 km/h",
+    "colors": [
+      {
+        "name": "Rojo Tricolor GP",
+        "hex": "#ef4444"
+      },
+      {
+        "name": "Azul Cobalto",
+        "hex": "#2563eb"
+      }
+    ],
+    "image": "/images/bikes/deportiva-250-rr.png",
+    "transparentImage": "/images/bikes/deportiva-250-rr.png",
+    "description": "ADN de competición en tus manos. La 250 RR ofrece frenado de respuesta milimétrica, chasis de doble viga perimetral y escape con resonancia grave de circuito.",
+    "highlights": [
+      "Chasis perimetral de máxima rigidez torsional",
+      "Frenos de disco sobredimensionados",
+      "Neumáticos radiales deportivos para agarre en curvas",
+      "Semimanillares ergonómicos tipo clip-on",
+      "Garantía oficial 12 meses o 12,000 km"
+    ],
+    "featured": true,
+    "showcase": true,
+    "comboEligible": true
+  },
+  {
+    "id": "nexus-250-rsport",
+    "name": "NEXUS 250 RS SPORT",
+    "slug": "nexus-250-rsport",
+    "category": "deportivas",
+    "categoryLabel": "Deportivas",
+    "tag": "SPORT RACING",
+    "badge": "TOP 1 PISTA",
+    "year": 2026,
+    "priceFromPen": "S/ 8,738*",
+    "priceFromUsd": "$ 2,299*",
+    "rawPricePen": 8738,
+    "installmentsFrom": "S/ 292/mes*",
+    "cc": "250 cc",
+    "power": "22.0 HP / 8500 rpm",
+    "torque": "21.0 Nm / 7000 rpm",
+    "transmission": "Mecánica 6 velocidades",
+    "fuelSystem": "Inyección Electrónica EFI",
+    "cooling": "Refrigeración Líquida",
+    "brakes": "Doble Disco Delantero Lobulado / Disco Trasero",
+    "tankCapacity": "15.0 L",
+    "consumption": "130 km/gal",
+    "weight": "152 kg",
+    "maxSpeed": "138 km/h",
+    "colors": [
+      {
+        "name": "Verde Ninja Racing",
+        "hex": "#22c55e"
+      },
+      {
+        "name": "Negro Mate Deportivo",
+        "hex": "#111827"
+      },
+      {
+        "name": "Rojo Tornado",
+        "hex": "#ef4444"
+      }
+    ],
+    "image": "/images/bikes/deportiva-250-rsport.png",
+    "transparentImage": "/images/bikes/deportiva-250-rsport.png",
+    "description": "Nacida para emocionar. Su diseño aerodinámico con carenado integral corta el viento para máxima estabilidad en autopista, entregando una postura deportiva inigualable.",
+    "highlights": [
+      "Carenado aerodinámico completo de estilo Superbike",
+      "Suspensión delantera telescópica invertida",
+      "Tablero 100% digital con velocímetro e indicador de cambios",
+      "Luces Full LED de alta intensidad frontal y posterior",
+      "Garantía oficial Grupo Lauzher 12 meses o 12,000 km"
+    ],
+    "featured": true,
+    "showcase": true,
+    "comboEligible": true
+  }
+]

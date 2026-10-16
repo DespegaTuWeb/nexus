@@ -1,0 +1,347 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import bikes from '../../data/bikes.json';
+
+const categories = [
+  { id: 'todas', label: 'Todos los Modelos' },
+  { id: 'pisteras', label: 'Pisteras' },
+  { id: 'deportivas', label: 'Deportivas' },
+  { id: 'scooter', label: 'Scooters' },
+  { id: 'todoterreno', label: 'Todoterreno' },
+  { id: 'caferacer', label: 'Cafe Racer' }
+];
+---
+
+<Layout
+  title="Catálogo Completo de Modelos Nexus Motos | Grupo Lauzher"
+  description="Explora todos los modelos oficiales de Nexus Motos en Perú: Pisteras, Deportivas, Scooters, Todoterreno y Cafe Racer con respaldo oficial de Grupo Lauzher."
+>
+  <!-- Header in Clean Light Gray / White -->
+  <section class="bg-gray-50 py-16 px-6 border-b border-gray-200">
+    <div class="max-w-7xl mx-auto text-center">
+      <span class="text-xs font-bold text-[#FF0000] uppercase tracking-widest font-['Teko',sans-serif] text-base">
+        LINEUP OFICIAL
+      </span>
+      <h1 class="text-5xl md:text-7xl font-black uppercase text-gray-900 font-['Teko',sans-serif] tracking-tight mt-1">
+        CATÁLOGO DE MOTOS <span class="text-[#FF0000]">NEXUS</span>
+      </h1>
+      <p class="text-gray-600 text-sm md:text-base max-w-2xl mx-auto mt-2 font-medium">
+        Encuentra la moto perfecta para tu estilo de vida o tu negocio, con el respaldo y garantía de Grupo Lauzher en todo el Perú.
+      </p>
+
+      <!-- Category Filter Buttons -->
+      <div class="mt-8 flex items-center justify-center gap-2 flex-wrap" id="catalog-category-tabs">
+        {categories.map((cat, i) => (
+          <button
+            class={`catalog-cat-btn px-5 py-2.5 rounded-full text-xs md:text-sm font-bold uppercase tracking-wider border transition-all cursor-pointer ${
+              i === 0
+                ? 'bg-[#FF0000] text-white border-[#FF0000] shadow-md active-cat'
+                : 'bg-white text-gray-700 hover:bg-gray-100 hover:text-black border-gray-300'
+            }`}
+            data-category={cat.id}
+          >
+            {cat.label}
+          </button>
+        ))}
+      </div>
+
+      <!-- Secondary Filter & Sorting Toolbar -->
+      <div class="mt-6 pt-6 border-t border-gray-200/80 flex flex-col md:flex-row items-center justify-between gap-4 max-w-5xl mx-auto">
+        <!-- Cilindrada Filters (Menor a Mayor) -->
+        <div class="flex items-center gap-1.5 flex-wrap justify-center">
+          <span class="text-xs font-bold uppercase text-gray-500 mr-1">Cilindrada:</span>
+          {['all', '125', '150', '200', '250'].map((ccVal, idx) => (
+            <button
+              class={`catalog-cc-btn px-3 py-1 rounded-full text-xs font-bold uppercase border transition-all cursor-pointer ${
+                idx === 0
+                  ? 'bg-gray-900 text-white border-gray-900'
+                  : 'bg-white text-gray-600 hover:bg-gray-100 border-gray-300'
+              }`}
+              data-cc={ccVal}
+            >
+              {ccVal === 'all' ? 'Todas' : `${ccVal} cc`}
+            </button>
+          ))}
+        </div>
+
+        <!-- Sorting Dropdown & Results Counter -->
+        <div class="flex items-center gap-4 w-full md:w-auto justify-between md:justify-end">
+          <span class="text-xs font-semibold text-gray-500 whitespace-nowrap" id="catalog-count">
+            {bikes.length} modelos
+          </span>
+
+          <div class="flex items-center gap-2">
+            <label for="catalog-sort" class="text-xs font-bold uppercase text-gray-500 whitespace-nowrap hidden sm:inline">
+              Ordenar por:
+            </label>
+            <select
+              id="catalog-sort"
+              class="text-xs font-bold uppercase tracking-wider bg-white border border-gray-300 rounded-lg px-3 py-1.5 text-gray-800 focus:outline-none focus:ring-2 focus:ring-[#FF0000] cursor-pointer"
+            >
+              <option value="default">Precio: Menor a Mayor (Por defecto)</option>
+              <option value="price-desc">Precio: Mayor a Menor</option>
+              <option value="cc-asc">Cilindrada: Menor a Mayor (125cc → 250cc)</option>
+              <option value="cc-desc">Cilindrada: Mayor a Menor (250cc → 125cc)</option>
+            </select>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Product Grid in Clean White -->
+  <section class="py-16 px-6 bg-white min-h-[600px]">
+    <div class="max-w-7xl mx-auto">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="catalog-grid">
+        {bikes.map((bike, index) => (
+          <div
+            class="catalog-bike-card bg-gray-50 hover:bg-white border border-gray-200 hover:border-gray-300 rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between group"
+            data-category={bike.category}
+            data-cc={parseInt(bike.cc.replace('cc', '').trim())}
+            data-price={bike.rawPricePen}
+            data-original-index={index}
+          >
+            <!-- Visual Container -->
+            <div class="relative bg-gray-200 h-64 p-6 flex items-center justify-center overflow-hidden">
+              <img
+                src={`/images/categories/bg-${bike.category}.jpg`}
+                alt=""
+                aria-hidden="true"
+                class="absolute inset-0 w-full h-full object-cover object-center opacity-80 brightness-110 transition-transform duration-700 group-hover:scale-105"
+                loading="lazy"
+              />
+              <!-- Bright central spotlight so dark/red bikes never blend into the background -->
+              <div class="absolute inset-0 bg-[radial-gradient(ellipse_75%_70%_at_50%_55%,rgba(255,255,255,0.92)_0%,rgba(255,255,255,0.72)_45%,rgba(255,255,255,0.22)_80%,transparent_100%)] pointer-events-none"></div>
+              <!-- Ground shadow under wheels -->
+              <div class="absolute bottom-5 left-1/2 -translate-x-1/2 w-2/3 h-3.5 bg-black/30 blur-md rounded-full pointer-events-none"></div>
+
+              <img
+                src={bike.transparentImage}
+                alt={bike.name}
+                class="relative z-10 max-h-52 w-auto object-contain transition-transform duration-500 group-hover:scale-108 [filter:drop-shadow(0_0_8px_rgba(255,255,255,0.95))_drop-shadow(0_10px_12px_rgba(0,0,0,0.35))]"
+                loading="lazy"
+              />
+            </div>
+
+            <!-- Card Info -->
+            <div class="p-6 flex-1 flex flex-col justify-between space-y-4">
+              <div>
+                <span class="text-[11px] uppercase font-bold text-[#FF0000] tracking-wider">
+                  {bike.categoryLabel}
+                </span>
+                <h2 class="text-2xl font-black uppercase text-gray-900 font-['Teko',sans-serif] tracking-wide mt-0.5 group-hover:text-[#FF0000] transition-colors">
+                  {bike.name}
+                </h2>
+                <p class="text-xs text-gray-600 line-clamp-2 mt-1 leading-relaxed">
+                  {bike.description}
+                </p>
+              </div>
+
+              <!-- Mini specs -->
+              <div class="grid grid-cols-3 gap-2 py-3 border-y border-gray-200 text-center">
+                <div class="bg-white border border-gray-200/90 rounded-lg p-2">
+                  <span class="text-[9px] uppercase font-bold text-gray-500 block">Motor</span>
+                  <span class="text-xs font-bold text-gray-900">{bike.cc}</span>
+                </div>
+                <div class="bg-white border border-gray-200/90 rounded-lg p-2">
+                  <span class="text-[9px] uppercase font-bold text-gray-500 block">Potencia</span>
+                  <span class="text-xs font-bold text-gray-900 truncate">{bike.power.split('/')[0]}</span>
+                </div>
+                <div class="bg-white border border-gray-200/90 rounded-lg p-2">
+                  <span class="text-[9px] uppercase font-bold text-gray-500 block">Rendimiento</span>
+                  <span class="text-xs font-bold text-gray-900">{bike.consumption}</span>
+                </div>
+              </div>
+
+              <!-- Price & Actions -->
+              <div class="pt-2 flex items-center justify-between">
+                <div>
+                  <span class="text-[10px] uppercase font-bold text-gray-500 block">Precio Referencial</span>
+                  <span class="text-2xl font-black text-gray-900 font-['Teko',sans-serif] tracking-tight">
+                    {bike.priceFromPen}
+                  </span>
+                </div>
+
+                <div class="flex items-center gap-2">
+                  <a
+                    href={`/modelos/${bike.slug}`}
+                    class="px-4 py-2 text-xs font-bold uppercase tracking-wider text-gray-800 bg-white border border-gray-300 hover:border-black hover:text-black rounded-full transition-all"
+                  >
+                    Ficha Técnica
+                  </a>
+                  <a
+                    href={`https://wa.me/51981234567?text=${encodeURIComponent(`Hola Grupo Lauzher, deseo cotizar la moto ${bike.name} (${bike.priceFromPen}).\n\nModelo: ${Astro.url.origin}/modelos/${bike.slug}`)}`}
+                    data-wa-slug={bike.slug}
+                    data-wa-name={bike.name}
+                    data-wa-price={bike.priceFromPen}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="card-wa-btn p-2 rounded-full border border-gray-300 hover:border-emerald-600 text-emerald-600 hover:bg-emerald-50 transition-all"
+                    title="Cotizar por WhatsApp"
+                  >
+                    <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24">
+                      <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.007c.106.005.249-.04.39.298.144.347.491 1.2.534 1.287.043.087.072.188.014.303-.058.116-.087.188-.173.289l-.26.302c-.087.087-.179.182-.077.357.101.174.45 742.968 1.202.666.592 1.229.774 1.403.86.174.087.275.072.376-.044.101-.116.433-.506.549-.68.116-.173.231-.144.39-.087s1.011.477 1.184.564.289.13.332.202c.044.073.044.42-.1.825z" />
+                    </svg>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+</Layout>
+
+<script>
+  const catBtns = document.querySelectorAll('.catalog-cat-btn');
+  const ccBtns = document.querySelectorAll('.catalog-cc-btn');
+  const sortSelect = document.getElementById('catalog-sort') as HTMLSelectElement | null;
+  const gridContainer = document.getElementById('catalog-grid');
+  const countText = document.getElementById('catalog-count');
+  const cards = Array.from(document.querySelectorAll('.catalog-bike-card')) as HTMLElement[];
+
+  let currentCat = 'todas';
+  let currentCc = 'all';
+  let currentSort = 'default';
+
+  const urlParams = new URLSearchParams(window.location.search);
+  const initialCat = urlParams.get('cat');
+  if (initialCat) {
+    currentCat = initialCat;
+  }
+
+  catBtns.forEach((btn) => {
+    btn.addEventListener('click', () => {
+      currentCat = btn.getAttribute('data-category') || 'todas';
+      updateUI();
+    });
+  });
+
+  ccBtns.forEach((btn) => {
+    btn.addEventListener('click', () => {
+      currentCc = btn.getAttribute('data-cc') || 'all';
+      updateUI();
+    });
+  });
+
+  if (sortSelect) {
+    sortSelect.addEventListener('change', () => {
+      currentSort = sortSelect.value;
+      updateUI();
+    });
+  }
+
+  function updateUI() {
+    // Determine available CCs for the currently selected category
+    const availableCcs = new Set<string>();
+    cards.forEach((card) => {
+      const cat = card.getAttribute('data-category');
+      const cc = card.getAttribute('data-cc');
+      if (currentCat === 'todas' || cat === currentCat) {
+        if (cc) availableCcs.add(cc);
+      }
+    });
+
+    // If the currently selected CC is no longer available in this category, reset to 'all'
+    if (currentCc !== 'all' && !availableCcs.has(currentCc)) {
+      currentCc = 'all';
+    }
+
+    // Show or hide CC pills dynamically based on existence in selected category
+    ccBtns.forEach((b) => {
+      const btnCc = b.getAttribute('data-cc') || 'all';
+      if (btnCc === 'all') {
+        (b as HTMLElement).style.display = 'inline-block';
+      } else if (availableCcs.has(btnCc)) {
+        (b as HTMLElement).style.display = 'inline-block';
+      } else {
+        (b as HTMLElement).style.display = 'none';
+      }
+    });
+
+    // Update category buttons active state
+    catBtns.forEach((b) => {
+      if (b.getAttribute('data-category') === currentCat) {
+        b.classList.add('bg-[#FF0000]', 'text-white', 'border-[#FF0000]', 'shadow-md');
+        b.classList.remove('bg-white', 'text-gray-700', 'border-gray-300');
+      } else {
+        b.classList.remove('bg-[#FF0000]', 'text-white', 'border-[#FF0000]', 'shadow-md');
+        b.classList.add('bg-white', 'text-gray-700', 'border-gray-300');
+      }
+    });
+
+    // Update CC buttons active state
+    ccBtns.forEach((b) => {
+      if (b.getAttribute('data-cc') === currentCc) {
+        b.classList.add('bg-gray-900', 'text-white', 'border-gray-900');
+        b.classList.remove('bg-white', 'text-gray-600', 'border-gray-300');
+      } else {
+        b.classList.remove('bg-gray-900', 'text-white', 'border-gray-900');
+        b.classList.add('bg-white', 'text-gray-600', 'border-gray-300');
+      }
+    });
+
+    // Sort cards
+    const sortedCards = [...cards].sort((a, b) => {
+      const priceA = parseInt(a.getAttribute('data-price') || '0', 10);
+      const priceB = parseInt(b.getAttribute('data-price') || '0', 10);
+      const ccA = parseInt(a.getAttribute('data-cc') || '0', 10);
+      const ccB = parseInt(b.getAttribute('data-cc') || '0', 10);
+      const idxA = parseInt(a.getAttribute('data-original-index') || '0', 10);
+      const idxB = parseInt(b.getAttribute('data-original-index') || '0', 10);
+
+      if (currentSort === 'price-asc') {
+        return priceA - priceB;
+      } else if (currentSort === 'price-desc') {
+        return priceB - priceA;
+      } else if (currentSort === 'cc-desc') {
+        return ccB - ccA || priceB - priceA;
+      } else if (currentSort === 'cc-asc') {
+        return ccA - ccB || priceA - priceB;
+      } else {
+        return idxA - idxB;
+      }
+    });
+
+    // Filter and append to DOM
+    let visibleCount = 0;
+    sortedCards.forEach((card) => {
+      const cardCat = card.getAttribute('data-category');
+      const cardCc = card.getAttribute('data-cc');
+
+      const matchesCat = currentCat === 'todas' || cardCat === currentCat;
+      const matchesCc = currentCc === 'all' || cardCc === currentCc;
+
+      if (matchesCat && matchesCc) {
+        card.style.display = 'flex';
+        visibleCount++;
+      } else {
+        card.style.display = 'none';
+      }
+
+      if (gridContainer) {
+        gridContainer.appendChild(card);
+      }
+    });
+
+    if (countText) {
+      countText.textContent = `${visibleCount} modelo${visibleCount !== 1 ? 's' : ''}`;
+    }
+  }
+
+  // Initial trigger
+  updateUI();
+
+  // Ensure WhatsApp buttons include live origin URL for OpenGraph preview card
+  document.querySelectorAll('.card-wa-btn').forEach((btn) => {
+    const slug = btn.getAttribute('data-wa-slug');
+    const name = btn.getAttribute('data-wa-name');
+    const price = btn.getAttribute('data-wa-price');
+    if (slug && name) {
+      const modelUrl = `${window.location.origin}/modelos/${slug}`;
+      const msg = `Hola Grupo Lauzher, deseo cotizar la moto ${name} (${price}).\n\nModelo: ${modelUrl}`;
+      btn.setAttribute('href', `https://wa.me/51981234567?text=${encodeURIComponent(msg)}`);
+    }
+  });
+</script>

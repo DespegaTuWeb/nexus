@@ -1,0 +1,65 @@
+---
+const pillars = [
+  {
+    icon: `<svg class="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" /></svg>`,
+    title: "Garantía Oficial 1 Año o 12,000 KM",
+    desc: "Garantía por 1 año o 12,000KM, lo que suceda primero. (Sólo Motor), con respaldo técnico directo de Grupo Lauzher."
+  },
+  {
+    icon: `<svg class="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" /><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" /></svg>`,
+    title: "6 Almacenes y Repuestos Originales",
+    desc: "Más de 10,000 m² de infraestructura para abastecer a todo el país con stock permanente de piezas de motor, carrocería y electricidad."
+  },
+  {
+    icon: `<svg class="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" /><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" /></svg>`,
+    title: "Red Nacional de Talleres Autorizados",
+    desc: "Talleres certificados en todo el Perú para tus 03 primeros mantenimientos gratuitos (mano de obra)."
+  },
+  {
+    icon: `<svg class="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" /></svg>`,
+    title: "Trámite de Tarjeta y Placa",
+    desc: "Incluido por la compra de tu unidad. Gestión registral formal con demora máxima de 15 a 20 días hábiles."
+  }
+];
+---
+
+<section class="py-20 bg-white text-gray-900 border-t border-gray-200">
+  <div class="max-w-7xl mx-auto px-6">
+    <div class="flex flex-col lg:flex-row lg:items-end justify-between gap-6 mb-14">
+      <div>
+        <span class="text-xs font-bold text-gray-500 uppercase tracking-widest font-['Teko',sans-serif] text-base">
+          IMPORTADOR EXCLUSIVO
+        </span>
+        <h2 class="text-4xl md:text-6xl font-black uppercase tracking-tight font-['Teko',sans-serif] leading-none mt-1 text-gray-900">
+          EL RESPALDO DE GRUPO LAUZHER EN PERÚ
+        </h2>
+        <p class="text-gray-600 text-sm md:text-base mt-2 max-w-2xl">
+          Más de dos décadas importando calidad, tecnología y rendimiento para los moteros peruanos.
+        </p>
+      </div>
+
+      <a
+        href="/grupo-lauzher"
+        class="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-gray-900 hover:underline transition-colors"
+      >
+        Conoce más de Grupo Lauzher →
+      </a>
+    </div>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+      {pillars.map((pillar) => (
+        <div class="bg-gray-50 hover:bg-white border border-gray-200 hover:border-gray-300 rounded-2xl p-6 transition-all duration-300 group shadow-sm hover:shadow-md">
+          <div class="w-12 h-12 rounded-xl bg-gray-100 text-gray-800 border border-gray-200 flex items-center justify-center transition-colors mb-5 group-hover:bg-gray-900 group-hover:text-white">
+            <Fragment set:html={pillar.icon} />
+          </div>
+          <h3 class="text-xl font-bold uppercase text-gray-900 font-['Teko',sans-serif] tracking-wide mb-2">
+            {pillar.title}
+          </h3>
+          <p class="text-xs text-gray-600 leading-relaxed font-normal">
+            {pillar.desc}
+          </p>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

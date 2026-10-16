@@ -1,0 +1,35 @@
+---
+interface Props {
+  className?: string;
+  showSubtitle?: boolean;
+  variant?: 'dark' | 'light';
+}
+
+const { className = "", showSubtitle = true, variant = 'light' } = Astro.props;
+const subTextPrimary = variant === 'light' ? 'text-gray-800' : 'text-gray-200';
+const subTextSecondary = variant === 'light' ? 'text-gray-500' : 'text-gray-400';
+const dividerColor = variant === 'light' ? 'bg-gray-300' : 'bg-white/20';
+---
+
+<a href="/" class={`shrink-0 inline-flex items-center gap-3 select-none group ${className}`}>
+  <img
+    src="/images/logo-nexus.png"
+    alt="Nexus Motos"
+    width="128"
+    height="30"
+    class="w-[115px] md:w-[128px] h-auto shrink-0 block object-contain transition-transform duration-300 group-hover:scale-105"
+  />
+  {showSubtitle && (
+    <div class="hidden sm:flex items-center gap-2.5 shrink-0">
+      <span class={`w-[1px] h-6 shrink-0 ${dividerColor}`}></span>
+      <div class="flex flex-col justify-center leading-tight whitespace-nowrap">
+        <span class={`text-[10px] font-extrabold tracking-[0.18em] ${subTextPrimary} uppercase whitespace-nowrap`}>
+          GRUPO LAUZHER
+        </span>
+        <span class={`text-[9px] font-semibold tracking-wider ${subTextSecondary} uppercase whitespace-nowrap`}>
+          REPRESENTANTE OFICIAL
+        </span>
+      </div>
+    </div>
+  )}
+</a>

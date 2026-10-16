@@ -1,0 +1,232 @@
+---
+import Layout from '../layouts/Layout.astro';
+import DealerLocator from '../components/DealerLocator.astro';
+import site from '../data/site.json';
+---
+
+<Layout
+  title="Ubícanos: Sedes, Talleres y Contacto | Nexus Motos Perú - Grupo Lauzher"
+  description="Ubica nuestro Showroom Central en Av. Nicolás Arriola 2278, San Luis, Lima, nuestra red nacional de concesionarios autorizados y comunícate con Grupo Lauzher."
+>
+  <!-- Header in Clean Light Gray -->
+  <section class="bg-gray-50 py-16 px-6 border-b border-gray-200 text-center">
+    <div class="max-w-4xl mx-auto space-y-2">
+      <span class="text-xs font-bold text-gray-500 uppercase tracking-widest font-['Teko',sans-serif] text-base">
+        SEDES OFICIALES, TALLERES Y ATENCIÓN DIRECTA
+      </span>
+      <h1 class="text-5xl md:text-7xl font-black uppercase text-gray-900 font-['Teko',sans-serif] tracking-tight leading-none">
+        UBÍCANOS Y CONTÁCTANOS
+      </h1>
+      <p class="text-gray-600 text-sm md:text-base max-w-2xl mx-auto font-medium">
+        Visítanos en nuestro Showroom Central de Av. Nicolás Arriola 2278, encuentra tu concesionario más cercano a nivel nacional o escríbenos directamente.
+      </p>
+    </div>
+  </section>
+
+  <!-- Content Grid in Pure White -->
+  <section class="py-16 px-6 bg-white text-gray-900">
+    <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12">
+      <!-- Contact Info -->
+      <div class="lg:col-span-5 space-y-8">
+        <div>
+          <h2 class="text-3xl font-black uppercase text-gray-900 font-['Teko',sans-serif] tracking-wide">
+            Sede Principal Grupo Lauzher
+          </h2>
+          <p class="text-xs text-gray-600 mt-1">
+            Visítanos en nuestro showroom central de motocicletas y taller autorizado en Lima:
+          </p>
+        </div>
+
+        <div class="space-y-4 text-xs">
+          <!-- Storefront Photo Card -->
+          <div class="rounded-2xl overflow-hidden border border-gray-200 shadow-sm relative h-44 group">
+            <img
+              src="/images/arriola-san-luis-ubicacion.webp"
+              alt="Fachada Tienda Central Grupo Lauzher - Av. Nicolás Arriola 2278, San Luis"
+              class="w-full h-full object-cover object-center transition-transform duration-700 group-hover:scale-105"
+            />
+            <div class="absolute inset-0 bg-gradient-to-t from-black/75 via-black/15 to-transparent"></div>
+            <div class="absolute bottom-3 left-4 right-4 flex items-end justify-between text-white">
+              <div>
+                <span class="text-[10px] font-bold uppercase tracking-widest text-emerald-400 block">Fachada de Nuestra Tienda</span>
+                <span class="text-base font-black uppercase font-['Teko',sans-serif] tracking-wide">Av. Nicolás Arriola 2278 — San Luis</span>
+              </div>
+              <a
+                href={site.mainMapsUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                class="px-2.5 py-1 rounded-lg bg-white/95 text-gray-900 font-bold text-[10px] uppercase hover:bg-white transition-colors"
+              >
+                Ver Mapa →
+              </a>
+            </div>
+          </div>
+
+          <div class="bg-gray-50 border border-gray-200 rounded-2xl p-4 flex items-start gap-4 shadow-sm">
+            <div class="w-10 h-10 rounded-xl bg-gray-200 text-gray-800 flex items-center justify-center flex-shrink-0">
+              <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+              </svg>
+            </div>
+            <div>
+              <span class="font-bold text-gray-900 uppercase text-sm font-['Teko',sans-serif]">Dirección Showroom</span>
+              <a
+                href={site.mainMapsUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                class="text-gray-700 hover:text-black hover:underline font-medium mt-0.5 block transition-colors"
+              >
+                {site.mainAddress}
+              </a>
+            </div>
+          </div>
+
+          <div class="bg-gray-50 border border-gray-200 rounded-2xl p-4 flex items-start gap-4 shadow-sm">
+            <div class="w-10 h-10 rounded-xl bg-emerald-100 text-emerald-700 flex items-center justify-center flex-shrink-0">
+              <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24">
+                <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.007c.106.005.249-.04.39.298.144.347.491 1.2.534 1.287.043.087.072.188.014.303-.058.116-.087.188-.173.289l-.26.302c-.087.087-.179.182-.077.357.101.174.45 742.968 1.202.666.592 1.229.774 1.403.86.174.087.275.072.376-.044.101-.116.433-.506.549-.68.116-.173.231-.144.39-.087s1.011.477 1.184.564.289.13.332.202c.044.073.044.42-.1.825z" />
+              </svg>
+            </div>
+            <div>
+              <span class="font-bold text-gray-900 uppercase text-sm font-['Teko',sans-serif]">WhatsApp y Central Telefónica</span>
+              <p class="text-gray-700 font-medium mt-0.5">Ventas: {site.centralMobile}</p>
+              <p class="text-gray-700 font-medium">Central: {site.centralPhone}</p>
+              <p class="text-gray-500 mt-1">{site.hours}</p>
+            </div>
+          </div>
+
+          <!-- Embedded Google Map -->
+          <div class="rounded-2xl overflow-hidden border border-gray-200 shadow-sm bg-gray-100">
+            <iframe
+              title="Ubicación Showroom Central Grupo Lauzher - Av. Nicolás Arriola 2278, San Luis, Lima"
+              src="https://maps.google.com/maps?q=Av.%20Nicol%C3%A1s%20Arriola%202278,%20San%20Luis,%20Lima,%20Per%C3%BA&t=&z=16&ie=UTF8&iwloc=&output=embed"
+              width="100%"
+              height="200"
+              style="border:0;"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+              class="w-full h-[200px] block"
+            ></iframe>
+          </div>
+        </div>
+      </div>
+
+      <!-- Contact Form -->
+      <div class="lg:col-span-7 bg-gray-50 border border-gray-200 rounded-3xl p-8 shadow-md">
+        <h3 class="text-2xl font-black uppercase text-gray-900 font-['Teko',sans-serif] tracking-wide mb-1">
+          Envíanos un Mensaje
+        </h3>
+        <p class="text-xs text-gray-600 mb-6 font-medium">Un asesor comercial se comunicará contigo a la brevedad.</p>
+
+        <form class="space-y-4" onsubmit="event.preventDefault(); alert('¡Gracias por comunicarte con Nexus Motos Grupo Lauzher! Un asesor se pondrá en contacto contigo.');">
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div>
+              <label class="block text-xs uppercase font-bold text-gray-700 mb-1">Nombres y Apellidos *</label>
+              <input
+                type="text"
+                required
+                placeholder="Ej. Juan Pérez"
+                class="w-full bg-white border border-gray-300 rounded-xl px-4 py-2.5 text-xs text-gray-900 focus:outline-none focus:border-gray-900"
+              />
+            </div>
+            <div>
+              <label class="block text-xs uppercase font-bold text-gray-700 mb-1">Número de DNI / CE *</label>
+              <input
+                type="text"
+                required
+                placeholder="Ej. 72345678"
+                class="w-full bg-white border border-gray-300 rounded-xl px-4 py-2.5 text-xs text-gray-900 focus:outline-none focus:border-gray-900"
+              />
+            </div>
+          </div>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div>
+              <label class="block text-xs uppercase font-bold text-gray-700 mb-1">Teléfono o Celular WhatsApp *</label>
+              <input
+                type="tel"
+                required
+                placeholder="Ej. 981234567"
+                class="w-full bg-white border border-gray-300 rounded-xl px-4 py-2.5 text-xs text-gray-900 focus:outline-none focus:border-gray-900"
+              />
+            </div>
+            <div>
+              <label class="block text-xs uppercase font-bold text-gray-700 mb-1">Ciudad o Departamento</label>
+              <input
+                type="text"
+                placeholder="Ej. Lima, Arequipa, Chiclayo..."
+                class="w-full bg-white border border-gray-300 rounded-xl px-4 py-2.5 text-xs text-gray-900 focus:outline-none focus:border-gray-900"
+              />
+            </div>
+          </div>
+
+          <div>
+            <label class="block text-xs uppercase font-bold text-gray-700 mb-1">Modelo de Interés</label>
+            <select class="w-full bg-white border border-gray-300 rounded-xl px-4 py-2.5 text-xs text-gray-900 focus:outline-none focus:border-gray-900">
+              <option>NEXUS 250 ADV (Todoterreno)</option>
+              <option>NEXUS 250 TK (Cross Enduro)</option>
+              <option>NEXUS 200 ZZ (Todoterreno)</option>
+              <option>NEXUS 250 RS SPORT (Deportiva)</option>
+              <option>NEXUS BRITANIA 69 (Cafe Racer)</option>
+              <option>NEXUS SCOOTER 150 TAX (Automática)</option>
+              <option>NEXUS 150 DELIVERY (Pistera)</option>
+              <option>NEXUS 150 CH1 (Pistera)</option>
+              <option>COMBO MOTERO TODO INCLUIDO (Placa + Casco + Mantenimientos)</option>
+            </select>
+          </div>
+
+          <div>
+            <label class="block text-xs uppercase font-bold text-gray-700 mb-1">Mensaje o Consulta</label>
+            <textarea
+              rows="3"
+              placeholder="Deseo información sobre crédito o disponibilidad de stock..."
+              class="w-full bg-white border border-gray-300 rounded-xl p-3 text-xs text-gray-900 focus:outline-none focus:border-gray-900"
+            ></textarea>
+          </div>
+
+          <button
+            type="submit"
+            class="w-full py-3.5 px-6 rounded-xl text-xs font-black uppercase tracking-wider text-white bg-emerald-600 hover:bg-emerald-700 shadow-md shadow-emerald-600/20 transition-all cursor-pointer"
+          >
+            Enviar Solicitud de Información
+          </button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Nationwide Dealers & Workshops -->
+  <DealerLocator />
+
+  <!-- Libro de Reclamaciones in Clean Light Gray -->
+  <section class="py-16 px-6 bg-gray-50 border-t border-gray-200" id="libro-reclamaciones">
+    <div class="max-w-4xl mx-auto bg-white border border-gray-200 rounded-3xl p-8 space-y-6 shadow-sm">
+      <div class="flex items-center gap-4">
+        <div class="w-12 h-12 rounded-2xl bg-amber-100 text-amber-700 flex items-center justify-center font-bold">
+          <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+          </svg>
+        </div>
+        <div>
+          <h3 class="text-2xl font-black uppercase text-gray-900 font-['Teko',sans-serif]">
+            Libro de Reclamaciones Virtual
+          </h3>
+          <p class="text-xs text-gray-600">
+            Conforme a lo establecido en el Código de Protección y Defensa del Consumidor (Ley N° 29571).
+          </p>
+        </div>
+      </div>
+
+      <div class="text-xs text-gray-600 space-y-2 border-t border-gray-200 pt-4 font-medium">
+        <p><strong>Razón Social:</strong> GRUPO LAUZHER S.A.C.</p>
+        <p><strong>RUC:</strong> {site.ruc}</p>
+        <p><strong>Dirección:</strong> {site.mainAddress}</p>
+        <p class="pt-2">
+          Para presentar un reclamo o queja formal respecto a algún bien o servicio adquirido, puedes escribirnos directamente a nuestro correo de atención al consumidor: <a href={`mailto:${site.supportEmail}`} class="text-gray-900 underline font-bold">{site.supportEmail}</a> o acercarte a nuestro libro físico en el showroom principal.
+        </p>
+      </div>
+    </div>
+  </section>
+</Layout>

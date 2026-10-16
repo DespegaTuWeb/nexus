@@ -1,0 +1,325 @@
+[
+  {
+    "id": "central-arriola",
+    "name": "Sede Central & Showroom Principal Grupo Lauzher",
+    "department": "Lima",
+    "city": "Lima",
+    "district": "San Luis",
+    "address": "Av. Nicolás Arriola 2278, San Luis, Lima",
+    "phone": "(01) 324-5800",
+    "mobile": "981 234 567",
+    "whatsapp": "51981234567",
+    "hours": "Lunes a Sábado: 8:30 AM - 7:00 PM | Domingo: 9:00 AM - 2:00 PM",
+    "isMain": true,
+    "services": [
+      "Showroom Oficial Nexus",
+      "Taller Central Especializado",
+      "Almacén Central de Repuestos Genuinos",
+      "Asesoría de Crédito al Instante",
+      "Trámite Express Placa y Tarjeta SUNARP"
+    ]
+  },
+  {
+    "id": "lima-kwk-motors",
+    "name": "KWK Motors (Taller Autorizado Lima)",
+    "department": "Lima",
+    "city": "Lima",
+    "district": "San Luis",
+    "address": "Av. El Aire 1397 C, San Luis",
+    "phone": "941 294 197",
+    "mobile": "941 294 197",
+    "whatsapp": "51941294197",
+    "hours": "Lunes a Sábado: 8:30 AM - 6:30 PM",
+    "isMain": false,
+    "services": [
+      "Taller de Mantenimiento",
+      "Garantía Nexus",
+      "Venta de Repuestos"
+    ]
+  },
+  {
+    "id": "arequipa-motocentro",
+    "name": "Motocentro Arequipa (Taller Autorizado)",
+    "department": "Arequipa",
+    "city": "Arequipa",
+    "district": "Miraflores",
+    "address": "Calle Puente Arnao 337, Miraflores",
+    "phone": "959 742 778",
+    "mobile": "959 742 778",
+    "whatsapp": "51959742778",
+    "hours": "Lunes a Sábado: 9:00 AM - 6:30 PM",
+    "isMain": false,
+    "services": [
+      "Concesionario Oficial",
+      "Taller Autorizado",
+      "Repuestos"
+    ]
+  },
+  {
+    "id": "la-libertad-kamil",
+    "name": "Kamil Motorcycle SAC (Taller Autorizado)",
+    "department": "La Libertad",
+    "city": "Chepén",
+    "district": "Chepén",
+    "address": "Exequiel Gonzales Cáceda 165, Chepén, Trujillo",
+    "phone": "920 031 710",
+    "mobile": "920 031 710",
+    "whatsapp": "51920031710",
+    "hours": "Lunes a Sábado: 9:00 AM - 7:00 PM",
+    "isMain": false,
+    "services": [
+      "Venta y Garantía",
+      "Taller Mecánico",
+      "Repuestos Genuinos"
+    ]
+  },
+  {
+    "id": "lambayeque-tecnimoto",
+    "name": "Tecnimoto Cix E.I.R.L (Taller Autorizado)",
+    "department": "Lambayeque",
+    "city": "Chiclayo",
+    "district": "Urb. San Luis",
+    "address": "Calle Antonio Raymondi 117, Urb. San Luis, Chiclayo",
+    "phone": "979 333 444",
+    "mobile": "979 333 444",
+    "whatsapp": "51979333444",
+    "hours": "Lunes a Sábado: 8:30 AM - 6:30 PM",
+    "isMain": false,
+    "services": [
+      "Taller Autorizado",
+      "Mantenimiento Periódico",
+      "Repuestos"
+    ]
+  },
+  {
+    "id": "piura-mg2",
+    "name": "MG2 Performance (Taller Autorizado)",
+    "department": "Piura",
+    "city": "Piura",
+    "district": "A.H. Juan Pablo II",
+    "address": "Calle Cusco 1460, A.H. Juan Pablo II, Piura",
+    "phone": "934 410 879",
+    "mobile": "970 834 458",
+    "whatsapp": "51934410879",
+    "hours": "Lunes a Sábado: 8:30 AM - 6:30 PM",
+    "isMain": false,
+    "services": [
+      "Taller Autorizado",
+      "Alineación y Mantenimiento",
+      "Garantía"
+    ]
+  },
+  {
+    "id": "cusco-ivan",
+    "name": "Ivan Motor's (Taller Autorizado)",
+    "department": "Cusco",
+    "city": "Sicuani",
+    "district": "Canchis",
+    "address": "Sicuani, Canchis, Cusco",
+    "phone": "999 994 138",
+    "mobile": "999 994 138",
+    "whatsapp": "51999994138",
+    "hours": "Lunes a Sábado: 9:00 AM - 6:00 PM",
+    "isMain": false,
+    "services": [
+      "Servicio Técnico",
+      "Garantía Nexus",
+      "Repuestos"
+    ]
+  },
+  {
+    "id": "puno-valhallam",
+    "name": "Valhallam Motor's (Taller Autorizado)",
+    "department": "Puno",
+    "city": "Juliaca",
+    "district": "San Román",
+    "address": "Av. El Sol 368, Juliaca",
+    "phone": "962 706 167",
+    "mobile": "962 706 167",
+    "whatsapp": "51962706167",
+    "hours": "Lunes a Sábado: 8:30 AM - 6:30 PM",
+    "isMain": false,
+    "services": [
+      "Venta y Taller",
+      "Garantía Oficial",
+      "Repuestos"
+    ]
+  },
+  {
+    "id": "junin-tecnimotos",
+    "name": "Tecnimotos López (Taller Autorizado)",
+    "department": "Junín",
+    "city": "Pichanaki",
+    "district": "Chanchamayo",
+    "address": "Jr. Andrés Avelino Cáceres Mz. B Lt. 3, Pichanaki",
+    "phone": "964 112 233",
+    "mobile": "964 112 233",
+    "whatsapp": "51964112233",
+    "hours": "Lunes a Sábado: 8:30 AM - 6:00 PM",
+    "isMain": false,
+    "services": [
+      "Taller de Mantenimiento",
+      "Repuestos",
+      "Garantía"
+    ]
+  },
+  {
+    "id": "amazonas-rs-motos",
+    "name": "R&S Motos Repuestos y Accesorios EIRL",
+    "department": "Amazonas",
+    "city": "Chachapoyas",
+    "district": "Chachapoyas",
+    "address": "Jr. Santa Ana 355, Chachapoyas",
+    "phone": "941 983 050",
+    "mobile": "941 983 050",
+    "whatsapp": "51941983050",
+    "hours": "Lunes a Sábado: 8:30 AM - 6:00 PM",
+    "isMain": false,
+    "services": [
+      "Taller Autorizado",
+      "Repuestos Genuinos",
+      "Garantía"
+    ]
+  },
+  {
+    "id": "ancash-lucho",
+    "name": "Motorepuestos Lucho (Taller Autorizado)",
+    "department": "Ancash",
+    "city": "Casma",
+    "district": "Casma",
+    "address": "Av. Perú Mza. C3 Lote 25, Casma",
+    "phone": "905 452 120",
+    "mobile": "905 452 120",
+    "whatsapp": "51905452120",
+    "hours": "Lunes a Sábado: 8:30 AM - 6:00 PM",
+    "isMain": false,
+    "services": [
+      "Taller Autorizado",
+      "Mantenimiento Periódico"
+    ]
+  },
+  {
+    "id": "apurimac-gary",
+    "name": "Gary Motors DMG (Taller Autorizado)",
+    "department": "Apurímac",
+    "city": "Abancay",
+    "district": "Abancay",
+    "address": "Av. Panamericana 1319, Abancay",
+    "phone": "956 774 588",
+    "mobile": "956 774 588",
+    "whatsapp": "51956774588",
+    "hours": "Lunes a Sábado: 8:30 AM - 6:00 PM",
+    "isMain": false,
+    "services": [
+      "Taller Autorizado",
+      "Garantía",
+      "Repuestos"
+    ]
+  },
+  {
+    "id": "ayacucho-moto-parts",
+    "name": "Moto Parts (Taller Autorizado)",
+    "department": "Ayacucho",
+    "city": "Ayacucho",
+    "district": "Jesús Nazareno",
+    "address": "Jr. Mariano Melgar 218, Huamanga, Ayacucho",
+    "phone": "982 277 153",
+    "mobile": "982 277 153",
+    "whatsapp": "51982277153",
+    "hours": "Lunes a Sábado: 8:30 AM - 6:00 PM",
+    "isMain": false,
+    "services": [
+      "Taller Autorizado",
+      "Mantenimiento Preventivo"
+    ]
+  },
+  {
+    "id": "huanuco-cortez",
+    "name": "Motoservicios Cortez (Taller Autorizado)",
+    "department": "Huánuco",
+    "city": "Huánuco",
+    "district": "Huánuco",
+    "address": "Jr. 28 de Julio N° 357, Huánuco",
+    "phone": "976 091 530",
+    "mobile": "976 091 530",
+    "whatsapp": "51976091530",
+    "hours": "Lunes a Sábado: 8:30 AM - 6:00 PM",
+    "isMain": false,
+    "services": [
+      "Taller Autorizado",
+      "Repuestos",
+      "Garantía"
+    ]
+  },
+  {
+    "id": "ica-roma",
+    "name": "Moto Repuestos Roma (Taller Autorizado)",
+    "department": "Ica",
+    "city": "Chincha",
+    "district": "Chincha",
+    "address": "Panamericana Sur Km 356, Chincha, Ica",
+    "phone": "955 602 132",
+    "mobile": "955 602 132",
+    "whatsapp": "51955602132",
+    "hours": "Lunes a Sábado: 8:30 AM - 6:30 PM",
+    "isMain": false,
+    "services": [
+      "Taller de Mantenimiento",
+      "Repuestos"
+    ]
+  },
+  {
+    "id": "loreto-ks",
+    "name": "K&S Multiservicios Company (Taller Autorizado)",
+    "department": "Loreto",
+    "city": "Iquitos",
+    "district": "Belén",
+    "address": "Calle Jazmines Mz. D Lt. 19, Maynas, Belén",
+    "phone": "964 219 906",
+    "mobile": "964 219 906",
+    "whatsapp": "51964219906",
+    "hours": "Lunes a Sábado: 8:00 AM - 5:30 PM",
+    "isMain": false,
+    "services": [
+      "Taller Autorizado",
+      "Garantía Oficial",
+      "Repuestos"
+    ]
+  },
+  {
+    "id": "tacna-richard",
+    "name": "Richard Motos Tacna (Taller Autorizado)",
+    "department": "Tacna",
+    "city": "Tacna",
+    "district": "Tacna",
+    "address": "Av. Tarata 535-B, Tacna",
+    "phone": "931 124 825",
+    "mobile": "931 124 825",
+    "whatsapp": "51931124825",
+    "hours": "Lunes a Sábado: 8:30 AM - 6:30 PM",
+    "isMain": false,
+    "services": [
+      "Taller Autorizado",
+      "Garantía",
+      "Repuestos"
+    ]
+  },
+  {
+    "id": "ucayali-cross",
+    "name": "Cross Zona Ruedas (Taller Autorizado)",
+    "department": "Ucayali",
+    "city": "Pucallpa",
+    "district": "Pucallpa",
+    "address": "Av. Centenario 1025, Pucallpa",
+    "phone": "988 000 597",
+    "mobile": "988 000 597",
+    "whatsapp": "51988000597",
+    "hours": "Lunes a Sábado: 8:00 AM - 6:00 PM",
+    "isMain": false,
+    "services": [
+      "Taller Autorizado",
+      "Repuestos",
+      "Garantía"
+    ]
+  }
+]

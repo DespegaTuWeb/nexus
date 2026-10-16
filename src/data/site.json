@@ -1,0 +1,27 @@
+{
+  "domain": "nexusmotos.com",
+  "brandName": "NEXUS MOTOS",
+  "importerName": "Grupo Lauzher",
+  "importerSlogan": "Principal Importador y Representante Oficial de Nexus en el Perú",
+  "mainAddress": "Av. Nicolás Arriola 2278, San Luis, Lima - Perú",
+  "mainMapsUrl": "https://www.google.com/maps/search/?api=1&query=Av.+Nicol%C3%A1s+Arriola+2278,+San+Luis,+Lima+-+Per%C3%BA",
+  "centralPhone": "(01) 324-5800",
+  "centralMobile": "981 234 567",
+  "whatsappNumber": "51981234567",
+  "supportEmail": "ventas@nexusmotos.com",
+  "hours": "Lunes a Sábado: 8:30 AM - 7:00 PM | Domingos: 9:00 AM - 2:00 PM",
+  "ruc": "20512345678",
+  "legalDisclaimer": "*Precios referenciales en Soles (S/.) y Dólares Americanos ($ USD) calculados al tipo de cambio referencial. Los precios pueden variar de acuerdo con promociones vigentes, costo de flete interprovincial y disponibilidad de stock en la red de concesionarios autorizados de Grupo Lauzher a nivel nacional. Las imágenes son referenciales y pueden presentar equipamiento opcional.",
+  "clientPurchaseBenefits": {
+    "greeting": "Estimado Cliente, por la compra de su unidad, se le incluyen estos beneficios:",
+    "included": [
+      "Trámite de tarjeta y placa.",
+      "Casco.",
+      "Kit básico de herramientas.",
+      "Aceite. (Activación de la unidad)"
+    ],
+    "maintenance": "Los 03 primeros Mantenimientos son GRATIS (mano de obra) 😉",
+    "plateNotice": "Asimismo, el trámite de tarjeta y placa tiene una demora máximo de 15 a 20 días hábiles.",
+    "warranty": "Garantía por 1 año o 12,000KM, lo que suceda primero. (Sólo Motor)"
+  }
+}

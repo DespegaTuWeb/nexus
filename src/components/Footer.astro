@@ -1,0 +1,101 @@
+---
+import NexusLogo from './NexusLogo.astro';
+import site from '../data/site.json';
+---
+
+<footer class="bg-gray-50 text-gray-600 border-t border-gray-200 pt-16 pb-8">
+  <div class="max-w-7xl mx-auto px-6">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 mb-12">
+      <div class="lg:col-span-2 space-y-4">
+        <NexusLogo variant="light" />
+        <p class="text-xs text-gray-600 leading-relaxed max-w-sm pt-2">
+          {site.importerSlogan}. Ofrecemos motocicletas deportivas, pisteras, todoterreno, cafe racer y scooters con garantía oficial de fábrica, stock nacional de repuestos originales y financiamiento directo.
+        </p>
+
+        <div class="bg-white border border-gray-200 rounded-xl p-3.5 space-y-1 text-xs shadow-sm">
+          <div class="flex items-center gap-2 text-gray-900 font-bold">
+            <span class="w-2 h-2 rounded-full bg-emerald-500"></span>
+            Showroom Central & Sede Principal
+          </div>
+          <a
+            href={site.mainMapsUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="text-gray-700 hover:text-[#FF0000] hover:underline transition-colors block"
+            title="Abrir en Google Maps"
+          >
+            {site.mainAddress}
+          </a>
+          <p class="text-gray-500">{site.hours}</p>
+        </div>
+      </div>
+
+      <div class="space-y-3">
+        <h4 class="text-sm font-bold uppercase tracking-wider text-gray-900 font-['Teko',sans-serif] text-base">
+          Gama de Motos
+        </h4>
+        <ul class="space-y-2 text-xs font-medium">
+          <li><a href="/modelos?cat=pisteras" class="hover:text-gray-900 transition-colors">Pisteras</a></li>
+          <li><a href="/modelos?cat=deportivas" class="hover:text-gray-900 transition-colors">Deportivas</a></li>
+          <li><a href="/modelos?cat=scooter" class="hover:text-gray-900 transition-colors">Scooters Automáticas</a></li>
+          <li><a href="/modelos?cat=todoterreno" class="hover:text-gray-900 transition-colors">Todoterreno y Cross</a></li>
+          <li><a href="/modelos?cat=caferacer" class="hover:text-gray-900 transition-colors">Cafe Racer Clásicas</a></li>
+          <li><a href="/combos-promociones" class="text-emerald-700 font-bold hover:underline">Combo Motero con Placa</a></li>
+        </ul>
+      </div>
+
+      <div class="space-y-3">
+        <h4 class="text-sm font-bold uppercase tracking-wider text-gray-900 font-['Teko',sans-serif] text-base">
+          Navegación
+        </h4>
+        <ul class="space-y-2 text-xs font-medium">
+          <li><a href="/modelos" class="hover:text-gray-900 transition-colors">Catálogo de Modelos</a></li>
+          <li><a href="/combos-promociones" class="hover:text-gray-900 transition-colors">Promociones y Combos</a></li>
+          <li><a href="/financiamiento" class="hover:text-gray-900 transition-colors">Simulador de Crédito con DNI</a></li>
+          <li><a href="/concesionarios" class="hover:text-gray-900 transition-colors">Red de Concesionarios</a></li>
+          <li><a href="/grupo-lauzher" class="hover:text-gray-900 transition-colors">Sobre Grupo Lauzher</a></li>
+          <li><a href="/contacto" class="hover:text-gray-900 transition-colors">Atención al Cliente</a></li>
+        </ul>
+      </div>
+
+      <div class="space-y-4">
+        <h4 class="text-sm font-bold uppercase tracking-wider text-gray-900 font-['Teko',sans-serif] text-base">
+          Atención y Soporte
+        </h4>
+        <div class="space-y-2 text-xs">
+          <p class="text-gray-700">Central: <span class="text-gray-900 font-bold">{site.centralPhone}</span></p>
+          <p class="text-gray-700">WhatsApp: <span class="text-emerald-700 font-bold">{site.centralMobile}</span></p>
+          <p class="text-gray-700">Ventas: <span class="text-gray-900 font-medium">{site.supportEmail}</span></p>
+        </div>
+
+        <a
+          href="/contacto#libro-reclamaciones"
+          class="inline-flex items-center gap-3 px-3.5 py-2.5 rounded-xl bg-white border border-gray-300 hover:border-gray-500 shadow-sm transition-colors group"
+        >
+          <div class="w-8 h-8 rounded-lg bg-amber-500/10 text-amber-600 flex items-center justify-center font-bold">
+            <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+            </svg>
+          </div>
+          <div class="text-left">
+            <span class="text-[10px] uppercase font-bold text-gray-500 block">Conforme a Ley</span>
+            <span class="text-xs font-bold text-gray-900 group-hover:text-[#FF0000] transition-colors">Libro de Reclamaciones</span>
+          </div>
+        </a>
+      </div>
+    </div>
+
+    <div class="py-6 border-t border-gray-200 text-[11px] text-gray-500 leading-relaxed">
+      <p>{site.legalDisclaimer}</p>
+    </div>
+
+    <div class="pt-6 border-t border-gray-200 flex flex-col sm:flex-row items-center justify-between text-xs text-gray-500 gap-4">
+      <p>© {new Date().getFullYear()} <strong class="text-gray-900">nexusmotos.com</strong> — Marca operada y distribuida por <strong class="text-gray-900">Grupo Lauzher Perú</strong>. Todos los derechos reservados.</p>
+      <div class="flex items-center gap-4 text-xs">
+        <a href="/contacto" class="hover:text-black transition-colors">Términos de Garantía</a>
+        <span>•</span>
+        <a href="/contacto" class="hover:text-black transition-colors">Política de Privacidad</a>
+      </div>
+    </div>
+  </div>
+</footer>

@@ -1,0 +1,112 @@
+---
+import Layout from '../layouts/Layout.astro';
+import site from '../data/site.json';
+---
+
+<Layout
+  title="Grupo Lauzher | Principal Importador y Representante de Nexus en Perú"
+  description="Conoce la trayectoria de Grupo Lauzher, representante exclusivo de Nexus Motos en el Perú. 20 años de experiencia, 6 almacenes con más de 10,000 m2 y red nacional de repuestos."
+>
+  <!-- Header in Clean Light Gray -->
+  <section class="bg-gray-50 py-20 px-6 border-b border-gray-200 text-center">
+    <div class="max-w-4xl mx-auto space-y-2">
+      <span class="text-xs font-bold text-gray-500 uppercase tracking-widest font-['Teko',sans-serif] text-base">
+        RESPALDO CORPORATIVO
+      </span>
+      <h1 class="text-5xl md:text-7xl lg:text-8xl font-black uppercase text-gray-900 font-['Teko',sans-serif] tracking-tight leading-none">
+        GRUPO LAUZHER
+      </h1>
+      <p class="text-xl md:text-2xl font-bold uppercase text-gray-600 tracking-wider">
+        EL PRINCIPAL IMPORTADOR Y REPRESENTANTE DE <span class="text-[#FF0000]">NEXUS</span> EN EL PERÚ
+      </p>
+    </div>
+  </section>
+
+  <!-- Body Content in Pure White -->
+  <section class="py-20 px-6 bg-white text-gray-900">
+    <div class="max-w-5xl mx-auto space-y-16">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+        <div class="space-y-4">
+          <h2 class="text-3xl md:text-4xl font-black uppercase text-gray-900 font-['Teko',sans-serif] tracking-wide">
+            Impulsando el Progreso y la Pasión Motera
+          </h2>
+          <p class="text-sm text-gray-700 leading-relaxed font-medium">
+            <strong>Grupo Lauzher</strong> se ha consolidado como una de las empresas importadoras más sólidas y respetadas del sector automotriz peruano. Con más de dos décadas de experiencia, nos dedicamos a la importación, ensamblaje, distribución y servicio postventa de vehículos menores de dos y tres ruedas.
+          </p>
+          <p class="text-sm text-gray-600 leading-relaxed">
+            Como principal importador y representante de la marca <strong>Nexus</strong>, nuestro compromiso va más allá de la venta: brindamos soporte técnico especializado, capacitación continua a mecánicos y un abastecimiento ininterrumpido de repuestos originales a través de nuestros 6 almacenes propios con más de 10,000 m² de infraestructura logística.
+          </p>
+        </div>
+
+        <div class="relative bg-gray-50 p-2 rounded-3xl border border-gray-200 shadow-sm">
+          <div class="bg-white rounded-3xl p-8 space-y-6 border border-gray-100">
+            <div class="flex items-center gap-4">
+              <span class="text-5xl font-black text-gray-900 font-['Teko',sans-serif]">20+</span>
+              <span class="text-xs uppercase font-bold text-gray-800">Años de Liderazgo en el Sector Motero Peruano</span>
+            </div>
+            <div class="flex items-center gap-4">
+              <span class="text-5xl font-black text-gray-900 font-['Teko',sans-serif]">6</span>
+              <span class="text-xs uppercase font-bold text-gray-800">Almacenes Propios con +10,000 m² de Stock Nacional</span>
+            </div>
+            <div class="flex items-center gap-4">
+              <span class="text-5xl font-black text-emerald-700 font-['Teko',sans-serif]">100%</span>
+              <span class="text-xs uppercase font-bold text-gray-800">Garantía Oficial de 12 Meses o 12,000 Kilómetros</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Sede Central Card -->
+      <div class="bg-gray-50 border border-gray-200 rounded-3xl p-8 md:p-12 space-y-6 shadow-md">
+        <div class="text-center max-w-2xl mx-auto">
+          <h3 class="text-3xl font-black uppercase text-gray-900 font-['Teko',sans-serif] tracking-wide">
+            NUESTRA SEDE CENTRAL EN LIMA
+          </h3>
+          <p class="text-xs text-gray-600 mt-1">
+            Ubicados estratégicamente en el corazón automotriz de la capital para atender a clientes y distribuidores mayoristas de todo el país.
+          </p>
+        </div>
+
+        <div class="rounded-2xl overflow-hidden border border-gray-200 shadow-sm relative h-64 md:h-80">
+          <img
+            src="/images/arriola-san-luis-ubicacion.webp"
+            alt="Showroom Central Grupo Lauzher - Av. Nicolás Arriola 2278, San Luis"
+            class="w-full h-full object-cover object-center"
+            loading="lazy"
+          />
+          <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent"></div>
+          <div class="absolute bottom-4 left-5 text-white">
+            <span class="text-[10px] font-bold uppercase tracking-widest text-emerald-400 block">Showroom Oficial</span>
+            <p class="text-lg md:text-2xl font-black uppercase font-['Teko',sans-serif] tracking-wide">
+              Av. Nicolás Arriola 2278, San Luis — Lima
+            </p>
+          </div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 pt-4 text-xs">
+          <div class="bg-white p-5 rounded-2xl border border-gray-200 space-y-2 shadow-sm">
+            <h4 class="font-bold uppercase text-sm font-['Teko',sans-serif] text-base text-gray-900">Showroom Integral</h4>
+            <p class="text-gray-600">Exhibición de toda la gama Nexus: pisteras, deportivas, scooters, todoterreno y cafe racer con asesores comerciales expertos.</p>
+          </div>
+          <div class="bg-white p-5 rounded-2xl border border-gray-200 space-y-2 shadow-sm">
+            <h4 class="font-bold uppercase text-sm font-['Teko',sans-serif] text-base text-gray-900">Taller Mecánico Especializado</h4>
+            <p class="text-gray-600">Mantenimientos preventivos oficiales, diagnóstico computarizado y aplicación de garantía directa de fábrica.</p>
+          </div>
+          <div class="bg-white p-5 rounded-2xl border border-gray-200 space-y-2 shadow-sm">
+            <h4 class="font-bold uppercase text-sm font-['Teko',sans-serif] text-base text-gray-900">Almacén Central de Repuestos</h4>
+            <p class="text-gray-600">Despacho diario de cilindros, pistones, carburadores, kits de arrastre, plásticos y llantas a talleres y tiendas en provincias.</p>
+          </div>
+        </div>
+
+        <div class="pt-6 text-center">
+          <a
+            href="/contacto"
+            class="inline-flex items-center gap-2 px-8 py-3.5 rounded-full text-xs font-bold uppercase tracking-wider text-white bg-gray-900 hover:bg-black transition-all shadow-md"
+          >
+            Visitar Showroom en Av. Nicolás Arriola 2278
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+</Layout>

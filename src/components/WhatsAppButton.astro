@@ -1,0 +1,21 @@
+---
+import site from '../data/site.json';
+---
+
+<div class="fixed bottom-6 right-6 z-50 flex items-center group">
+  <div class="mr-3 hidden md:flex items-center bg-gray-950 text-white border border-gray-800 text-xs font-semibold py-2 px-3 rounded-xl shadow-xl transition-all duration-300 transform group-hover:scale-105 pointer-events-none">
+    <span>¿Deseas cotizar tu Nexus? <strong class="text-emerald-400">Escríbenos</strong></span>
+  </div>
+
+  <a
+    href={`https://wa.me/${site.whatsappNumber}?text=Hola%20Nexus%20Motos%20Grupo%20Lauzher,%20deseo%20asesoría%20sobre%20un%20modelo%20y%20el%20Combo%20Motero`}
+    target="_blank"
+    rel="noopener noreferrer"
+    class="w-14 h-14 rounded-full bg-emerald-500 hover:bg-emerald-600 text-white flex items-center justify-center shadow-[0_10px_25px_rgba(16,185,129,0.45)] hover:shadow-[0_15px_30px_rgba(16,185,129,0.6)] transform hover:scale-110 active:scale-95 transition-all duration-300 relative focus:outline-none"
+    aria-label="Contactar por WhatsApp"
+  >
+    <svg class="w-7 h-7 fill-current" viewBox="0 0 24 24">
+      <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.007c.106.005.249-.04.39.298.144.347.491 1.2.534 1.287.043.087.072.188.014.303-.058.116-.087.188-.173.289l-.26.302c-.087.087-.179.182-.077.357.101.174.45 742.968 1.202.666.592 1.229.774 1.403.86.174.087.275.072.376-.044.101-.116.433-.506.549-.68.116-.173.231-.144.39-.087s1.011.477 1.184.564.289.13.332.202c.044.073.044.42-.1.825z" />
+    </svg>
+  </a>
+</div>

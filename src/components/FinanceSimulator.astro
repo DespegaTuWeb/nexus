@@ -1,0 +1,203 @@
+---
+import bikes from '../data/bikes.json';
+import site from '../data/site.json';
+---
+
+<section class="py-20 bg-gray-50 text-gray-900 border-t border-gray-200" id="simulador-credito">
+  <div class="max-w-7xl mx-auto px-6">
+    <div class="text-center max-w-2xl mx-auto mb-12">
+      <span class="text-emerald-700 text-xs font-bold uppercase tracking-widest font-['Teko',sans-serif] text-sm">
+        FINANCIAMIENTO INMEDIATO
+      </span>
+      <h2 class="text-4xl md:text-6xl font-black uppercase tracking-tight font-['Teko',sans-serif] leading-none mt-1 text-gray-900">
+        CALCULA TU CUOTA EN SOLES
+      </h2>
+      <p class="text-gray-600 text-sm md:text-base mt-2">
+        Evaluación en 15 minutos solo con tu DNI. Aceptamos independientes, dependientes y emprendedores.
+      </p>
+    </div>
+
+    <div class="max-w-4xl mx-auto bg-white border border-gray-200 rounded-3xl p-6 md:p-10 shadow-xl">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+        <div class="lg:col-span-7 space-y-6">
+          <div>
+            <label class="block text-xs uppercase font-bold tracking-wider text-gray-700 mb-2">
+              1. Selecciona tu Modelo de Moto
+            </label>
+            <select
+              id="calc-bike-select"
+              class="w-full bg-white border border-gray-300 rounded-xl px-4 py-3.5 text-sm font-semibold text-gray-900 focus:outline-none focus:border-gray-900 transition-colors"
+            >
+              {bikes.map((b) => (
+                <option value={b.rawPricePen} data-name={b.name} data-image={b.transparentImage}>
+                  {b.name} — {b.priceFromPen} ({b.cc})
+                </option>
+              ))}
+            </select>
+          </div>
+
+          <div>
+            <div class="flex justify-between items-center mb-2">
+              <label class="text-xs uppercase font-bold tracking-wider text-gray-700">
+                2. Cuota Inicial
+              </label>
+              <span id="initial-amount-label" class="text-sm font-black text-emerald-700 font-mono">
+                S/ 0 (0%)
+              </span>
+            </div>
+            <div class="grid grid-cols-4 gap-2 mb-3">
+              <button type="button" class="initial-btn px-3 py-2.5 text-xs font-bold rounded-xl bg-gray-900 text-white border border-gray-900 shadow-sm cursor-pointer transition-all" data-pct="0">
+                0% Inicial
+              </button>
+              <button type="button" class="initial-btn px-3 py-2.5 text-xs font-bold rounded-xl bg-white text-gray-700 border border-gray-300 hover:bg-gray-100 cursor-pointer transition-all" data-pct="10">
+                10%
+              </button>
+              <button type="button" class="initial-btn px-3 py-2.5 text-xs font-bold rounded-xl bg-white text-gray-700 border border-gray-300 hover:bg-gray-100 cursor-pointer transition-all" data-pct="20">
+                20%
+              </button>
+              <button type="button" class="initial-btn px-3 py-2.5 text-xs font-bold rounded-xl bg-white text-gray-700 border border-gray-300 hover:bg-gray-100 cursor-pointer transition-all" data-pct="30">
+                30%
+              </button>
+            </div>
+          </div>
+
+          <div>
+            <label class="block text-xs uppercase font-bold tracking-wider text-gray-700 mb-2">
+              3. Plazo de Financiamiento
+            </label>
+            <div class="grid grid-cols-4 gap-2">
+              <button type="button" class="term-btn px-3 py-2.5 text-xs font-bold rounded-xl bg-white text-gray-700 border border-gray-300 hover:bg-gray-100 cursor-pointer transition-all" data-months="12">
+                12 Meses
+              </button>
+              <button type="button" class="term-btn px-3 py-2.5 text-xs font-bold rounded-xl bg-gray-900 text-white border border-gray-900 shadow-sm cursor-pointer transition-all" data-months="18">
+                18 Meses
+              </button>
+              <button type="button" class="term-btn px-3 py-2.5 text-xs font-bold rounded-xl bg-white text-gray-700 border border-gray-300 hover:bg-gray-100 cursor-pointer transition-all" data-months="24">
+                24 Meses
+              </button>
+              <button type="button" class="term-btn px-3 py-2.5 text-xs font-bold rounded-xl bg-white text-gray-700 border border-gray-300 hover:bg-gray-100 cursor-pointer transition-all" data-months="36">
+                36 Meses
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="lg:col-span-5 bg-gray-50 border border-gray-200 rounded-2xl p-6 text-center flex flex-col justify-between shadow-md relative overflow-hidden">
+          <div>
+            <span class="text-xs uppercase font-bold text-gray-500 tracking-wider">Cuota Mensual Estimada</span>
+            <div class="my-3">
+              <span class="text-5xl md:text-6xl font-black text-gray-900 font-['Teko',sans-serif] tracking-tight" id="monthly-installment">
+                S/ 295*
+              </span>
+              <span class="text-xs text-gray-500 block font-medium">al mes (cuota fija en Soles)</span>
+            </div>
+
+            <div class="space-y-2 py-3 border-y border-gray-200 text-xs text-gray-700">
+              <div class="flex justify-between">
+                <span class="text-gray-500">Precio de la Moto:</span>
+                <span class="font-bold text-gray-900" id="summary-price">S/ 8,490</span>
+              </div>
+              <div class="flex justify-between">
+                <span class="text-gray-500">Cuota Inicial:</span>
+                <span class="font-bold text-emerald-700" id="summary-initial">S/ 0</span>
+              </div>
+              <div class="flex justify-between">
+                <span class="text-gray-500">Plazo Seleccionado:</span>
+                <span class="font-bold text-gray-900" id="summary-term">18 meses</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="mt-6 space-y-2">
+            <a
+              id="whatsapp-credit-btn"
+              href={`https://wa.me/${site.whatsappNumber}?text=Hola%20Grupo%20Lauzher,%20deseo%20evaluar%20mi%20crédito%20para%20la%20NEXUS%20250%20ADV%20con%200%20inicial`}
+              target="_blank"
+              rel="noopener noreferrer"
+              class="w-full py-3.5 px-4 rounded-xl text-xs font-black uppercase tracking-wider text-white bg-emerald-600 hover:bg-emerald-700 shadow-md shadow-emerald-600/20 transition-all flex items-center justify-center gap-2"
+            >
+              Solicitar Pre-Aprobación con DNI
+            </a>
+            <p class="text-[9px] text-gray-500">
+              *TCEA referencial. Sujeto a evaluación crediticia de la entidad financiera aliada o crédito directo.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+  let selectedPrice = 8490;
+  let bikeName = 'NEXUS 250 ADV';
+  let initialPct = 0;
+  let selectedMonths = 18;
+
+  const selectEl = document.getElementById('calc-bike-select') as HTMLSelectElement;
+  const initialBtns = document.querySelectorAll('.initial-btn');
+  const termBtns = document.querySelectorAll('.term-btn');
+  const installmentEl = document.getElementById('monthly-installment');
+  const initialLabel = document.getElementById('initial-amount-label');
+  const summaryPrice = document.getElementById('summary-price');
+  const summaryInitial = document.getElementById('summary-initial');
+  const summaryTerm = document.getElementById('summary-term');
+  const waBtn = document.getElementById('whatsapp-credit-btn') as HTMLAnchorElement;
+
+  function calculate() {
+    const initialAmount = Math.round(selectedPrice * (initialPct / 100));
+    const amountToFinance = selectedPrice - initialAmount;
+
+    const monthlyRate = 0.019;
+    const numerator = monthlyRate * Math.pow(1 + monthlyRate, selectedMonths);
+    const denominator = Math.pow(1 + monthlyRate, selectedMonths) - 1;
+    const monthlyPayment = Math.round(amountToFinance * (numerator / denominator));
+
+    if (installmentEl) installmentEl.textContent = `S/ ${monthlyPayment}*`;
+    if (initialLabel) initialLabel.textContent = `S/ ${initialAmount.toLocaleString()} (${initialPct}%)`;
+    if (summaryPrice) summaryPrice.textContent = `S/ ${selectedPrice.toLocaleString()}`;
+    if (summaryInitial) summaryInitial.textContent = `S/ ${initialAmount.toLocaleString()}`;
+    if (summaryTerm) summaryTerm.textContent = `${selectedMonths} meses`;
+
+    if (waBtn) {
+      const msg = `Hola Grupo Lauzher, coticé en la web nexusmotos.com: Modelo: ${bikeName}, Precio S/ ${selectedPrice}, Inicial: S/ ${initialAmount} (${initialPct}%), Plazo: ${selectedMonths} meses con cuota aprox de S/ ${monthlyPayment}. Deseo tramitar mi crédito con DNI.`;
+      waBtn.href = `https://wa.me/51981234567?text=${encodeURIComponent(msg)}`;
+    }
+  }
+
+  selectEl?.addEventListener('change', (e) => {
+    const target = e.target as HTMLSelectElement;
+    selectedPrice = Number(target.value);
+    const selectedOption = target.options[target.selectedIndex];
+    bikeName = selectedOption.getAttribute('data-name') || 'Moto Nexus';
+    calculate();
+  });
+
+  initialBtns.forEach((btn) => {
+    btn.addEventListener('click', () => {
+      initialBtns.forEach((b) => {
+        b.classList.remove('bg-gray-900', 'text-white', 'border-gray-900', 'shadow-sm');
+        b.classList.add('bg-white', 'text-gray-700', 'border-gray-300');
+      });
+      btn.classList.add('bg-gray-900', 'text-white', 'border-gray-900', 'shadow-sm');
+      btn.classList.remove('bg-white', 'text-gray-700', 'border-gray-300');
+      initialPct = Number(btn.getAttribute('data-pct'));
+      calculate();
+    });
+  });
+
+  termBtns.forEach((btn) => {
+    btn.addEventListener('click', () => {
+      termBtns.forEach((b) => {
+        b.classList.remove('bg-gray-900', 'text-white', 'border-gray-900', 'shadow-sm');
+        b.classList.add('bg-white', 'text-gray-700', 'border-gray-300');
+      });
+      btn.classList.add('bg-gray-900', 'text-white', 'border-gray-900', 'shadow-sm');
+      btn.classList.remove('bg-white', 'text-gray-700', 'border-gray-300');
+      selectedMonths = Number(btn.getAttribute('data-months'));
+      calculate();
+    });
+  });
+
+  calculate();
+</script>

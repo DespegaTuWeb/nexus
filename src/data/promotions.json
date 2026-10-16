@@ -1,0 +1,61 @@
+{
+  "combo": {
+    "badge": "BENEFICIOS POR TU COMPRA",
+    "title": "BENEFICIOS INCLUIDOS POR LA COMPRA DE TU UNIDAD",
+    "headline": "Estimado Cliente, por la compra de su unidad, se le incluyen estos beneficios:",
+    "savings": "AHORRA EN TRÁMITES Y EQUIPAMIENTO",
+    "bannerImage": "https://images.unsplash.com/photo-1558981806-ec527fa84c39?auto=format&fit=crop&w=1200&q=80",
+    "helmetImage": "https://images.unsplash.com/photo-1558981403-c5f9899a28bc?auto=format&fit=crop&w=600&q=80",
+    "plateBadgeText": "TRÁMITE DE TARJETA Y PLACA (15-20 DÍAS HÁBILES)",
+    "helmetBadgeText": "CASCO INCLUIDO",
+    "maintenanceBadgeText": "03 PRIMEROS MANTENIMIENTOS GRATIS (MANO DE OBRA)",
+    "warrantyBadgeText": "GARANTÍA 1 AÑO O 12,000 KM (SÓLO MOTOR)",
+    "clientMessage": "Estimado Cliente, por la compra de su unidad, se le incluyen estos beneficios:",
+    "plateNotice": "Asimismo, el trámite de tarjeta y placa tiene una demora máximo de 15 a 20 días hábiles.",
+    "warrantyNotice": "🏅 Garantía por 1 año o 12,000KM, lo que suceda primero. (Sólo Motor)",
+    "maintenanceNotice": "🛠️ Los 03 primeros Mantenimientos son GRATIS (mano de obra) 😉",
+    "items": [
+      {
+        "name": "Trámite de tarjeta y placa",
+        "description": "Gestión registral completa incluida. Demora máxima de 15 a 20 días hábiles.",
+        "icon": "file-check",
+        "value": "INCLUIDO"
+      },
+      {
+        "name": "Casco",
+        "description": "Casco de protección para que empieces a rodar seguro desde el primer día.",
+        "icon": "shield",
+        "value": "INCLUIDO"
+      },
+      {
+        "name": "Kit básico de herramientas",
+        "description": "Herramientas esenciales para mantenimiento y emergencias en ruta.",
+        "icon": "wrench",
+        "value": "INCLUIDO"
+      },
+      {
+        "name": "Aceite (Activación de la unidad)",
+        "description": "Aceite de motor oficial de primer llenado para la activación y encendido de tu unidad 0 km.",
+        "icon": "droplet",
+        "value": "INCLUIDO"
+      },
+      {
+        "name": "03 Primeros Mantenimientos GRATIS",
+        "description": "Los 03 primeros mantenimientos preventivos son GRATIS (mano de obra) en talleres autorizados.",
+        "icon": "wrench",
+        "value": "MANO DE OBRA GRATIS"
+      }
+    ],
+    "terms": "*El trámite de tarjeta y placa tiene una demora máxima de 15 a 20 días hábiles. Garantía por 1 año o 12,000 KM, lo que suceda primero. (Sólo Motor). Beneficios aplican por la compra de unidades en la red oficial de Grupo Lauzher."
+  },
+  "financing": {
+    "title": "Crédito Rápido Solo con tu DNI",
+    "subtitle": "Evaluación inmediata en menos de 15 minutos",
+    "bullets": [
+      "Aprobación al instante con DNI (sujeto a evaluación crediticia)",
+      "Opciones con 0 Inicial según perfil",
+      "Financiamiento desde 12 hasta 36 cuotas fijas en Soles",
+      "Aceptamos dependientes, independientes, RUS y RUC 10 o 20"
+    ]
+  }
+}
