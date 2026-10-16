@@ -15,8 +15,16 @@ function cleanPower(power: string): string {
   return hpPart.replace('.0', '');
 }
 
-const showcaseBikes = bikes
-  .filter((b) => b.showcase)
+const showcaseSlugs = [
+  'nexus-150-plusor',
+  'nexus-200-dm',
+  'nexus-200-rr',
+  'nexus-scooter-125-tx'
+];
+
+const showcaseBikes = showcaseSlugs
+  .map((slug) => bikes.find((b) => b.slug === slug))
+  .filter((b): b is (typeof bikes)[0] => Boolean(b))
   .map((b) => ({
     ...b,
     displayPower: cleanPower(b.power),
@@ -47,10 +55,10 @@ const showcaseBikes = bikes
       <!-- Floating Navigation Arrow Prev -->
       <button
         id="stage-prev"
-        class="absolute left-0 md:left-4 z-30 w-12 h-12 md:w-14 md:h-14 rounded-full bg-white/90 backdrop-blur-sm border border-gray-200 shadow-md hover:shadow-lg hover:border-black flex items-center justify-center text-gray-800 hover:text-black hover:scale-105 transition-all cursor-pointer"
+        class="absolute left-1 md:left-4 z-30 w-10 h-10 md:w-14 md:h-14 rounded-full bg-white/90 backdrop-blur-sm border border-gray-200 shadow-md hover:shadow-lg hover:border-black flex items-center justify-center text-gray-800 hover:text-black hover:scale-105 transition-all cursor-pointer"
         aria-label="Modelo anterior"
       >
-        <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <svg class="w-5 h-5 md:w-6 md:h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
         </svg>
       </button>
@@ -69,10 +77,10 @@ const showcaseBikes = bikes
       <!-- Floating Navigation Arrow Next -->
       <button
         id="stage-next"
-        class="absolute right-0 md:right-4 z-30 w-12 h-12 md:w-14 md:h-14 rounded-full bg-white/90 backdrop-blur-sm border border-gray-200 shadow-md hover:shadow-lg hover:border-black flex items-center justify-center text-gray-800 hover:text-black hover:scale-105 transition-all cursor-pointer"
+        class="absolute right-1 md:right-4 z-30 w-10 h-10 md:w-14 md:h-14 rounded-full bg-white/90 backdrop-blur-sm border border-gray-200 shadow-md hover:shadow-lg hover:border-black flex items-center justify-center text-gray-800 hover:text-black hover:scale-105 transition-all cursor-pointer"
         aria-label="Siguiente modelo"
       >
-        <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <svg class="w-5 h-5 md:w-6 md:h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
         </svg>
       </button>
@@ -105,33 +113,33 @@ const showcaseBikes = bikes
       </div>
 
       <!-- 3 Key Specs Cards: Cilindrada, Potencia, Transmision -->
-      <div class="grid grid-cols-3 gap-3 md:gap-5 py-6">
+      <div class="grid grid-cols-3 gap-2 sm:gap-3 md:gap-5 py-4 sm:py-6">
         <!-- Cilindrada -->
-        <div class="bg-gray-50 border border-gray-200/90 rounded-2xl p-4 text-center hover:bg-gray-100/70 transition-colors">
-          <span class="text-[10px] uppercase font-bold text-gray-500 block tracking-wider mb-1">
+        <div class="bg-gray-50 border border-gray-200/90 rounded-2xl p-2.5 sm:p-4 text-center hover:bg-gray-100/70 transition-colors">
+          <span class="text-[9px] sm:text-[10px] uppercase font-bold text-gray-500 block tracking-wider mb-1">
             Cilindrada
           </span>
-          <span id="spec-cc" class="text-2xl md:text-4xl font-black text-gray-900 font-['Teko',sans-serif] tracking-tight block">
+          <span id="spec-cc" class="text-xl sm:text-2xl md:text-4xl font-black text-gray-900 font-['Teko',sans-serif] tracking-tight block">
             {showcaseBikes[0].cc}
           </span>
         </div>
 
         <!-- Potencia (solo número y HP) -->
-        <div class="bg-gray-50 border border-gray-200/90 rounded-2xl p-4 text-center hover:bg-gray-100/70 transition-colors">
-          <span class="text-[10px] uppercase font-bold text-gray-500 block tracking-wider mb-1">
+        <div class="bg-gray-50 border border-gray-200/90 rounded-2xl p-2.5 sm:p-4 text-center hover:bg-gray-100/70 transition-colors">
+          <span class="text-[9px] sm:text-[10px] uppercase font-bold text-gray-500 block tracking-wider mb-1">
             Potencia
           </span>
-          <span id="spec-power" class="text-2xl md:text-4xl font-black text-gray-900 font-['Teko',sans-serif] tracking-tight block">
+          <span id="spec-power" class="text-xl sm:text-2xl md:text-4xl font-black text-gray-900 font-['Teko',sans-serif] tracking-tight block">
             {showcaseBikes[0].displayPower}
           </span>
         </div>
 
         <!-- Transmisión (Manual / Automática / Semiautomática) -->
-        <div class="bg-gray-50 border border-gray-200/90 rounded-2xl p-4 text-center hover:bg-gray-100/70 transition-colors">
-          <span class="text-[10px] uppercase font-bold text-gray-500 block tracking-wider mb-1">
+        <div class="bg-gray-50 border border-gray-200/90 rounded-2xl p-2.5 sm:p-4 text-center hover:bg-gray-100/70 transition-colors">
+          <span class="text-[9px] sm:text-[10px] uppercase font-bold text-gray-500 block tracking-wider mb-1">
             Transmisión
           </span>
-          <span id="spec-trans" class="text-2xl md:text-4xl font-black text-gray-900 font-['Teko',sans-serif] tracking-tight block truncate">
+          <span id="spec-trans" class="text-lg sm:text-2xl md:text-4xl font-black text-gray-900 font-['Teko',sans-serif] tracking-tight block truncate">
             {showcaseBikes[0].displayTrans}
           </span>
         </div>

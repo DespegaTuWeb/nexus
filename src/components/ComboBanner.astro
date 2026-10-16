@@ -1,125 +1,208 @@
 ---
-import promotions from '../data/promotions.json';
 import site from '../data/site.json';
 
-const combo = promotions.combo;
+const benefits = [
+  {
+    id: "placa",
+    badge: "100% INCLUIDO • SUNARP",
+    badgeColor: "bg-blue-100 text-blue-800 border-blue-200",
+    iconBg: "bg-blue-500/10 text-blue-600 border-blue-200",
+    title: "Tarjeta y Placa SUNARP",
+    desc: "Trámite registral formal sin colas ni notarías. Demora máxima de 15 a 20 días hábiles.",
+    isPlate: true
+  },
+  {
+    id: "casco",
+    badge: "GRATIS • SEGURIDAD",
+    badgeColor: "bg-emerald-100 text-emerald-800 border-emerald-200",
+    iconBg: "bg-emerald-500/10 text-emerald-600 border-emerald-200",
+    title: "Casco Protector Homologado",
+    desc: "Casco reglamentario certificado para que estrenes tu moto seguro desde el minuto cero.",
+    icon: `<svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3C6.5 3 3 6.5 3 11c0 3 1.5 5.5 3.5 7l.5 3h10l.5-3c2-1.5 3.5-4 3.5-7 0-4.5-3.5-8-9-8z" /><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 11h10c.5 0 1 .5 1 1.5s-.8 2.5-3 2.5H9c-2.2 0-3-1.5-3-2.5S6.5 11 7 11z" /></svg>`
+  },
+  {
+    id: "mantenimiento",
+    badge: "MANO DE OBRA S/ 0",
+    badgeColor: "bg-emerald-100 text-emerald-800 border-emerald-200",
+    iconBg: "bg-emerald-500/10 text-emerald-600 border-emerald-200",
+    title: "03 Primeros Mantenimientos",
+    desc: "Los 03 primeros mantenimientos son GRATIS (mano de obra) en talleres autorizados.",
+    icon: `<svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z" /></svg>`
+  },
+  {
+    id: "herramientas",
+    badge: "EQUIPAMIENTO DE RUTA",
+    badgeColor: "bg-amber-100 text-amber-800 border-amber-200",
+    iconBg: "bg-amber-500/10 text-amber-600 border-amber-200",
+    title: "Kit Básico de Herramientas",
+    desc: "Set de llaves y herramientas indispensables para ajustes rápidos y emergencias en carretera.",
+    icon: `<svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 7a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V7z" /><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5V3a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v2" /></svg>`
+  },
+  {
+    id: "aceite",
+    badge: "PUESTA A PUNTO",
+    badgeColor: "bg-cyan-100 text-cyan-800 border-cyan-200",
+    iconBg: "bg-cyan-500/10 text-cyan-600 border-cyan-200",
+    title: "Aceite de Activación 0 KM",
+    desc: "Primer llenado con lubricante oficial formulado para el encendido y asentamiento del motor.",
+    icon: `<svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 2v4m0 0l-3 4h6l-3-4zm-5 8h10a2 2 0 0 1 2 2v6a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2v-6a2 2 0 0 1 2-2z" /></svg>`
+  },
+  {
+    id: "garantia",
+    badge: "1 AÑO O 12,000 KM",
+    badgeColor: "bg-purple-100 text-purple-800 border-purple-200",
+    iconBg: "bg-purple-500/10 text-purple-600 border-purple-200",
+    title: "Garantía Oficial Grupo Lauzher",
+    desc: "Garantía por 1 año o 12,000KM, lo que suceda primero. (Sólo Motor) con respaldo directo nacional.",
+    icon: `<svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" /></svg>`
+  }
+];
 ---
 
-<section class="py-20 bg-gray-50 text-gray-900 relative overflow-hidden border-t border-gray-200" id="combo-promocion">
+<section class="py-20 bg-[#fafafa] text-gray-900 relative overflow-hidden border-t border-gray-200" id="combo-promocion">
   <div class="max-w-7xl mx-auto px-6 relative z-10">
+    <!-- Header: The Irresistible Hook -->
     <div class="text-center max-w-3xl mx-auto mb-14">
-      <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-emerald-50 border border-emerald-200 text-emerald-800 text-xs font-black uppercase tracking-widest font-['Teko',sans-serif] mb-3">
-        <span class="w-2 h-2 rounded-full bg-emerald-500"></span>
-        {combo.badge}
+      <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-emerald-50 border border-emerald-300 text-emerald-800 text-xs font-black uppercase tracking-widest font-['Teko',sans-serif] mb-3 shadow-sm">
+        <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+        PACK MOTERO OFICIAL • VALORIZADO EN MÁS DE S/ 850 INCLUIDO
       </div>
       <h2 class="text-5xl md:text-7xl font-black uppercase tracking-tight font-['Teko',sans-serif] leading-none text-gray-900">
-        BENEFICIOS POR TU COMPRA
+        BENEFICIOS INCLUIDOS <span class="text-[#FF0000]">POR TU COMPRA</span>
       </h2>
-      <p class="text-gray-700 text-base md:text-lg font-bold mt-2">
-        Estimado Cliente, por la compra de su unidad, se le incluyen estos beneficios:
+      <p class="text-gray-600 text-base md:text-lg font-medium mt-2">
+        Estimado Cliente: al adquirir tu motocicleta Nexus 0 km, te incluimos todo este equipamiento para que salgas rodando sin costos ocultos:
       </p>
-      <div class="mt-3 inline-block bg-emerald-50 border border-emerald-300 text-emerald-800 px-4 py-1.5 rounded-lg text-xs md:text-sm font-bold shadow-sm">
-        🏅 Garantía por 1 año o 12,000 KM, lo que suceda primero (Sólo Motor)
-      </div>
     </div>
 
-    <!-- Main Card in Pure White -->
-    <div class="relative bg-white border border-gray-200 rounded-3xl p-6 md:p-10 shadow-xl overflow-hidden">
+    <!-- Main Showcase Container -->
+    <div class="bg-white border border-gray-200 rounded-2xl sm:rounded-3xl p-4 sm:p-6 md:p-10 shadow-xl overflow-hidden">
       <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
-        <!-- Visual Presentation -->
-        <div class="lg:col-span-7 relative flex items-center justify-center min-h-[340px] md:min-h-[420px] bg-gradient-to-b from-gray-50 to-gray-100/60 rounded-2xl p-4">
-          <img
-            src="/images/bikes/todoterreno-200-zz.webp"
-            alt="Nexus 200 ZZ Combo Motero"
-            class="relative z-10 max-h-72 md:max-h-84 w-auto object-contain drop-shadow-[0_16px_20px_rgba(0,0,0,0.18)] transform hover:scale-105 transition-transform duration-500"
-          />
+        <!-- Visual Studio Hero Display -->
+        <div class="lg:col-span-5 relative flex flex-col items-center justify-center min-h-[360px] md:min-h-[460px] bg-gradient-to-b from-gray-50 to-gray-100/70 rounded-3xl p-6 border border-gray-200/80 group">
+          <!-- Spotlight background effect -->
+          <div class="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(255,255,255,0.9)_0%,transparent_75%)] pointer-events-none"></div>
 
-          <!-- Floating badge: Casco -->
-          <div class="absolute top-4 left-2 md:left-6 z-20 bg-white border border-amber-300 rounded-2xl p-3 shadow-lg flex items-center gap-3">
-            <div class="w-10 h-10 rounded-xl bg-amber-500/10 flex items-center justify-center text-amber-600 font-bold">
-              <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+          <!-- Top Floating Tag: Casco -->
+          <div class="absolute top-3 left-3 sm:top-4 sm:left-4 z-20 bg-white/95 backdrop-blur-sm border border-emerald-300 rounded-xl sm:rounded-2xl p-2 sm:p-2.5 shadow-md flex items-center gap-2 max-w-[80%]">
+            <div class="w-8 h-8 sm:w-9 sm:h-9 rounded-lg sm:rounded-xl bg-emerald-100 text-emerald-700 flex items-center justify-center shrink-0">
+              <svg class="w-4 h-4 sm:w-5 sm:h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3C6.5 3 3 6.5 3 11c0 3 1.5 5.5 3.5 7l.5 3h10l.5-3c2-1.5 3.5-4 3.5-7 0-4.5-3.5-8-9-8z" />
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 11h10c.5 0 1 .5 1 1.5s-.8 2.5-3 2.5H9c-2.2 0-3-1.5-3-2.5S6.5 11 7 11z" />
               </svg>
             </div>
-            <div>
-              <span class="text-[10px] uppercase font-bold text-amber-700 block tracking-wider">Incluido Gratis</span>
-              <span class="text-xs font-black uppercase text-gray-900 font-['Teko',sans-serif] tracking-wide text-sm">CASCO PROTECTOR</span>
+            <div class="min-w-0">
+              <span class="text-[8px] sm:text-[9px] uppercase font-black text-emerald-700 block tracking-wider truncate">INCLUIDO GRATIS</span>
+              <span class="text-[11px] sm:text-xs font-black uppercase text-gray-900 font-['Teko',sans-serif] tracking-wide truncate block">CASCO PROTECTOR</span>
             </div>
           </div>
 
-          <!-- Floating badge: Placa SUNARP -->
-          <div class="absolute bottom-4 right-2 md:right-6 z-20 bg-white border border-blue-200 rounded-2xl p-3 shadow-lg flex items-center gap-3">
-            <div class="bg-blue-50 text-gray-900 border-2 border-blue-600 rounded px-2 py-0.5 text-center font-mono font-black text-xs">
-              <span class="text-[7px] text-blue-700 block tracking-widest font-sans font-bold -mb-1">PERÚ</span>
-              7890-NX
+          <!-- Bottom Floating Tag: Placa SUNARP -->
+          <div class="absolute bottom-3 right-3 sm:bottom-4 sm:right-4 z-20 bg-white/95 backdrop-blur-sm border border-blue-300 rounded-xl sm:rounded-2xl p-2 sm:p-2.5 shadow-md flex items-center gap-2 max-w-[80%]">
+            <div class="w-9 h-5 sm:w-10 sm:h-6 bg-white border-2 border-blue-600 rounded text-center flex flex-col items-center justify-center shadow-sm leading-tight shrink-0">
+              <span class="text-[5px] sm:text-[6px] text-blue-700 font-bold -mb-0.5 font-sans">PERÚ</span>
+              <span class="text-[7px] sm:text-[8px] font-black font-mono text-gray-900">7890-NX</span>
             </div>
-            <div>
-              <span class="text-[10px] uppercase font-bold text-blue-600 block tracking-wider">Demora máx. 15-20 días</span>
-              <span class="text-xs font-black uppercase text-gray-900 font-['Teko',sans-serif] tracking-wide text-sm">TARJETA Y PLACA</span>
+            <div class="min-w-0">
+              <span class="text-[8px] sm:text-[9px] uppercase font-black text-blue-600 block tracking-wider truncate">DEMORA 15-20 DÍAS</span>
+              <span class="text-[11px] sm:text-xs font-black uppercase text-gray-900 font-['Teko',sans-serif] tracking-wide truncate block">TARJETA Y PLACA</span>
             </div>
           </div>
 
-          <div class="absolute -bottom-2 left-6 z-20 bg-white border border-emerald-300 rounded-xl px-3 py-1.5 hidden sm:flex items-center gap-2 shadow-md">
-            <span class="w-2 h-2 rounded-full bg-emerald-500"></span>
-            <span class="text-xs font-bold text-emerald-700">🛠️ 03 primeros Mantenimientos GRATIS (mano de obra) 😉</span>
-          </div>
+          <!-- Bike Photo with Soft Ground Shadow -->
+          <img
+            src="/images/bikes/todoterreno-200-zz.webp"
+            alt="Nexus 200 ZZ con Beneficios y Combo Motero"
+            class="relative z-10 max-h-72 md:max-h-88 w-auto object-contain drop-shadow-[0_20px_25px_rgba(0,0,0,0.18)] transform group-hover:scale-105 transition-transform duration-500"
+          />
+          <div class="absolute bottom-8 w-3/4 h-6 bg-black/15 rounded-full blur-md -z-0"></div>
         </div>
 
-        <!-- Combo Details List -->
-        <div class="lg:col-span-5 space-y-4">
-          <h3 class="text-2xl md:text-3xl font-black uppercase text-gray-900 font-['Teko',sans-serif] tracking-wide border-b border-gray-200 pb-2">
-            Beneficios Incluidos por tu Compra
-          </h3>
+        <!-- 6 Visual Hook Cards Grid (Right Side) -->
+        <div class="lg:col-span-7 space-y-5">
+          <div class="flex items-center justify-between border-b border-gray-200 pb-3">
+            <div>
+              <span class="text-xs font-bold text-gray-400 uppercase tracking-widest font-['Teko',sans-serif] text-base">
+                EQUIPAMIENTO COMPLETO DE SERIE
+              </span>
+              <h3 class="text-3xl md:text-4xl font-black uppercase text-gray-900 font-['Teko',sans-serif] tracking-wide leading-none mt-0.5">
+                TU MOTO SALE 100% LISTA PARA RODAR
+              </h3>
+            </div>
+            <span class="hidden sm:inline-flex px-3 py-1 rounded-full text-xs font-black uppercase tracking-wider bg-gray-900 text-white">
+              6 BENEFICIOS
+            </span>
+          </div>
 
-          <div class="space-y-3">
-            {combo.items.map((item) => (
-              <div class="flex items-start gap-3 bg-gray-50 hover:bg-emerald-50/40 p-3.5 rounded-xl border border-gray-200 transition-colors">
-                <div class="w-8 h-8 rounded-lg bg-emerald-100 text-emerald-700 flex items-center justify-center flex-shrink-0 mt-0.5">
-                  <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7" />
-                  </svg>
-                </div>
-                <div class="flex-1">
-                  <div class="flex items-center justify-between">
-                    <h4 class="text-sm font-bold text-gray-900">{item.name}</h4>
-                    <span class="text-[10px] font-black uppercase px-2 py-0.5 rounded bg-emerald-100 text-emerald-800 border border-emerald-200">
-                      {item.value}
+          <!-- 6 High-Impact Visual Cards with Icons & Badges -->
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+            {benefits.map((b) => (
+              <div class="bg-gray-50 hover:bg-white border border-gray-200 hover:border-gray-300 rounded-2xl p-3.5 transition-all duration-300 shadow-sm hover:shadow-md flex items-start gap-3 group/card">
+                <!-- Visual Icon / Figurita -->
+                {b.isPlate ? (
+                  <div class="w-12 h-12 rounded-xl bg-blue-500/10 border border-blue-500/20 text-blue-600 flex flex-col items-center justify-center shrink-0 shadow-inner group-hover/card:scale-105 transition-transform">
+                    <div class="w-8 h-5 bg-white rounded border border-blue-600 flex flex-col items-center justify-center shadow-sm leading-none">
+                      <span class="text-[5px] text-blue-700 font-bold -mb-0.5 font-sans">PERÚ</span>
+                      <span class="text-[6px] text-gray-900 font-black font-mono">NX-26</span>
+                    </div>
+                  </div>
+                ) : (
+                  <div class={`w-12 h-12 rounded-xl ${b.iconBg} border flex items-center justify-center shrink-0 shadow-inner group-hover/card:scale-105 transition-transform`}>
+                    <Fragment set:html={b.icon} />
+                  </div>
+                )}
+
+                <!-- Card Content -->
+                <div class="min-w-0 flex-1">
+                  <div class="flex items-center justify-between gap-1">
+                    <span class={`text-[9px] font-black uppercase px-2 py-0.5 rounded border tracking-wider ${b.badgeColor}`}>
+                      {b.badge}
                     </span>
                   </div>
+                  <h4 class="text-sm font-bold text-gray-900 uppercase font-['Teko',sans-serif] tracking-wide mt-1 leading-tight text-base">
+                    {b.title}
+                  </h4>
                   <p class="text-xs text-gray-600 mt-0.5 leading-relaxed">
-                    {item.description}
+                    {b.desc}
                   </p>
                 </div>
               </div>
             ))}
           </div>
 
-          <div class="p-3.5 bg-amber-50/90 border border-amber-200 rounded-xl text-xs text-amber-950 font-medium space-y-1.5 shadow-sm">
-            <p>📍 <strong>Trámite de Placa y Tarjeta:</strong> Demora máxima de 15 a 20 días hábiles.</p>
-            <p>🛠️ <strong>Mantenimientos:</strong> Los 03 primeros Mantenimientos son GRATIS (mano de obra) 😉</p>
-            <p>🏅 <strong>Garantía:</strong> Por 1 año o 12,000KM, lo que suceda primero. (Sólo Motor)</p>
+          <!-- Clean Reassurance Banner (No yellow!) -->
+          <div class="p-3.5 bg-gray-100/90 border border-gray-200/90 rounded-2xl text-xs text-gray-700 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-2">
+            <div class="flex items-center gap-2">
+              <span class="w-2 h-2 rounded-full bg-emerald-500 shrink-0"></span>
+              <span class="font-medium text-gray-800">
+                Garantía oficial por 1 año o 12,000 KM (Sólo Motor) con respaldo de Grupo Lauzher.
+              </span>
+            </div>
+            <a href="/combos-promociones" class="text-gray-900 font-bold hover:underline shrink-0 text-xs">
+              Conocer términos completos →
+            </a>
           </div>
 
+          <!-- CTAs -->
           <div class="pt-2 flex flex-col sm:flex-row gap-3">
             <a
               href={`https://wa.me/${site.whatsappNumber}?text=Hola%20Grupo%20Lauzher,%20deseo%20consultar%20por%20los%20beneficios%20incluidos%20por%20la%20compra%20de%20mi%20moto`}
               target="_blank"
               rel="noopener noreferrer"
-              class="flex-1 text-center py-3.5 px-6 rounded-full text-xs font-black uppercase tracking-wider text-white bg-emerald-600 hover:bg-emerald-700 shadow-md shadow-emerald-600/20 transition-all flex items-center justify-center gap-2"
+              class="flex-1 text-center py-3.5 px-6 rounded-full text-xs font-black uppercase tracking-wider text-white bg-emerald-600 hover:bg-emerald-700 shadow-md shadow-emerald-600/20 transition-all flex items-center justify-center gap-2 cursor-pointer active:scale-95"
             >
+              <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24">
+                <path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91C2.13 13.66 2.59 15.36 3.45 16.86L2.05 22L7.3 20.62C8.75 21.41 10.38 21.83 12.04 21.83C17.5 21.83 21.95 17.38 21.95 11.92C21.95 9.27 20.92 6.78 19.05 4.91C17.18 3.03 14.69 2 12.04 2M12.05 3.67C14.25 3.67 16.31 4.53 17.87 6.09C19.42 7.65 20.28 9.72 20.28 11.92C20.28 16.46 16.58 20.15 12.04 20.15C10.56 20.15 9.11 19.76 7.85 19L7.55 18.83L4.43 19.65L5.26 16.61L5.06 16.29C4.24 15 3.8 13.47 3.8 11.91C3.81 7.37 7.5 3.67 12.05 3.67M8.53 7.33C8.37 7.33 8.1 7.39 7.87 7.64C7.65 7.89 7.02 8.48 7.02 9.68C7.02 10.88 7.89 12.04 8.01 12.2C8.13 12.37 9.71 14.81 12.14 15.86C14.16 16.73 14.57 16.56 15.01 16.52C15.46 16.48 16.45 15.93 16.66 15.35C16.86 14.77 16.86 14.28 16.8 14.17C16.74 14.07 16.58 14.01 16.34 13.89C16.1 13.77 14.92 13.19 14.7 13.11C14.48 13.03 14.32 12.99 14.16 13.23C14 13.48 13.54 14.01 13.4 14.17C13.26 14.34 13.12 14.36 12.88 14.24C12.64 14.12 11.86 13.87 10.94 13.05C10.22 12.41 9.73 11.62 9.59 11.38C9.45 11.14 9.57 11 9.69 10.89C9.8 10.78 9.94 10.6 10.06 10.46C10.18 10.32 10.22 10.22 10.3 10.06C10.38 9.9 10.34 9.76 10.28 9.64C10.22 9.52 9.74 8.35 9.55 7.87C9.35 7.41 9.16 7.47 9.01 7.46C8.88 7.46 8.71 7.45 8.55 7.45L8.53 7.33Z"/>
+              </svg>
               Consultar Beneficios por WhatsApp
             </a>
             <a
-              href="/combos-promociones"
-              class="py-3.5 px-6 rounded-full text-xs font-black uppercase tracking-wider text-gray-700 border border-gray-300 hover:border-black hover:text-black transition-all text-center"
+              href="/modelos"
+              class="py-3.5 px-6 rounded-full text-xs font-black uppercase tracking-wider text-gray-800 border border-gray-300 hover:border-black hover:text-black transition-all text-center"
             >
-              Ver Detalle Completo
+              Ver Catálogo de Motos
             </a>
           </div>
-
-          <p class="text-[10px] text-gray-500 pt-1">
-            {combo.terms}
-          </p>
         </div>
       </div>
     </div>

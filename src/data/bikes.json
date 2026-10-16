@@ -47,7 +47,7 @@
       "Garantía 12 meses o 12,000 km"
     ],
     "featured": false,
-    "showcase": false,
+    "showcase": true,
     "comboEligible": true
   },
   {
@@ -328,7 +328,7 @@
       "Garantía 12 meses o 12,000 km"
     ],
     "featured": false,
-    "showcase": false,
+    "showcase": true,
     "comboEligible": true
   },
   {
@@ -427,7 +427,7 @@
       "Garantía oficial 12 meses o 12,000 km"
     ],
     "featured": true,
-    "showcase": true,
+    "showcase": false,
     "comboEligible": true
   },
   {
@@ -716,7 +716,7 @@
       "Garantía 12 meses o 12,000 km"
     ],
     "featured": true,
-    "showcase": true,
+    "showcase": false,
     "comboEligible": true
   },
   {
@@ -811,7 +811,7 @@
       "Garantía 12 meses o 12,000 km"
     ],
     "featured": false,
-    "showcase": false,
+    "showcase": true,
     "comboEligible": true
   },
   {
@@ -957,7 +957,7 @@
       "Garantía 12 meses o 12,000 km"
     ],
     "featured": false,
-    "showcase": false,
+    "showcase": true,
     "comboEligible": true
   },
   {
@@ -1105,7 +1105,7 @@
       "Garantía oficial de 12 meses o 12,000 km respaldada por Grupo Lauzher"
     ],
     "featured": true,
-    "showcase": true,
+    "showcase": false,
     "comboEligible": true
   },
   {
@@ -1201,7 +1201,7 @@
       "Garantía oficial 12 meses o 12,000 km"
     ],
     "featured": true,
-    "showcase": true,
+    "showcase": false,
     "comboEligible": true
   },
   {
@@ -1253,7 +1253,7 @@
       "Garantía oficial Grupo Lauzher 12 meses o 12,000 km"
     ],
     "featured": true,
-    "showcase": true,
+    "showcase": false,
     "comboEligible": true
   }
 ]

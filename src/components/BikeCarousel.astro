@@ -2,18 +2,18 @@
 import bikes from '../data/bikes.json';
 
 const categories = [
-  { id: 'todas', label: 'Todas' },
-  { id: 'pisteras', label: 'Pisteras' },
-  { id: 'deportivas', label: 'Deportivas' },
-  { id: 'scooter', label: 'Scooters' },
-  { id: 'todoterreno', label: 'Todoterreno' },
-  { id: 'caferacer', label: 'Cafe Racer' }
+  { id: 'todas', label: 'Todas', count: bikes.length },
+  { id: 'pisteras', label: 'Pisteras', count: bikes.filter((b) => b.category === 'pisteras').length },
+  { id: 'deportivas', label: 'Deportivas', count: bikes.filter((b) => b.category === 'deportivas').length },
+  { id: 'scooter', label: 'Scooters', count: bikes.filter((b) => b.category === 'scooter').length },
+  { id: 'todoterreno', label: 'Todoterreno', count: bikes.filter((b) => b.category === 'todoterreno').length },
+  { id: 'caferacer', label: 'Cafe Racer', count: bikes.filter((b) => b.category === 'caferacer').length }
 ];
 ---
 
 <section class="py-20 bg-[#fafafa] text-gray-900 border-t border-gray-200" id="catalogo-selector">
   <div class="max-w-7xl mx-auto px-6">
-    <div class="flex flex-col lg:flex-row lg:items-center justify-between gap-6 mb-12">
+    <div class="flex flex-col lg:flex-row lg:items-center justify-between gap-6 mb-8">
       <div>
         <h2 class="text-4xl md:text-6xl font-black text-gray-900 tracking-tight font-['Teko',sans-serif]">
           ELIGE TU NUEVA <span class="text-[#FF0000]">NEXUS</span>
@@ -24,50 +24,40 @@ const categories = [
       <div class="flex items-center gap-1.5 overflow-x-auto pb-2 lg:pb-0 scrollbar-none" id="category-tabs">
         {categories.map((cat, i) => (
           <button
-            class={`category-filter-btn px-5 py-2.5 rounded-full text-xs md:text-sm font-bold tracking-wider uppercase border transition-all duration-200 whitespace-nowrap cursor-pointer ${
+            class={`category-filter-btn inline-flex items-center gap-2 px-4 py-2 md:px-5 md:py-2.5 rounded-full text-xs md:text-sm font-bold tracking-wider uppercase border transition-all duration-200 whitespace-nowrap cursor-pointer ${
               i === 0
                 ? 'bg-[#0f1118] text-white border-[#0f1118] shadow-md active-category'
-                : 'bg-white text-gray-600 hover:text-black hover:bg-gray-200/80 border-gray-200/80'
+                : 'bg-white text-gray-600 hover:text-black hover:bg-gray-100 border-gray-200'
             }`}
             data-category={cat.id}
           >
-            {cat.label}
+            <span>{cat.label}</span>
+            <span class={`cat-badge text-[11px] font-black px-2 py-0.5 rounded-full transition-colors ${
+              i === 0 ? 'bg-white/20 text-white' : 'bg-gray-100 text-gray-600'
+            }`}>
+              {cat.count}
+            </span>
           </button>
         ))}
       </div>
     </div>
 
-    <!-- Filter & Sort Toolbar -->
-    <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 mb-6 bg-white p-3 rounded-2xl border border-gray-200/80 shadow-sm">
-      <div class="flex items-center gap-1.5 overflow-x-auto pb-1 sm:pb-0 scrollbar-none">
-        <span class="text-xs font-bold uppercase text-gray-500 mr-1">Cilindrada:</span>
+    <!-- Compact Cilindrada Bar (No Sort Dropdown, No Dead Space) -->
+    <div class="flex items-center gap-2 mb-8 flex-wrap">
+      <span class="text-xs font-bold uppercase text-gray-500 mr-1">Cilindrada:</span>
+      <div class="flex items-center gap-1.5 flex-wrap">
         {['all', '125', '150', '200', '250'].map((ccVal, idx) => (
           <button
-            class={`carousel-cc-btn px-3 py-1 rounded-full text-xs font-bold uppercase transition-all cursor-pointer ${
+            class={`carousel-cc-btn px-3.5 py-1 rounded-full text-xs font-bold uppercase border transition-all cursor-pointer ${
               idx === 0
-                ? 'bg-gray-900 text-white'
-                : 'bg-gray-100 text-gray-600 hover:bg-gray-200'
+                ? 'bg-gray-900 text-white border-gray-900 shadow-sm'
+                : 'bg-white text-gray-600 hover:bg-gray-100 hover:text-black border-gray-200'
             }`}
             data-cc={ccVal}
           >
             {ccVal === 'all' ? 'Todas' : `${ccVal} cc`}
           </button>
         ))}
-      </div>
-
-      <div class="flex items-center gap-2 justify-end">
-        <label for="home-sort" class="text-xs font-bold uppercase text-gray-500 whitespace-nowrap">
-          Ordenar:
-        </label>
-        <select
-          id="home-sort"
-          class="text-xs font-bold uppercase tracking-wider bg-gray-50 border border-gray-200 rounded-lg px-2.5 py-1 text-gray-800 focus:outline-none focus:ring-2 focus:ring-[#FF0000] cursor-pointer"
-        >
-          <option value="default">Precio: Menor a Mayor (Por defecto)</option>
-          <option value="price-desc">Precio: Mayor a Menor</option>
-          <option value="cc-asc">Cilindrada: 125cc → 250cc</option>
-          <option value="cc-desc">Cilindrada: 250cc → 125cc</option>
-        </select>
       </div>
     </div>
 
@@ -167,13 +157,11 @@ const categories = [
 <script>
   const filterBtns = document.querySelectorAll('.category-filter-btn');
   const ccBtns = document.querySelectorAll('.carousel-cc-btn');
-  const sortSelect = document.getElementById('home-sort') as HTMLSelectElement | null;
   const container = document.getElementById('bike-cards-container');
   const cards = Array.from(document.querySelectorAll('.bike-card')) as HTMLElement[];
 
   let currentCat = 'todas';
   let currentCc = 'all';
-  let currentSort = 'default';
 
   filterBtns.forEach((btn) => {
     btn.addEventListener('click', () => {
@@ -188,13 +176,6 @@ const categories = [
       updateCarouselUI();
     });
   });
-
-  if (sortSelect) {
-    sortSelect.addEventListener('change', () => {
-      currentSort = sortSelect.value;
-      updateCarouselUI();
-    });
-  }
 
   function updateCarouselUI() {
     // Determine available CCs for the currently selected category
@@ -225,44 +206,39 @@ const categories = [
     });
 
     filterBtns.forEach((b) => {
+      const badge = b.querySelector('.cat-badge');
       if (b.getAttribute('data-category') === currentCat) {
         b.classList.add('bg-[#0f1118]', 'text-white', 'border-[#0f1118]', 'shadow-md', 'active-category');
-        b.classList.remove('bg-white', 'text-gray-600', 'border-gray-200/80');
+        b.classList.remove('bg-white', 'text-gray-600', 'border-gray-200');
+        if (badge) {
+          badge.classList.add('bg-white/20', 'text-white');
+          badge.classList.remove('bg-gray-100', 'text-gray-600');
+        }
       } else {
         b.classList.remove('bg-[#0f1118]', 'text-white', 'border-[#0f1118]', 'shadow-md', 'active-category');
-        b.classList.add('bg-white', 'text-gray-600', 'border-gray-200/80');
+        b.classList.add('bg-white', 'text-gray-600', 'border-gray-200');
+        if (badge) {
+          badge.classList.remove('bg-white/20', 'text-white');
+          badge.classList.add('bg-gray-100', 'text-gray-600');
+        }
       }
     });
 
     ccBtns.forEach((b) => {
       if (b.getAttribute('data-cc') === currentCc) {
-        b.classList.add('bg-gray-900', 'text-white');
-        b.classList.remove('bg-gray-100', 'text-gray-600');
+        b.classList.add('bg-gray-900', 'text-white', 'border-gray-900');
+        b.classList.remove('bg-white', 'text-gray-600', 'border-gray-200');
       } else {
-        b.classList.remove('bg-gray-900', 'text-white');
-        b.classList.add('bg-gray-100', 'text-gray-600');
+        b.classList.remove('bg-gray-900', 'text-white', 'border-gray-900');
+        b.classList.add('bg-white', 'text-gray-600', 'border-gray-200');
       }
     });
 
+    // Natural catalog order
     const sortedCards = [...cards].sort((a, b) => {
-      const priceA = parseInt(a.getAttribute('data-price') || '0', 10);
-      const priceB = parseInt(b.getAttribute('data-price') || '0', 10);
-      const ccA = parseInt(a.getAttribute('data-cc') || '0', 10);
-      const ccB = parseInt(b.getAttribute('data-cc') || '0', 10);
       const idxA = parseInt(a.getAttribute('data-original-index') || '0', 10);
       const idxB = parseInt(b.getAttribute('data-original-index') || '0', 10);
-
-      if (currentSort === 'price-asc') {
-        return priceA - priceB;
-      } else if (currentSort === 'price-desc') {
-        return priceB - priceA;
-      } else if (currentSort === 'cc-desc') {
-        return ccB - ccA || priceB - priceA;
-      } else if (currentSort === 'cc-asc') {
-        return ccA - ccB || priceA - priceB;
-      } else {
-        return idxA - idxB;
-      }
+      return idxA - idxB;
     });
 
     sortedCards.forEach((card) => {

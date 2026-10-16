@@ -3,12 +3,12 @@ import Layout from '../../layouts/Layout.astro';
 import bikes from '../../data/bikes.json';
 
 const categories = [
-  { id: 'todas', label: 'Todos los Modelos' },
-  { id: 'pisteras', label: 'Pisteras' },
-  { id: 'deportivas', label: 'Deportivas' },
-  { id: 'scooter', label: 'Scooters' },
-  { id: 'todoterreno', label: 'Todoterreno' },
-  { id: 'caferacer', label: 'Cafe Racer' }
+  { id: 'todas', label: 'Todos los Modelos', count: bikes.length },
+  { id: 'pisteras', label: 'Pisteras', count: bikes.filter((b) => b.category === 'pisteras').length },
+  { id: 'deportivas', label: 'Deportivas', count: bikes.filter((b) => b.category === 'deportivas').length },
+  { id: 'scooter', label: 'Scooters', count: bikes.filter((b) => b.category === 'scooter').length },
+  { id: 'todoterreno', label: 'Todoterreno', count: bikes.filter((b) => b.category === 'todoterreno').length },
+  { id: 'caferacer', label: 'Cafe Racer', count: bikes.filter((b) => b.category === 'caferacer').length }
 ];
 ---
 
@@ -17,7 +17,7 @@ const categories = [
   description="Explora todos los modelos oficiales de Nexus Motos en Perú: Pisteras, Deportivas, Scooters, Todoterreno y Cafe Racer con respaldo oficial de Grupo Lauzher."
 >
   <!-- Header in Clean Light Gray / White -->
-  <section class="bg-gray-50 py-16 px-6 border-b border-gray-200">
+  <section class="bg-gray-50 pt-12 pb-6 px-6 border-b border-gray-200">
     <div class="max-w-7xl mx-auto text-center">
       <span class="text-xs font-bold text-[#FF0000] uppercase tracking-widest font-['Teko',sans-serif] text-base">
         LINEUP OFICIAL
@@ -29,27 +29,31 @@ const categories = [
         Encuentra la moto perfecta para tu estilo de vida o tu negocio, con el respaldo y garantía de Grupo Lauzher en todo el Perú.
       </p>
 
-      <!-- Category Filter Buttons -->
-      <div class="mt-8 flex items-center justify-center gap-2 flex-wrap" id="catalog-category-tabs">
+      <!-- Category Filter Buttons with Direct Model Counts -->
+      <div class="mt-6 flex items-center justify-center gap-2 flex-wrap" id="catalog-category-tabs">
         {categories.map((cat, i) => (
           <button
-            class={`catalog-cat-btn px-5 py-2.5 rounded-full text-xs md:text-sm font-bold uppercase tracking-wider border transition-all cursor-pointer ${
+            class={`catalog-cat-btn inline-flex items-center gap-2 px-4 py-2 md:px-5 md:py-2.5 rounded-full text-xs md:text-sm font-bold uppercase tracking-wider border transition-all cursor-pointer ${
               i === 0
                 ? 'bg-[#FF0000] text-white border-[#FF0000] shadow-md active-cat'
                 : 'bg-white text-gray-700 hover:bg-gray-100 hover:text-black border-gray-300'
             }`}
             data-category={cat.id}
           >
-            {cat.label}
+            <span>{cat.label}</span>
+            <span class={`cat-badge text-[11px] font-black px-2 py-0.5 rounded-full transition-colors ${
+              i === 0 ? 'bg-black/20 text-white' : 'bg-gray-100 text-gray-700'
+            }`}>
+              {cat.count}
+            </span>
           </button>
         ))}
       </div>
 
-      <!-- Secondary Filter & Sorting Toolbar -->
-      <div class="mt-6 pt-6 border-t border-gray-200/80 flex flex-col md:flex-row items-center justify-between gap-4 max-w-5xl mx-auto">
-        <!-- Cilindrada Filters (Menor a Mayor) -->
-        <div class="flex items-center gap-1.5 flex-wrap justify-center">
-          <span class="text-xs font-bold uppercase text-gray-500 mr-1">Cilindrada:</span>
+      <!-- Cilindrada Filters (Compact, Centered, Clean) -->
+      <div class="mt-4 flex items-center justify-center gap-2 flex-wrap">
+        <span class="text-xs font-bold uppercase text-gray-500 mr-0.5">Cilindrada:</span>
+        <div class="inline-flex items-center gap-1.5 flex-wrap justify-center">
           {['all', '125', '150', '200', '250'].map((ccVal, idx) => (
             <button
               class={`catalog-cc-btn px-3 py-1 rounded-full text-xs font-bold uppercase border transition-all cursor-pointer ${
@@ -63,34 +67,12 @@ const categories = [
             </button>
           ))}
         </div>
-
-        <!-- Sorting Dropdown & Results Counter -->
-        <div class="flex items-center gap-4 w-full md:w-auto justify-between md:justify-end">
-          <span class="text-xs font-semibold text-gray-500 whitespace-nowrap" id="catalog-count">
-            {bikes.length} modelos
-          </span>
-
-          <div class="flex items-center gap-2">
-            <label for="catalog-sort" class="text-xs font-bold uppercase text-gray-500 whitespace-nowrap hidden sm:inline">
-              Ordenar por:
-            </label>
-            <select
-              id="catalog-sort"
-              class="text-xs font-bold uppercase tracking-wider bg-white border border-gray-300 rounded-lg px-3 py-1.5 text-gray-800 focus:outline-none focus:ring-2 focus:ring-[#FF0000] cursor-pointer"
-            >
-              <option value="default">Precio: Menor a Mayor (Por defecto)</option>
-              <option value="price-desc">Precio: Mayor a Menor</option>
-              <option value="cc-asc">Cilindrada: Menor a Mayor (125cc → 250cc)</option>
-              <option value="cc-desc">Cilindrada: Mayor a Menor (250cc → 125cc)</option>
-            </select>
-          </div>
-        </div>
       </div>
     </div>
   </section>
 
   <!-- Product Grid in Clean White -->
-  <section class="py-16 px-6 bg-white min-h-[600px]">
+  <section class="pt-8 pb-16 px-6 bg-white min-h-[600px]">
     <div class="max-w-7xl mx-auto">
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="catalog-grid">
         {bikes.map((bike, index) => (
@@ -180,7 +162,7 @@ const categories = [
                     title="Cotizar por WhatsApp"
                   >
                     <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24">
-                      <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.007c.106.005.249-.04.39.298.144.347.491 1.2.534 1.287.043.087.072.188.014.303-.058.116-.087.188-.173.289l-.26.302c-.087.087-.179.182-.077.357.101.174.45 742.968 1.202.666.592 1.229.774 1.403.86.174.087.275.072.376-.044.101-.116.433-.506.549-.68.116-.173.231-.144.39-.087s1.011.477 1.184.564.289.13.332.202c.044.073.044.42-.1.825z" />
+                      <path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91C2.13 13.66 2.59 15.36 3.45 16.86L2.05 22L7.3 20.62C8.75 21.41 10.38 21.83 12.04 21.83C17.5 21.83 21.95 17.38 21.95 11.92C21.95 9.27 20.92 6.78 19.05 4.91C17.18 3.03 14.69 2 12.04 2M12.05 3.67C14.25 3.67 16.31 4.53 17.87 6.09C19.42 7.65 20.28 9.72 20.28 11.92C20.28 16.46 16.58 20.15 12.04 20.15C10.56 20.15 9.11 19.76 7.85 19L7.55 18.83L4.43 19.65L5.26 16.61L5.06 16.29C4.24 15 3.8 13.47 3.8 11.91C3.81 7.37 7.5 3.67 12.05 3.67M8.53 7.33C8.37 7.33 8.1 7.39 7.87 7.64C7.65 7.89 7.02 8.48 7.02 9.68C7.02 10.88 7.89 12.04 8.01 12.2C8.13 12.37 9.71 14.81 12.14 15.86C14.16 16.73 14.57 16.56 15.01 16.52C15.46 16.48 16.45 15.93 16.66 15.35C16.86 14.77 16.86 14.28 16.8 14.17C16.74 14.07 16.58 14.01 16.34 13.89C16.1 13.77 14.92 13.19 14.7 13.11C14.48 13.03 14.32 12.99 14.16 13.23C14 13.48 13.54 14.01 13.4 14.17C13.26 14.34 13.12 14.36 12.88 14.24C12.64 14.12 11.86 13.87 10.94 13.05C10.22 12.41 9.73 11.62 9.59 11.38C9.45 11.14 9.57 11 9.69 10.89C9.8 10.78 9.94 10.6 10.06 10.46C10.18 10.32 10.22 10.22 10.3 10.06C10.38 9.9 10.34 9.76 10.28 9.64C10.22 9.52 9.74 8.35 9.55 7.87C9.35 7.41 9.16 7.47 9.01 7.46C8.88 7.46 8.71 7.45 8.55 7.45L8.53 7.33Z"/>
                     </svg>
                   </a>
                 </div>
@@ -196,21 +178,20 @@ const categories = [
 <script>
   const catBtns = document.querySelectorAll('.catalog-cat-btn');
   const ccBtns = document.querySelectorAll('.catalog-cc-btn');
-  const sortSelect = document.getElementById('catalog-sort') as HTMLSelectElement | null;
   const gridContainer = document.getElementById('catalog-grid');
-  const countText = document.getElementById('catalog-count');
   const cards = Array.from(document.querySelectorAll('.catalog-bike-card')) as HTMLElement[];
 
   let currentCat = 'todas';
   let currentCc = 'all';
-  let currentSort = 'default';
 
+  // Read URL query parameter ?cat=...
   const urlParams = new URLSearchParams(window.location.search);
   const initialCat = urlParams.get('cat');
   if (initialCat) {
     currentCat = initialCat;
   }
 
+  // Attach Category button click listeners
   catBtns.forEach((btn) => {
     btn.addEventListener('click', () => {
       currentCat = btn.getAttribute('data-category') || 'todas';
@@ -218,19 +199,13 @@ const categories = [
     });
   });
 
+  // Attach CC button click listeners
   ccBtns.forEach((btn) => {
     btn.addEventListener('click', () => {
       currentCc = btn.getAttribute('data-cc') || 'all';
       updateUI();
     });
   });
-
-  if (sortSelect) {
-    sortSelect.addEventListener('change', () => {
-      currentSort = sortSelect.value;
-      updateUI();
-    });
-  }
 
   function updateUI() {
     // Determine available CCs for the currently selected category
@@ -260,14 +235,23 @@ const categories = [
       }
     });
 
-    // Update category buttons active state
+    // Update category buttons active state and count badge styling
     catBtns.forEach((b) => {
+      const badge = b.querySelector('.cat-badge');
       if (b.getAttribute('data-category') === currentCat) {
         b.classList.add('bg-[#FF0000]', 'text-white', 'border-[#FF0000]', 'shadow-md');
         b.classList.remove('bg-white', 'text-gray-700', 'border-gray-300');
+        if (badge) {
+          badge.classList.add('bg-black/20', 'text-white');
+          badge.classList.remove('bg-gray-100', 'text-gray-700');
+        }
       } else {
         b.classList.remove('bg-[#FF0000]', 'text-white', 'border-[#FF0000]', 'shadow-md');
         b.classList.add('bg-white', 'text-gray-700', 'border-gray-300');
+        if (badge) {
+          badge.classList.remove('bg-black/20', 'text-white');
+          badge.classList.add('bg-gray-100', 'text-gray-700');
+        }
       }
     });
 
@@ -282,30 +266,14 @@ const categories = [
       }
     });
 
-    // Sort cards
+    // Keep natural catalog order
     const sortedCards = [...cards].sort((a, b) => {
-      const priceA = parseInt(a.getAttribute('data-price') || '0', 10);
-      const priceB = parseInt(b.getAttribute('data-price') || '0', 10);
-      const ccA = parseInt(a.getAttribute('data-cc') || '0', 10);
-      const ccB = parseInt(b.getAttribute('data-cc') || '0', 10);
       const idxA = parseInt(a.getAttribute('data-original-index') || '0', 10);
       const idxB = parseInt(b.getAttribute('data-original-index') || '0', 10);
-
-      if (currentSort === 'price-asc') {
-        return priceA - priceB;
-      } else if (currentSort === 'price-desc') {
-        return priceB - priceA;
-      } else if (currentSort === 'cc-desc') {
-        return ccB - ccA || priceB - priceA;
-      } else if (currentSort === 'cc-asc') {
-        return ccA - ccB || priceA - priceB;
-      } else {
-        return idxA - idxB;
-      }
+      return idxA - idxB;
     });
 
     // Filter and append to DOM
-    let visibleCount = 0;
     sortedCards.forEach((card) => {
       const cardCat = card.getAttribute('data-category');
       const cardCc = card.getAttribute('data-cc');
@@ -315,7 +283,6 @@ const categories = [
 
       if (matchesCat && matchesCc) {
         card.style.display = 'flex';
-        visibleCount++;
       } else {
         card.style.display = 'none';
       }
@@ -324,10 +291,6 @@ const categories = [
         gridContainer.appendChild(card);
       }
     });
-
-    if (countText) {
-      countText.textContent = `${visibleCount} modelo${visibleCount !== 1 ? 's' : ''}`;
-    }
   }
 
   // Initial trigger

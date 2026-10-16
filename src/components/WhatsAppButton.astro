@@ -2,20 +2,30 @@
 import site from '../data/site.json';
 ---
 
-<div class="fixed bottom-6 right-6 z-50 flex items-center group">
-  <div class="mr-3 hidden md:flex items-center bg-gray-950 text-white border border-gray-800 text-xs font-semibold py-2 px-3 rounded-xl shadow-xl transition-all duration-300 transform group-hover:scale-105 pointer-events-none">
-    <span>¿Deseas cotizar tu Nexus? <strong class="text-emerald-400">Escríbenos</strong></span>
+<div class="fixed bottom-4 right-4 sm:bottom-6 sm:right-6 z-50 flex items-center group select-none">
+  <!-- Simplified, sleek callout pill in light theme -->
+  <div class="mr-2.5 hidden sm:flex items-center gap-2 bg-white/95 backdrop-blur-md text-gray-800 border border-gray-200/90 text-xs font-semibold py-2 px-3.5 rounded-full shadow-lg transition-all duration-300 transform group-hover:scale-105 pointer-events-none">
+    <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+    <span>¿Deseas cotizar? <strong class="text-emerald-600 font-bold">Escríbenos</strong></span>
   </div>
 
+  <!-- WhatsApp Floating Action Button -->
   <a
-    href={`https://wa.me/${site.whatsappNumber}?text=Hola%20Nexus%20Motos%20Grupo%20Lauzher,%20deseo%20asesoría%20sobre%20un%20modelo%20y%20el%20Combo%20Motero`}
+    href={`https://wa.me/${site.whatsappNumber}?text=${encodeURIComponent('Hola Nexus Motos Perú (Grupo Lauzher), deseo asesoría sobre un modelo y las promociones vigentes.')}`}
     target="_blank"
     rel="noopener noreferrer"
-    class="w-14 h-14 rounded-full bg-emerald-500 hover:bg-emerald-600 text-white flex items-center justify-center shadow-[0_10px_25px_rgba(16,185,129,0.45)] hover:shadow-[0_15px_30px_rgba(16,185,129,0.6)] transform hover:scale-110 active:scale-95 transition-all duration-300 relative focus:outline-none"
+    class="w-13 h-13 sm:w-14 sm:h-14 rounded-full bg-[#25D366] hover:bg-[#20bd5a] text-white flex items-center justify-center shadow-[0_8px_25px_rgba(37,211,102,0.45)] hover:shadow-[0_12px_30px_rgba(37,211,102,0.65)] transform hover:scale-110 active:scale-95 transition-all duration-300 relative focus:outline-none"
     aria-label="Contactar por WhatsApp"
   >
-    <svg class="w-7 h-7 fill-current" viewBox="0 0 24 24">
-      <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.007c.106.005.249-.04.39.298.144.347.491 1.2.534 1.287.043.087.072.188.014.303-.058.116-.087.188-.173.289l-.26.302c-.087.087-.179.182-.077.357.101.174.45 742.968 1.202.666.592 1.229.774 1.403.86.174.087.275.072.376-.044.101-.116.433-.506.549-.68.116-.173.231-.144.39-.087s1.011.477 1.184.564.289.13.332.202c.044.073.044.42-.1.825z" />
+    <!-- Live Ping Indicator -->
+    <span class="absolute top-0 right-0 -mt-0.5 -mr-0.5 flex h-3.5 w-3.5">
+      <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-300 opacity-75"></span>
+      <span class="relative inline-flex rounded-full h-3.5 w-3.5 bg-emerald-400 border-2 border-white"></span>
+    </span>
+
+    <!-- Pixel-perfect Official WhatsApp SVG Icon -->
+    <svg class="w-7 h-7 fill-white shrink-0 drop-shadow-sm" viewBox="0 0 24 24" aria-hidden="true">
+      <path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91C2.13 13.66 2.59 15.36 3.45 16.86L2.05 22L7.3 20.62C8.75 21.41 10.38 21.83 12.04 21.83C17.5 21.83 21.95 17.38 21.95 11.92C21.95 9.27 20.92 6.78 19.05 4.91C17.18 3.03 14.69 2 12.04 2M12.05 3.67C14.25 3.67 16.31 4.53 17.87 6.09C19.42 7.65 20.28 9.72 20.28 11.92C20.28 16.46 16.58 20.15 12.04 20.15C10.56 20.15 9.11 19.76 7.85 19L7.55 18.83L4.43 19.65L5.26 16.61L5.06 16.29C4.24 15 3.8 13.47 3.8 11.91C3.81 7.37 7.5 3.67 12.05 3.67M8.53 7.33C8.37 7.33 8.1 7.39 7.87 7.64C7.65 7.89 7.02 8.48 7.02 9.68C7.02 10.88 7.89 12.04 8.01 12.2C8.13 12.37 9.71 14.81 12.14 15.86C14.16 16.73 14.57 16.56 15.01 16.52C15.46 16.48 16.45 15.93 16.66 15.35C16.86 14.77 16.86 14.28 16.8 14.17C16.74 14.07 16.58 14.01 16.34 13.89C16.1 13.77 14.92 13.19 14.7 13.11C14.48 13.03 14.32 12.99 14.16 13.23C14 13.48 13.54 14.01 13.4 14.17C13.26 14.34 13.12 14.36 12.88 14.24C12.64 14.12 11.86 13.87 10.94 13.05C10.22 12.41 9.73 11.62 9.59 11.38C9.45 11.14 9.57 11 9.69 10.89C9.8 10.78 9.94 10.6 10.06 10.46C10.18 10.32 10.22 10.22 10.3 10.06C10.38 9.9 10.34 9.76 10.28 9.64C10.22 9.52 9.74 8.35 9.55 7.87C9.35 7.41 9.16 7.47 9.01 7.46C8.88 7.46 8.71 7.45 8.55 7.45L8.53 7.33Z"/>
     </svg>
   </a>
 </div>
